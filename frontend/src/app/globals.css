@@ -2,22 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: #1a2236;
+  --bg-hover: #243050;
+  --border-color: #1e3a5f;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-green: #22c55e;
+  --accent-red: #ef4444;
+  --accent-orange: #f97316;
+  --accent-yellow: #eab308;
+  --accent-purple: #a855f7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Map container */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary) !important;
+  z-index: 1;
+}
+
+.leaflet-control-attribution {
+  background: rgba(10, 14, 26, 0.8) !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--text-secondary) !important;
+}
+
+.leaflet-control-zoom a {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: var(--bg-hover) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.leaflet-popup-close-button {
+  color: var(--text-secondary) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d4a7a;
+}
+
+/* Pulse animation for alerts */
+@keyframes pulse-alert {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-alert {
+  animation: pulse-alert 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Disruption zone pulse on map */
+@keyframes zone-pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.disruption-zone {
+  animation: zone-pulse 2s ease-in-out infinite;
+}
+
+/* Loading dots */
+@keyframes loading-dots {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.loading-dot:nth-child(1) { animation: loading-dots 1.4s infinite 0s; }
+.loading-dot:nth-child(2) { animation: loading-dots 1.4s infinite 0.2s; }
+.loading-dot:nth-child(3) { animation: loading-dots 1.4s infinite 0.4s; }
+
+/* Alert ticker scroll */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-scroll {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(26, 34, 54, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 58, 95, 0.5);
+  border-radius: 8px;
+}
+
+/* Risk indicator glow */
+.risk-glow-critical {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+.risk-glow-high {
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+}
+
+/* Animated route dash */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -20;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.route-animated {
+  animation: dash-flow 1s linear infinite;
 }
 
 @layer utilities {
