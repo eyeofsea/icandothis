@@ -1,0 +1,356 @@
+[
+  {
+    "routeId": "RT-001",
+    "name": "Houston to Jebel Ali (via Hormuz)",
+    "description": "Major route for US-manufactured equipment destined for UAE projects. Transits Strait of Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-001", "name": "Houston", "coordinates": [-95.27, 29.73]},
+      {"portId": null, "name": "Florida Straits", "coordinates": [-80.00, 25.00]},
+      {"portId": null, "name": "Gibraltar Strait", "coordinates": [-5.35, 35.96]},
+      {"portId": "PORT-018", "name": "Port Said", "coordinates": [32.31, 31.26]},
+      {"portId": null, "name": "Suez Canal Transit", "coordinates": [32.35, 30.50]},
+      {"portId": null, "name": "Bab el-Mandeb", "coordinates": [43.30, 12.60]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-002", "name": "Jebel Ali", "coordinates": [55.03, 25.01]}
+    ],
+    "totalDistanceNm": 9450,
+    "estimatedTransitDays": 32,
+    "shippingCost": 285000,
+    "insuranceCost": 42000,
+    "carrierOptions": [
+      {"carrierName": "Maersk", "vesselType": "Heavy Lift", "transitDays": 32, "cost": 285000, "reliability": 94.5},
+      {"carrierName": "BBC Chartering", "vesselType": "MPP", "transitDays": 34, "cost": 265000, "reliability": 91.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-002", "ZONE-008", "ZONE-001"],
+    "riskScore": 7.5
+  },
+  {
+    "routeId": "RT-002",
+    "name": "Hamburg to Lagos (via Suez & West Africa)",
+    "description": "European equipment to West African projects. Passes through Suez Canal and Gulf of Guinea.",
+    "waypoints": [
+      {"portId": "PORT-010", "name": "Hamburg", "coordinates": [9.97, 53.54]},
+      {"portId": "PORT-011", "name": "Rotterdam", "coordinates": [4.29, 51.90]},
+      {"portId": null, "name": "Gibraltar Strait", "coordinates": [-5.35, 35.96]},
+      {"portId": null, "name": "Gulf of Guinea", "coordinates": [2.00, 5.00]},
+      {"portId": "PORT-004", "name": "Lagos (Apapa)", "coordinates": [3.38, 6.44]}
+    ],
+    "totalDistanceNm": 5200,
+    "estimatedTransitDays": 18,
+    "shippingCost": 165000,
+    "insuranceCost": 28000,
+    "carrierOptions": [
+      {"carrierName": "Grimaldi", "vesselType": "RORO/MPP", "transitDays": 18, "cost": 165000, "reliability": 88.5},
+      {"carrierName": "CMA CGM", "vesselType": "Container", "transitDays": 20, "cost": 145000, "reliability": 92.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-006"],
+    "riskScore": 6.2
+  },
+  {
+    "routeId": "RT-003",
+    "name": "Houston to Lagos (Transatlantic)",
+    "description": "Direct transatlantic route from US Gulf Coast to Nigeria. Avoids Suez and Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-001", "name": "Houston", "coordinates": [-95.27, 29.73]},
+      {"portId": null, "name": "Mid-Atlantic", "coordinates": [-30.00, 15.00]},
+      {"portId": null, "name": "Gulf of Guinea", "coordinates": [2.00, 5.00]},
+      {"portId": "PORT-004", "name": "Lagos (Apapa)", "coordinates": [3.38, 6.44]}
+    ],
+    "totalDistanceNm": 6100,
+    "estimatedTransitDays": 21,
+    "shippingCost": 195000,
+    "insuranceCost": 32000,
+    "carrierOptions": [
+      {"carrierName": "Intermarine", "vesselType": "Heavy Lift", "transitDays": 21, "cost": 195000, "reliability": 89.0},
+      {"carrierName": "Spliethoff", "vesselType": "MPP", "transitDays": 23, "cost": 175000, "reliability": 90.5}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-006", "ZONE-009"],
+    "riskScore": 5.8
+  },
+  {
+    "routeId": "RT-004",
+    "name": "Yokohama to Jebel Ali (via Malacca & Hormuz)",
+    "description": "Japan to UAE route for MHI and Yokogawa equipment. Passes through Malacca Strait and Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-006", "name": "Yokohama", "coordinates": [139.64, 35.44]},
+      {"portId": "PORT-008", "name": "Singapore", "coordinates": [103.85, 1.26]},
+      {"portId": null, "name": "Strait of Malacca", "coordinates": [100.00, 2.50]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [65.00, 18.00]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-002", "name": "Jebel Ali", "coordinates": [55.03, 25.01]}
+    ],
+    "totalDistanceNm": 6500,
+    "estimatedTransitDays": 22,
+    "shippingCost": 215000,
+    "insuranceCost": 35000,
+    "carrierOptions": [
+      {"carrierName": "NYK Line", "vesselType": "Heavy Lift", "transitDays": 22, "cost": 215000, "reliability": 96.0},
+      {"carrierName": "K Line", "vesselType": "MPP", "transitDays": 24, "cost": 195000, "reliability": 94.5}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-003", "ZONE-007", "ZONE-001"],
+    "riskScore": 7.0
+  },
+  {
+    "routeId": "RT-005",
+    "name": "Rotterdam to Jubail (via Suez & Hormuz)",
+    "description": "European equipment to Saudi projects via Suez Canal and Strait of Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-011", "name": "Rotterdam", "coordinates": [4.29, 51.90]},
+      {"portId": null, "name": "Gibraltar Strait", "coordinates": [-5.35, 35.96]},
+      {"portId": "PORT-018", "name": "Port Said", "coordinates": [32.31, 31.26]},
+      {"portId": null, "name": "Suez Canal Transit", "coordinates": [32.35, 30.50]},
+      {"portId": null, "name": "Bab el-Mandeb", "coordinates": [43.30, 12.60]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-003", "name": "Jubail", "coordinates": [49.66, 27.01]}
+    ],
+    "totalDistanceNm": 7200,
+    "estimatedTransitDays": 24,
+    "shippingCost": 235000,
+    "insuranceCost": 38000,
+    "carrierOptions": [
+      {"carrierName": "Hansa Heavy Lift", "vesselType": "Heavy Lift", "transitDays": 24, "cost": 235000, "reliability": 93.0},
+      {"carrierName": "SAL Heavy Lift", "vesselType": "Heavy Lift", "transitDays": 25, "cost": 245000, "reliability": 95.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-002", "ZONE-008", "ZONE-001"],
+    "riskScore": 8.0
+  },
+  {
+    "routeId": "RT-006",
+    "name": "Hamburg to Jebel Ali (via Suez & Hormuz)",
+    "description": "German manufactured equipment to UAE via Suez and Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-010", "name": "Hamburg", "coordinates": [9.97, 53.54]},
+      {"portId": null, "name": "English Channel", "coordinates": [1.00, 50.80]},
+      {"portId": null, "name": "Gibraltar Strait", "coordinates": [-5.35, 35.96]},
+      {"portId": "PORT-018", "name": "Port Said", "coordinates": [32.31, 31.26]},
+      {"portId": null, "name": "Suez Canal Transit", "coordinates": [32.35, 30.50]},
+      {"portId": null, "name": "Bab el-Mandeb", "coordinates": [43.30, 12.60]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-002", "name": "Jebel Ali", "coordinates": [55.03, 25.01]}
+    ],
+    "totalDistanceNm": 7650,
+    "estimatedTransitDays": 26,
+    "shippingCost": 248000,
+    "insuranceCost": 40000,
+    "carrierOptions": [
+      {"carrierName": "Rickmers-Linie", "vesselType": "MPP", "transitDays": 26, "cost": 248000, "reliability": 92.0},
+      {"carrierName": "Hapag-Lloyd", "vesselType": "Container", "transitDays": 28, "cost": 220000, "reliability": 93.5}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-002", "ZONE-008", "ZONE-001"],
+    "riskScore": 8.2
+  },
+  {
+    "routeId": "RT-007",
+    "name": "Mumbai to Jebel Ali (via Hormuz)",
+    "description": "Indian manufactured equipment to UAE. Short route but transits Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-009", "name": "JNPT Mumbai", "coordinates": [72.95, 18.95]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [62.00, 22.00]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-002", "name": "Jebel Ali", "coordinates": [55.03, 25.01]}
+    ],
+    "totalDistanceNm": 1250,
+    "estimatedTransitDays": 5,
+    "shippingCost": 65000,
+    "insuranceCost": 12000,
+    "carrierOptions": [
+      {"carrierName": "Shipping Corp of India", "vesselType": "General Cargo", "transitDays": 5, "cost": 65000, "reliability": 86.0},
+      {"carrierName": "MSC", "vesselType": "Container", "transitDays": 6, "cost": 55000, "reliability": 91.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-001"],
+    "riskScore": 6.5
+  },
+  {
+    "routeId": "RT-008",
+    "name": "Busan to Vladivostok (Russia Far East)",
+    "description": "Korean equipment to Russian Far East for Amur GPP. Subject to sanctions compliance.",
+    "waypoints": [
+      {"portId": "PORT-007", "name": "Busan", "coordinates": [129.04, 35.10]},
+      {"portId": null, "name": "Sea of Japan", "coordinates": [132.00, 40.00]},
+      {"portId": "PORT-020", "name": "Vladivostok", "coordinates": [131.89, 43.12]}
+    ],
+    "totalDistanceNm": 480,
+    "estimatedTransitDays": 3,
+    "shippingCost": 45000,
+    "insuranceCost": 22000,
+    "carrierOptions": [
+      {"carrierName": "FESCO", "vesselType": "General Cargo", "transitDays": 3, "cost": 45000, "reliability": 78.0},
+      {"carrierName": "Sinokor", "vesselType": "MPP", "transitDays": 4, "cost": 52000, "reliability": 82.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-005"],
+    "riskScore": 9.0
+  },
+  {
+    "routeId": "RT-009",
+    "name": "Yokohama to Jubail (via Singapore & Hormuz)",
+    "description": "Japanese equipment to Saudi Arabia via Singapore transshipment.",
+    "waypoints": [
+      {"portId": "PORT-006", "name": "Yokohama", "coordinates": [139.64, 35.44]},
+      {"portId": "PORT-008", "name": "Singapore", "coordinates": [103.85, 1.26]},
+      {"portId": null, "name": "Strait of Malacca", "coordinates": [100.00, 2.50]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [65.00, 18.00]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-003", "name": "Jubail", "coordinates": [49.66, 27.01]}
+    ],
+    "totalDistanceNm": 6800,
+    "estimatedTransitDays": 23,
+    "shippingCost": 225000,
+    "insuranceCost": 36000,
+    "carrierOptions": [
+      {"carrierName": "MOL", "vesselType": "Heavy Lift", "transitDays": 23, "cost": 225000, "reliability": 95.0},
+      {"carrierName": "Wallenius Wilhelmsen", "vesselType": "RORO", "transitDays": 25, "cost": 210000, "reliability": 93.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-003", "ZONE-007", "ZONE-001"],
+    "riskScore": 7.5
+  },
+  {
+    "routeId": "RT-010",
+    "name": "Hamburg to Lagos (via Cape of Good Hope)",
+    "description": "Alternative Europe-to-West Africa route avoiding Suez Canal via southern Africa.",
+    "waypoints": [
+      {"portId": "PORT-010", "name": "Hamburg", "coordinates": [9.97, 53.54]},
+      {"portId": "PORT-011", "name": "Rotterdam", "coordinates": [4.29, 51.90]},
+      {"portId": null, "name": "Bay of Biscay", "coordinates": [-5.00, 45.00]},
+      {"portId": null, "name": "Canary Islands", "coordinates": [-16.00, 28.00]},
+      {"portId": "PORT-017", "name": "Cape Town", "coordinates": [18.43, -33.90]},
+      {"portId": null, "name": "Mozambique Channel", "coordinates": [40.00, -15.00]},
+      {"portId": "PORT-004", "name": "Lagos (Apapa)", "coordinates": [3.38, 6.44]}
+    ],
+    "totalDistanceNm": 8900,
+    "estimatedTransitDays": 32,
+    "shippingCost": 310000,
+    "insuranceCost": 35000,
+    "carrierOptions": [
+      {"carrierName": "MSC", "vesselType": "Container", "transitDays": 32, "cost": 310000, "reliability": 90.0},
+      {"carrierName": "Grimaldi", "vesselType": "MPP", "transitDays": 34, "cost": 295000, "reliability": 87.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": [],
+    "riskScore": 3.5
+  },
+  {
+    "routeId": "RT-011",
+    "name": "Rotterdam to Jebel Ali (via Cape of Good Hope)",
+    "description": "Alternative Europe-to-UAE route bypassing both Suez Canal and Bab el-Mandeb.",
+    "waypoints": [
+      {"portId": "PORT-011", "name": "Rotterdam", "coordinates": [4.29, 51.90]},
+      {"portId": null, "name": "Bay of Biscay", "coordinates": [-5.00, 45.00]},
+      {"portId": null, "name": "Canary Islands", "coordinates": [-16.00, 28.00]},
+      {"portId": "PORT-017", "name": "Cape Town", "coordinates": [18.43, -33.90]},
+      {"portId": null, "name": "Mozambique Channel", "coordinates": [40.00, -15.00]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [62.00, 18.00]},
+      {"portId": "PORT-015", "name": "Fujairah", "coordinates": [56.36, 25.12]},
+      {"portId": "PORT-002", "name": "Jebel Ali", "coordinates": [55.03, 25.01]}
+    ],
+    "totalDistanceNm": 11800,
+    "estimatedTransitDays": 42,
+    "shippingCost": 385000,
+    "insuranceCost": 32000,
+    "carrierOptions": [
+      {"carrierName": "SAL Heavy Lift", "vesselType": "Heavy Lift", "transitDays": 42, "cost": 385000, "reliability": 94.0},
+      {"carrierName": "Maersk", "vesselType": "Container", "transitDays": 44, "cost": 355000, "reliability": 93.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": [],
+    "riskScore": 3.0
+  },
+  {
+    "routeId": "RT-012",
+    "name": "Rotterdam to Jubail (via Cape of Good Hope)",
+    "description": "Alternative Europe-to-Saudi route bypassing Suez and Hormuz. Uses Fujairah for transshipment.",
+    "waypoints": [
+      {"portId": "PORT-011", "name": "Rotterdam", "coordinates": [4.29, 51.90]},
+      {"portId": "PORT-017", "name": "Cape Town", "coordinates": [18.43, -33.90]},
+      {"portId": null, "name": "Mozambique Channel", "coordinates": [40.00, -15.00]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [62.00, 18.00]},
+      {"portId": "PORT-015", "name": "Fujairah", "coordinates": [56.36, 25.12]},
+      {"portId": "PORT-025", "name": "Dammam", "coordinates": [50.10, 26.48]},
+      {"portId": "PORT-003", "name": "Jubail", "coordinates": [49.66, 27.01]}
+    ],
+    "totalDistanceNm": 12200,
+    "estimatedTransitDays": 44,
+    "shippingCost": 395000,
+    "insuranceCost": 34000,
+    "carrierOptions": [
+      {"carrierName": "Hansa Heavy Lift", "vesselType": "Heavy Lift", "transitDays": 44, "cost": 395000, "reliability": 92.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": [],
+    "riskScore": 3.2
+  },
+  {
+    "routeId": "RT-020",
+    "name": "Houston to Dos Bocas (Gulf of Mexico)",
+    "description": "Short Gulf of Mexico route for US equipment to Mexican refinery project.",
+    "waypoints": [
+      {"portId": "PORT-001", "name": "Houston", "coordinates": [-95.27, 29.73]},
+      {"portId": null, "name": "Gulf of Mexico", "coordinates": [-92.00, 24.00]},
+      {"portId": "PORT-005", "name": "Dos Bocas", "coordinates": [-93.22, 18.43]}
+    ],
+    "totalDistanceNm": 780,
+    "estimatedTransitDays": 3,
+    "shippingCost": 48000,
+    "insuranceCost": 8000,
+    "carrierOptions": [
+      {"carrierName": "Intermarine", "vesselType": "Heavy Lift", "transitDays": 3, "cost": 48000, "reliability": 92.0},
+      {"carrierName": "BBC Chartering", "vesselType": "MPP", "transitDays": 4, "cost": 42000, "reliability": 90.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-009"],
+    "riskScore": 3.5
+  },
+  {
+    "routeId": "RT-021",
+    "name": "Busan to Dos Bocas (Transpacific via Panama)",
+    "description": "Korean and East Asian equipment to Mexico via Panama Canal.",
+    "waypoints": [
+      {"portId": "PORT-007", "name": "Busan", "coordinates": [129.04, 35.10]},
+      {"portId": null, "name": "North Pacific", "coordinates": [-180.00, 30.00]},
+      {"portId": null, "name": "Panama Canal", "coordinates": [-79.55, 9.08]},
+      {"portId": null, "name": "Gulf of Mexico", "coordinates": [-92.00, 24.00]},
+      {"portId": "PORT-005", "name": "Dos Bocas", "coordinates": [-93.22, 18.43]}
+    ],
+    "totalDistanceNm": 9200,
+    "estimatedTransitDays": 33,
+    "shippingCost": 295000,
+    "insuranceCost": 38000,
+    "carrierOptions": [
+      {"carrierName": "HMM", "vesselType": "Container", "transitDays": 33, "cost": 295000, "reliability": 91.0},
+      {"carrierName": "Evergreen", "vesselType": "Container", "transitDays": 35, "cost": 275000, "reliability": 92.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": [],
+    "riskScore": 3.8
+  },
+  {
+    "routeId": "RT-030",
+    "name": "Mumbai to Jubail (via Hormuz)",
+    "description": "Indian equipment to Saudi Arabia. Short Arabian Sea route via Hormuz.",
+    "waypoints": [
+      {"portId": "PORT-009", "name": "JNPT Mumbai", "coordinates": [72.95, 18.95]},
+      {"portId": null, "name": "Arabian Sea", "coordinates": [62.00, 22.00]},
+      {"portId": null, "name": "Strait of Hormuz", "coordinates": [56.25, 26.50]},
+      {"portId": "PORT-003", "name": "Jubail", "coordinates": [49.66, 27.01]}
+    ],
+    "totalDistanceNm": 1500,
+    "estimatedTransitDays": 6,
+    "shippingCost": 72000,
+    "insuranceCost": 14000,
+    "carrierOptions": [
+      {"carrierName": "Shipping Corp of India", "vesselType": "General Cargo", "transitDays": 6, "cost": 72000, "reliability": 85.0},
+      {"carrierName": "Hafnia", "vesselType": "MPP", "transitDays": 7, "cost": 68000, "reliability": 89.0}
+    ],
+    "currentStatus": "active",
+    "passesThrough": ["ZONE-001"],
+    "riskScore": 6.5
+  }
+]

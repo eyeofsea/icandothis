@@ -1,0 +1,213 @@
+[
+  {
+    "zoneId": "ZONE-001",
+    "name": "Strait of Hormuz",
+    "type": "Maritime Chokepoint",
+    "region": "Middle East",
+    "riskLevel": 9,
+    "status": "Critical",
+    "description": "Narrow strait between Iran and Oman/UAE through which approximately 21% of global petroleum liquids pass daily. Subject to geopolitical tensions between Iran and Gulf states.",
+    "polygon": [
+      [55.50, 26.80],
+      [57.00, 26.80],
+      [57.00, 25.50],
+      [56.50, 25.20],
+      [55.50, 25.80],
+      [55.50, 26.80]
+    ],
+    "affectedRoutes": ["RT-001", "RT-004", "RT-005", "RT-006", "RT-007", "RT-008", "RT-009"],
+    "monitoringSources": ["Reuters", "Lloyd's List", "UKMTO", "US NAVCENT"],
+    "currentThreats": ["naval blockade risk", "mine warfare", "drone/missile attacks on shipping", "IRGC Navy provocations"],
+    "lastIncidentDate": "2026-03-30",
+    "insuranceSurcharge": 0.15
+  },
+  {
+    "zoneId": "ZONE-002",
+    "name": "Suez Canal Zone",
+    "type": "Maritime Chokepoint",
+    "region": "North Africa",
+    "riskLevel": 6,
+    "status": "Elevated",
+    "description": "The Suez Canal handles approximately 12-15% of global trade. Single point of failure for Europe-Asia maritime trade with limited alternative capacity.",
+    "polygon": [
+      [32.00, 31.50],
+      [33.00, 31.50],
+      [33.00, 29.80],
+      [32.00, 29.80],
+      [32.00, 31.50]
+    ],
+    "affectedRoutes": ["RT-002", "RT-005", "RT-006"],
+    "monitoringSources": ["Suez Canal Authority", "Lloyd's List", "MarineTraffic"],
+    "currentThreats": ["grounding risk", "Houthi attacks on shipping in southern approaches", "capacity constraints"],
+    "lastIncidentDate": "2026-03-30",
+    "insuranceSurcharge": 0.08
+  },
+  {
+    "zoneId": "ZONE-003",
+    "name": "Japan Seismic Zone (Kanto-Tokai)",
+    "type": "Natural Disaster Zone",
+    "region": "East Asia",
+    "riskLevel": 7,
+    "status": "Monitored",
+    "description": "The Kanto-Tokai region of Japan including Tokyo, Yokohama, and Kawasaki is one of the most seismically active industrial corridors in the world, home to major manufacturing facilities.",
+    "polygon": [
+      [138.50, 36.00],
+      [140.50, 36.00],
+      [140.50, 34.50],
+      [138.50, 34.50],
+      [138.50, 36.00]
+    ],
+    "affectedRoutes": ["RT-004", "RT-009"],
+    "monitoringSources": ["JMA", "USGS", "NHK", "Japan Coast Guard"],
+    "currentThreats": ["magnitude 7+ earthquake risk", "tsunami risk", "infrastructure damage", "port closures"],
+    "lastIncidentDate": "2026-03-30",
+    "insuranceSurcharge": 0.05
+  },
+  {
+    "zoneId": "ZONE-004",
+    "name": "US-China Trade Corridor",
+    "type": "Trade Policy Zone",
+    "region": "Trans-Pacific",
+    "riskLevel": 6,
+    "status": "Elevated",
+    "description": "Trade corridor subject to escalating tariffs between the United States and China. Impacts procurement of Chinese-manufactured industrial equipment and components.",
+    "polygon": [
+      [115.00, 40.00],
+      [125.00, 40.00],
+      [125.00, 20.00],
+      [115.00, 20.00],
+      [115.00, 40.00]
+    ],
+    "affectedRoutes": ["RT-003", "RT-004", "RT-009"],
+    "monitoringSources": ["US DOC", "MOFCOM", "WTO", "USTR"],
+    "currentThreats": ["tariff escalation", "export controls", "retaliatory measures", "secondary sanctions"],
+    "lastIncidentDate": "2026-03-30",
+    "insuranceSurcharge": 0.0
+  },
+  {
+    "zoneId": "ZONE-005",
+    "name": "Russia Sanctions Zone",
+    "type": "Sanctions Zone",
+    "region": "Russia",
+    "riskLevel": 9,
+    "status": "Critical",
+    "description": "Comprehensive Western sanctions regime covering Russia, prohibiting export of industrial equipment, technology, and services to Russian energy sector entities.",
+    "polygon": [
+      [27.00, 70.00],
+      [180.00, 70.00],
+      [180.00, 42.00],
+      [27.00, 42.00],
+      [27.00, 70.00]
+    ],
+    "affectedRoutes": ["RT-008", "RT-015", "RT-016"],
+    "monitoringSources": ["EU Official Journal", "US Treasury OFAC", "UK OFSI", "Swiss SECO"],
+    "currentThreats": ["full export ban", "secondary sanctions", "asset freezing", "compliance risk for third-country suppliers"],
+    "lastIncidentDate": "2026-03-30",
+    "insuranceSurcharge": 0.50
+  },
+  {
+    "zoneId": "ZONE-006",
+    "name": "Gulf of Guinea",
+    "type": "Maritime Security Zone",
+    "region": "West Africa",
+    "riskLevel": 7,
+    "status": "Elevated",
+    "description": "Waters off the coast of Nigeria and neighboring countries with elevated piracy and maritime security risks. Key shipping lane for West African oil and gas projects.",
+    "polygon": [
+      [-2.00, 8.00],
+      [6.00, 8.00],
+      [6.00, 2.00],
+      [-2.00, 2.00],
+      [-2.00, 8.00]
+    ],
+    "affectedRoutes": ["RT-002", "RT-003", "RT-011"],
+    "monitoringSources": ["IMB Piracy Reporting Centre", "MDAT-GoG", "Nigerian Navy", "Lloyd's List"],
+    "currentThreats": ["piracy", "armed robbery", "kidnapping", "vessel hijacking"],
+    "lastIncidentDate": "2026-02-14",
+    "insuranceSurcharge": 0.10
+  },
+  {
+    "zoneId": "ZONE-007",
+    "name": "Strait of Malacca",
+    "type": "Maritime Chokepoint",
+    "region": "Southeast Asia",
+    "riskLevel": 4,
+    "status": "Normal",
+    "description": "Narrow waterway between Malaysia and Indonesia connecting the Indian Ocean to the South China Sea. Handles approximately 25% of global shipping trade.",
+    "polygon": [
+      [99.00, 4.50],
+      [104.50, 4.50],
+      [104.50, 0.50],
+      [99.00, 0.50],
+      [99.00, 4.50]
+    ],
+    "affectedRoutes": ["RT-004", "RT-005", "RT-009"],
+    "monitoringSources": ["MSSI", "ReCAAP", "IMO", "MarineTraffic"],
+    "currentThreats": ["congestion", "grounding risk", "piracy (reduced)"],
+    "lastIncidentDate": "2025-11-22",
+    "insuranceSurcharge": 0.02
+  },
+  {
+    "zoneId": "ZONE-008",
+    "name": "Bab el-Mandeb Strait",
+    "type": "Maritime Chokepoint",
+    "region": "Middle East / East Africa",
+    "riskLevel": 8,
+    "status": "Critical",
+    "description": "Strategic chokepoint between Yemen and Djibouti connecting the Red Sea to the Gulf of Aden. Subject to ongoing Houthi attacks on commercial shipping.",
+    "polygon": [
+      [42.50, 13.50],
+      [44.00, 13.50],
+      [44.00, 12.00],
+      [42.50, 12.00],
+      [42.50, 13.50]
+    ],
+    "affectedRoutes": ["RT-002", "RT-005", "RT-006"],
+    "monitoringSources": ["UKMTO", "US NAVCENT", "EU NAVFOR", "Lloyd's List"],
+    "currentThreats": ["Houthi missile/drone attacks", "mine warfare", "naval confrontations"],
+    "lastIncidentDate": "2026-03-18",
+    "insuranceSurcharge": 0.12
+  },
+  {
+    "zoneId": "ZONE-009",
+    "name": "Gulf of Mexico Hurricane Zone",
+    "type": "Natural Disaster Zone",
+    "region": "North America",
+    "riskLevel": 5,
+    "status": "Normal",
+    "description": "The Gulf of Mexico is subject to tropical cyclone activity from June through November, impacting offshore operations, coastal ports, and inland petrochemical facilities.",
+    "polygon": [
+      [-98.00, 30.50],
+      [-80.00, 30.50],
+      [-80.00, 18.00],
+      [-98.00, 18.00],
+      [-98.00, 30.50]
+    ],
+    "affectedRoutes": ["RT-001", "RT-003", "RT-010"],
+    "monitoringSources": ["NOAA NHC", "NWS", "USCG", "Port Authorities"],
+    "currentThreats": ["hurricane season Jun-Nov", "tropical storms", "storm surge", "port closures"],
+    "lastIncidentDate": "2025-09-08",
+    "insuranceSurcharge": 0.04
+  },
+  {
+    "zoneId": "ZONE-010",
+    "name": "South China Sea",
+    "type": "Geopolitical Zone",
+    "region": "East Asia",
+    "riskLevel": 5,
+    "status": "Monitored",
+    "description": "Contested maritime territory with overlapping claims from China, Vietnam, Philippines, and others. Critical shipping lane connecting East Asia to the Indian Ocean.",
+    "polygon": [
+      [105.00, 23.00],
+      [122.00, 23.00],
+      [122.00, 3.00],
+      [105.00, 3.00],
+      [105.00, 23.00]
+    ],
+    "affectedRoutes": ["RT-004", "RT-009"],
+    "monitoringSources": ["AMTI", "CSIS", "UNCLOS Tribunal", "AIS tracking"],
+    "currentThreats": ["territorial disputes", "naval confrontations", "fishing militia activity", "potential blockade scenarios"],
+    "lastIncidentDate": "2026-01-05",
+    "insuranceSurcharge": 0.03
+  }
+]
