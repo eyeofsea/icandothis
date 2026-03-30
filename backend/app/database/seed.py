@@ -206,12 +206,18 @@ def create_zones(session, records: List[dict]) -> int:
 
 
 def create_purchase_orders(session, records: List[dict]) -> int:
+    # Normalize: accept either "poId" or "poNumber" as the primary key
+    rows = []
+    for r in records:
+        clean = props_for_cypher(r)
+        if "poNumber" in clean and "poId" not in clean:
+            clean["poId"] = clean["poNumber"]
+        rows.append(clean)
     query = """
     UNWIND $rows AS row
     MERGE (po:PurchaseOrder {poId: row.poId})
     SET po += row
     """
-    rows = [props_for_cypher(r) for r in records]
     session.run(query, rows=rows)
     print(f"  Created {len(rows)} PurchaseOrder nodes")
     return len(rows)
@@ -331,7 +337,7 @@ def create_route_zone_rels(session, route_records: List[dict]) -> int:
     pairs = []
     for rt in route_records:
         rid = rt.get("routeId")
-        zones = rt.get("passesThroughZones") or rt.get("zones") or []
+        zones = rt.get("passesThrough") or rt.get("passesThroughZones") or rt.get("zones") or []
         for zid in zones:
             pairs.append({"rid": rid, "zid": zid})
     if not pairs:
@@ -353,8 +359,18 @@ def create_route_port_rels(session, route_records: List[dict]) -> int:
     arrives = []
     for rt in route_records:
         rid = rt.get("routeId")
+        # Try explicit fields first, then fall back to first/last waypoint
         dep = rt.get("departurePortId") or rt.get("originPortId")
         arr = rt.get("arrivalPortId") or rt.get("destinationPortId")
+        if not dep or not arr:
+            waypoints = rt.get("waypoints", [])
+            if waypoints:
+                if not dep:
+                    first_wp = waypoints[0]
+                    dep = first_wp.get("portId") if isinstance(first_wp, dict) else first_wp
+                if not arr:
+                    last_wp = waypoints[-1]
+                    arr = last_wp.get("portId") if isinstance(last_wp, dict) else last_wp
         if rid and dep:
             departs.append({"rid": rid, "pid": dep})
         if rid and arr:
@@ -528,6 +544,52 @@ def seed_nodes(session, data: Dict[str, Any]) -> Dict[str, int]:
     return counts
 
 
+def create_relationships_from_file(session, rels_data: dict) -> Dict[str, int]:
+    """Create alternative relationships from the relationships.json file."""
+    counts: Dict[str, int] = {}
+
+    # Supplier alternatives
+    supplier_alts = rels_data.get("supplierAlternatives", [])
+    if supplier_alts:
+        pairs = [{"sid": r["supplierId"], "altId": r["alternativeId"]} for r in supplier_alts]
+        session.run("""
+            UNWIND $pairs AS pair
+            MATCH (s1:Supplier {supplierId: pair.sid})
+            MATCH (s2:Supplier {supplierId: pair.altId})
+            MERGE (s1)-[:HAS_ALTERNATIVE]->(s2)
+        """, pairs=pairs)
+        print(f"  Created {len(pairs)} HAS_ALTERNATIVE (Supplier) from relationships.json")
+        counts["HAS_ALTERNATIVE (Supplier) file"] = len(pairs)
+
+    # Route alternatives
+    route_alts = rels_data.get("routeAlternatives", [])
+    if route_alts:
+        pairs = [{"rid": r["routeId"], "altId": r["alternativeId"]} for r in route_alts]
+        session.run("""
+            UNWIND $pairs AS pair
+            MATCH (r1:ShippingRoute {routeId: pair.rid})
+            MATCH (r2:ShippingRoute {routeId: pair.altId})
+            MERGE (r1)-[:HAS_ALTERNATIVE]->(r2)
+        """, pairs=pairs)
+        print(f"  Created {len(pairs)} HAS_ALTERNATIVE (Route) from relationships.json")
+        counts["HAS_ALTERNATIVE (Route) file"] = len(pairs)
+
+    # Equipment substitutes
+    eq_subs = rels_data.get("equipmentSubstitutes", [])
+    if eq_subs:
+        pairs = [{"eid": r["equipmentId"], "subId": r["substituteId"]} for r in eq_subs]
+        session.run("""
+            UNWIND $pairs AS pair
+            MATCH (e1:Equipment {equipmentId: pair.eid})
+            MATCH (e2:Equipment {equipmentId: pair.subId})
+            MERGE (e1)-[:HAS_SUBSTITUTE]->(e2)
+        """, pairs=pairs)
+        print(f"  Created {len(pairs)} HAS_SUBSTITUTE from relationships.json")
+        counts["HAS_SUBSTITUTE file"] = len(pairs)
+
+    return counts
+
+
 def seed_relationships(session, data: Dict[str, Any]) -> Dict[str, int]:
     """Create all relationship types from seed data. Returns counts per type."""
     print("\n--- Creating relationships ---")
@@ -549,6 +611,12 @@ def seed_relationships(session, data: Dict[str, Any]) -> Dict[str, int]:
     counts["HAS_ALTERNATIVE (Supplier)"] = create_supplier_alternative_rels(session, suppliers)
     counts["HAS_ALTERNATIVE (Route)"] = create_route_alternative_rels(session, routes)
     counts["HAS_SUBSTITUTE"] = create_equipment_substitute_rels(session, equipment)
+
+    # Also process relationships.json if present
+    rels_data = data.get("relationships")
+    if rels_data and isinstance(rels_data, dict):
+        file_counts = create_relationships_from_file(session, rels_data)
+        counts.update(file_counts)
 
     return counts
 

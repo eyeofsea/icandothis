@@ -1,0 +1,296 @@
+{
+  "supplierAlternatives": [
+    {
+      "supplierId": "SUP-001",
+      "alternativeId": "SUP-002",
+      "switchCost": 150000,
+      "qualificationTime": 30
+    },
+    {
+      "supplierId": "SUP-001",
+      "alternativeId": "SUP-006",
+      "switchCost": 200000,
+      "qualificationTime": 45
+    },
+    {
+      "supplierId": "SUP-002",
+      "alternativeId": "SUP-003",
+      "switchCost": 180000,
+      "qualificationTime": 35
+    },
+    {
+      "supplierId": "SUP-002",
+      "alternativeId": "SUP-004",
+      "switchCost": 100000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-003",
+      "alternativeId": "SUP-006",
+      "switchCost": 120000,
+      "qualificationTime": 25
+    },
+    {
+      "supplierId": "SUP-004",
+      "alternativeId": "SUP-005",
+      "switchCost": 90000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-005",
+      "alternativeId": "SUP-001",
+      "switchCost": 170000,
+      "qualificationTime": 40
+    },
+    {
+      "supplierId": "SUP-010",
+      "alternativeId": "SUP-011",
+      "switchCost": 80000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-010",
+      "alternativeId": "SUP-014",
+      "switchCost": 60000,
+      "qualificationTime": 25
+    },
+    {
+      "supplierId": "SUP-011",
+      "alternativeId": "SUP-013",
+      "switchCost": 100000,
+      "qualificationTime": 30
+    },
+    {
+      "supplierId": "SUP-012",
+      "alternativeId": "SUP-013",
+      "switchCost": 70000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-013",
+      "alternativeId": "SUP-014",
+      "switchCost": 50000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-020",
+      "alternativeId": "SUP-021",
+      "switchCost": 120000,
+      "qualificationTime": 25
+    },
+    {
+      "supplierId": "SUP-020",
+      "alternativeId": "SUP-022",
+      "switchCost": 150000,
+      "qualificationTime": 35
+    },
+    {
+      "supplierId": "SUP-021",
+      "alternativeId": "SUP-023",
+      "switchCost": 100000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-022",
+      "alternativeId": "SUP-024",
+      "switchCost": 80000,
+      "qualificationTime": 25
+    },
+    {
+      "supplierId": "SUP-023",
+      "alternativeId": "SUP-024",
+      "switchCost": 60000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-030",
+      "alternativeId": "SUP-031",
+      "switchCost": 90000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-030",
+      "alternativeId": "SUP-032",
+      "switchCost": 110000,
+      "qualificationTime": 30
+    },
+    {
+      "supplierId": "SUP-031",
+      "alternativeId": "SUP-033",
+      "switchCost": 70000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-032",
+      "alternativeId": "SUP-033",
+      "switchCost": 80000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-040",
+      "alternativeId": "SUP-041",
+      "switchCost": 50000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-041",
+      "alternativeId": "SUP-044",
+      "switchCost": 40000,
+      "qualificationTime": 10
+    },
+    {
+      "supplierId": "SUP-042",
+      "alternativeId": "SUP-043",
+      "switchCost": 60000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-043",
+      "alternativeId": "SUP-044",
+      "switchCost": 30000,
+      "qualificationTime": 10
+    },
+    {
+      "supplierId": "SUP-050",
+      "alternativeId": "SUP-051",
+      "switchCost": 40000,
+      "qualificationTime": 10
+    },
+    {
+      "supplierId": "SUP-051",
+      "alternativeId": "SUP-052",
+      "switchCost": 70000,
+      "qualificationTime": 20
+    },
+    {
+      "supplierId": "SUP-052",
+      "alternativeId": "SUP-053",
+      "switchCost": 50000,
+      "qualificationTime": 15
+    },
+    {
+      "supplierId": "SUP-053",
+      "alternativeId": "SUP-054",
+      "switchCost": 60000,
+      "qualificationTime": 25
+    }
+  ],
+  "routeAlternatives": [
+    {
+      "routeId": "RT-001",
+      "alternativeId": "RT-006",
+      "additionalDays": 5,
+      "additionalCost": 80000
+    },
+    {
+      "routeId": "RT-001",
+      "alternativeId": "RT-011",
+      "additionalDays": 15,
+      "additionalCost": 200000
+    },
+    {
+      "routeId": "RT-004",
+      "alternativeId": "RT-009",
+      "additionalDays": 3,
+      "additionalCost": 50000
+    },
+    {
+      "routeId": "RT-005",
+      "alternativeId": "RT-012",
+      "additionalDays": 18,
+      "additionalCost": 350000
+    },
+    {
+      "routeId": "RT-005",
+      "alternativeId": "RT-011",
+      "additionalDays": 20,
+      "additionalCost": 400000
+    },
+    {
+      "routeId": "RT-006",
+      "alternativeId": "RT-011",
+      "additionalDays": 15,
+      "additionalCost": 300000
+    },
+    {
+      "routeId": "RT-006",
+      "alternativeId": "RT-012",
+      "additionalDays": 17,
+      "additionalCost": 330000
+    },
+    {
+      "routeId": "RT-007",
+      "alternativeId": "RT-030",
+      "additionalDays": 2,
+      "additionalCost": 30000
+    },
+    {
+      "routeId": "RT-009",
+      "alternativeId": "RT-004",
+      "additionalDays": 4,
+      "additionalCost": 60000
+    },
+    {
+      "routeId": "RT-002",
+      "alternativeId": "RT-010",
+      "additionalDays": 10,
+      "additionalCost": 180000
+    },
+    {
+      "routeId": "RT-030",
+      "alternativeId": "RT-007",
+      "additionalDays": 2,
+      "additionalCost": 25000
+    }
+  ],
+  "equipmentSubstitutes": [
+    {
+      "equipmentId": "EQ-0001",
+      "substituteId": "EQ-0048",
+      "compatibilityPct": 95,
+      "notes": "Same spec gas turbine across projects"
+    },
+    {
+      "equipmentId": "EQ-0003",
+      "substituteId": "EQ-0050",
+      "compatibilityPct": 90,
+      "notes": "Similar centrifugal compressor"
+    },
+    {
+      "equipmentId": "EQ-0009",
+      "substituteId": "EQ-0056",
+      "compatibilityPct": 92,
+      "notes": "Interchangeable static equipment"
+    },
+    {
+      "equipmentId": "EQ-0017",
+      "substituteId": "EQ-0065",
+      "compatibilityPct": 88,
+      "notes": "Compatible switchgear"
+    },
+    {
+      "equipmentId": "EQ-0025",
+      "substituteId": "EQ-0073",
+      "compatibilityPct": 93,
+      "notes": "Same DCS platform"
+    },
+    {
+      "equipmentId": "EQ-0130",
+      "substituteId": "EQ-0164",
+      "compatibilityPct": 85,
+      "notes": "Similar rotating equipment"
+    },
+    {
+      "equipmentId": "EQ-0140",
+      "substituteId": "EQ-0176",
+      "compatibilityPct": 90,
+      "notes": "Compatible heat exchanger"
+    },
+    {
+      "equipmentId": "EQ-0220",
+      "substituteId": "EQ-0048",
+      "compatibilityPct": 80,
+      "notes": "Gas turbine cross-project substitute"
+    }
+  ]
+}

@@ -1,0 +1,6102 @@
+[
+  {
+    "equipmentId": "EQ-0001",
+    "name": "Gas Turbine Generator",
+    "description": "Gas Turbine Generator for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 83278,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2026-05-20",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-001",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0001"
+  },
+  {
+    "equipmentId": "EQ-0002",
+    "name": "Steam Turbine",
+    "description": "Steam Turbine for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 74628,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2027-03-24",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-002",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0002"
+  },
+  {
+    "equipmentId": "EQ-0003",
+    "name": "Centrifugal Compressor",
+    "description": "Centrifugal Compressor for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 34349,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2026-10-30",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-003",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0003"
+  },
+  {
+    "equipmentId": "EQ-0004",
+    "name": "Process Gas Compressor",
+    "description": "Process Gas Compressor for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 23070,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-02-12",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-004",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0004"
+  },
+  {
+    "equipmentId": "EQ-0005",
+    "name": "Boiler Feed Water Pump",
+    "description": "Boiler Feed Water Pump for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 7597,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-02-22",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-005",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0005"
+  },
+  {
+    "equipmentId": "EQ-0006",
+    "name": "Centrifugal Pump",
+    "description": "Centrifugal Pump for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 2402,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2026-10-17",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-006",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0006"
+  },
+  {
+    "equipmentId": "EQ-0007",
+    "name": "Reciprocating Compressor",
+    "description": "Reciprocating Compressor for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 10212,
+    "dimensions": "5x3x3",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2026-05-11",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "cylinders": 4,
+      "discharge_pressure_bar": 350
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-001",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0001"
+  },
+  {
+    "equipmentId": "EQ-0008",
+    "name": "Screw Compressor",
+    "description": "Screw Compressor for PRJ-001 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 10574,
+    "dimensions": "4x2x2",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2027-01-12",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "flow_rate_m3h": 8000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-002",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0002"
+  },
+  {
+    "equipmentId": "EQ-0009",
+    "name": "Crude Distillation Column",
+    "description": "Crude Distillation Column for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 350145,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-12-13",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0007"
+  },
+  {
+    "equipmentId": "EQ-0010",
+    "name": "Vacuum Distillation Column",
+    "description": "Vacuum Distillation Column for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 219595,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-04-15",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-011",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0008"
+  },
+  {
+    "equipmentId": "EQ-0011",
+    "name": "Pressure Vessel",
+    "description": "Pressure Vessel for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 64671,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-04-16",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-012",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0009"
+  },
+  {
+    "equipmentId": "EQ-0012",
+    "name": "Shell & Tube Heat Exchanger",
+    "description": "Shell & Tube Heat Exchanger for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 13180,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2026-11-22",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-013",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0010"
+  },
+  {
+    "equipmentId": "EQ-0013",
+    "name": "Air Cooled Heat Exchanger",
+    "description": "Air Cooled Heat Exchanger for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 28599,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2026-07-22",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-014",
+    "routeId": "RT-030",
+    "purchaseOrderId": "PO-0011"
+  },
+  {
+    "equipmentId": "EQ-0014",
+    "name": "Reactor Vessel",
+    "description": "Reactor Vessel for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 98233,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2027-05-11",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0007"
+  },
+  {
+    "equipmentId": "EQ-0015",
+    "name": "Deaerator",
+    "description": "Deaerator for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 12614,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2026-03-23",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-011",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0008"
+  },
+  {
+    "equipmentId": "EQ-0016",
+    "name": "Flash Drum",
+    "description": "Flash Drum for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11227,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-01-12",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-012",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0009"
+  },
+  {
+    "equipmentId": "EQ-0017",
+    "name": "Knock-out Drum",
+    "description": "Knock-out Drum for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 5664,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-11-26",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-013",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0010"
+  },
+  {
+    "equipmentId": "EQ-0018",
+    "name": "Splitter Column",
+    "description": "Splitter Column for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 147841,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-01-18",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0011"
+  },
+  {
+    "equipmentId": "EQ-0019",
+    "name": "Absorber Column",
+    "description": "Absorber Column for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 120010,
+    "dimensions": "35x5x5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-05-26",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "packing_type": "Random"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0007"
+  },
+  {
+    "equipmentId": "EQ-0020",
+    "name": "Stripper Column",
+    "description": "Stripper Column for PRJ-001 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 100589,
+    "dimensions": "30x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-11-21",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "reboiler_duty_mw": 25
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-011",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0008"
+  },
+  {
+    "equipmentId": "EQ-0021",
+    "name": "33kV GIS Switchgear",
+    "description": "33kV GIS Switchgear for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 19216,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2026-12-19",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-030",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0012"
+  },
+  {
+    "equipmentId": "EQ-0022",
+    "name": "Power Transformer 100MVA",
+    "description": "Power Transformer 100MVA for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 64207,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2026-04-17",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-031",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0013"
+  },
+  {
+    "equipmentId": "EQ-0023",
+    "name": "Motor Control Center",
+    "description": "Motor Control Center for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 5193,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2027-05-01",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-032",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0014"
+  },
+  {
+    "equipmentId": "EQ-0024",
+    "name": "UPS System 500kVA",
+    "description": "UPS System 500kVA for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 2870,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-07-03",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-033",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0015"
+  },
+  {
+    "equipmentId": "EQ-0025",
+    "name": "Variable Frequency Drive",
+    "description": "Variable Frequency Drive for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1816,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-10-12",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-030",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0012"
+  },
+  {
+    "equipmentId": "EQ-0026",
+    "name": "Bus Duct System",
+    "description": "Bus Duct System for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1571,
+    "dimensions": "50x0.5x0.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2027-01-28",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "rating_a": 5000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-031",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0013"
+  },
+  {
+    "equipmentId": "EQ-0027",
+    "name": "Emergency Diesel Generator",
+    "description": "Emergency Diesel Generator for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 39478,
+    "dimensions": "8x3x3.5",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2026-08-08",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "power_kva": 3000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-032",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0014"
+  },
+  {
+    "equipmentId": "EQ-0028",
+    "name": "Battery Energy Storage",
+    "description": "Battery Energy Storage for PRJ-001 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 10930,
+    "dimensions": "6x3x3",
+    "hsCode": "8507.60",
+    "requiredOnSiteDate": "2027-02-11",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "capacity_kwh": 2000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-033",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0015"
+  },
+  {
+    "equipmentId": "EQ-0029",
+    "name": "DCS System",
+    "description": "DCS System for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2744,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-05-13",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-020",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0016"
+  },
+  {
+    "equipmentId": "EQ-0030",
+    "name": "ESD System",
+    "description": "ESD System for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1626,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-07-17",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-021",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0017"
+  },
+  {
+    "equipmentId": "EQ-0031",
+    "name": "Fire & Gas Detection System",
+    "description": "Fire & Gas Detection System for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1721,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2027-05-02",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-022",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0018"
+  },
+  {
+    "equipmentId": "EQ-0032",
+    "name": "Control Valve Assembly",
+    "description": "Control Valve Assembly for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1420,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-10-07",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-023",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0019"
+  },
+  {
+    "equipmentId": "EQ-0033",
+    "name": "Flow Meter Assembly",
+    "description": "Flow Meter Assembly for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 333,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2026-03-20",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-024",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0020"
+  },
+  {
+    "equipmentId": "EQ-0034",
+    "name": "Pressure Transmitter Package",
+    "description": "Pressure Transmitter Package for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 167,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2026-05-15",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-020",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0016"
+  },
+  {
+    "equipmentId": "EQ-0035",
+    "name": "Level Transmitter Package",
+    "description": "Level Transmitter Package for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 58,
+    "dimensions": "0.5x0.2x0.2",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2027-01-04",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "type": "Guided Wave Radar"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-021",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0017"
+  },
+  {
+    "equipmentId": "EQ-0036",
+    "name": "Analyzer System",
+    "description": "Analyzer System for PRJ-001 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 2358,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.80",
+    "requiredOnSiteDate": "2027-06-02",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "type": "Gas Chromatograph",
+      "streams": 8
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-022",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0018"
+  },
+  {
+    "equipmentId": "EQ-0037",
+    "name": "Alloy Steel Pipe Spools",
+    "description": "Alloy Steel Pipe Spools for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 43271,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2027-04-10",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-040",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0021"
+  },
+  {
+    "equipmentId": "EQ-0038",
+    "name": "Large Bore CS Fittings",
+    "description": "Large Bore CS Fittings for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 7504,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2026-11-24",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-041",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0022"
+  },
+  {
+    "equipmentId": "EQ-0039",
+    "name": "Expansion Joint Assembly",
+    "description": "Expansion Joint Assembly for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 2953,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2026-12-20",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-042",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0023"
+  },
+  {
+    "equipmentId": "EQ-0040",
+    "name": "Inconel Alloy Piping",
+    "description": "Inconel Alloy Piping for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 4832,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2026-11-30",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-043",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0024"
+  },
+  {
+    "equipmentId": "EQ-0041",
+    "name": "Duplex Steel Pipe Package",
+    "description": "Duplex Steel Pipe Package for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 6898,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2027-01-31",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-044",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0025"
+  },
+  {
+    "equipmentId": "EQ-0042",
+    "name": "Alloy Steel Pipe Spools Unit 2",
+    "description": "Alloy Steel Pipe Spools for PRJ-001 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 15613,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2026-05-25",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-040",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0021"
+  },
+  {
+    "equipmentId": "EQ-0043",
+    "name": "Ball Valve 24\" 600#",
+    "description": "Ball Valve 24\" 600# for PRJ-001 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 6363,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-05-07",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-050",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0026"
+  },
+  {
+    "equipmentId": "EQ-0044",
+    "name": "Gate Valve 36\" 300#",
+    "description": "Gate Valve 36\" 300# for PRJ-001 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 10787,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-08-26",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-051",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0027"
+  },
+  {
+    "equipmentId": "EQ-0045",
+    "name": "Control Valve 8\" 150#",
+    "description": "Control Valve 8\" 150# for PRJ-001 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 740,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-03-14",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-052",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0028"
+  },
+  {
+    "equipmentId": "EQ-0046",
+    "name": "Safety Relief Valve",
+    "description": "Safety Relief Valve for PRJ-001 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 316,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2026-08-31",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-053",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0029"
+  },
+  {
+    "equipmentId": "EQ-0047",
+    "name": "Check Valve 16\" 300#",
+    "description": "Check Valve 16\" 300# for PRJ-001 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 2634,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "8481.30",
+    "requiredOnSiteDate": "2026-06-25",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "size_inch": 16,
+      "class": 300
+    },
+    "projectId": "PRJ-001",
+    "supplierId": "SUP-054",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0030"
+  },
+  {
+    "equipmentId": "EQ-0048",
+    "name": "Gas Turbine Generator",
+    "description": "Gas Turbine Generator for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 147839,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2027-04-15",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-001",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0031"
+  },
+  {
+    "equipmentId": "EQ-0049",
+    "name": "Steam Turbine",
+    "description": "Steam Turbine for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 74725,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2027-10-31",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-002",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0032"
+  },
+  {
+    "equipmentId": "EQ-0050",
+    "name": "Centrifugal Compressor",
+    "description": "Centrifugal Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 34277,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-02-22",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-003",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0033"
+  },
+  {
+    "equipmentId": "EQ-0051",
+    "name": "Process Gas Compressor",
+    "description": "Process Gas Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 20235,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-10-27",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-004",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0034"
+  },
+  {
+    "equipmentId": "EQ-0052",
+    "name": "Boiler Feed Water Pump",
+    "description": "Boiler Feed Water Pump for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 3552,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-11-16",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-005",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0035"
+  },
+  {
+    "equipmentId": "EQ-0053",
+    "name": "Centrifugal Pump",
+    "description": "Centrifugal Pump for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 3605,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-08-03",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-006",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0036"
+  },
+  {
+    "equipmentId": "EQ-0054",
+    "name": "Reciprocating Compressor",
+    "description": "Reciprocating Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 17020,
+    "dimensions": "5x3x3",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2027-03-01",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "cylinders": 4,
+      "discharge_pressure_bar": 350
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-001",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0031"
+  },
+  {
+    "equipmentId": "EQ-0055",
+    "name": "Screw Compressor",
+    "description": "Screw Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 8981,
+    "dimensions": "4x2x2",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2026-10-27",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "flow_rate_m3h": 8000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-002",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0032"
+  },
+  {
+    "equipmentId": "EQ-0056",
+    "name": "Diesel Generator Set",
+    "description": "Diesel Generator Set for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 14239,
+    "dimensions": "6x2.5x3",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2027-10-15",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "power_kva": 2500,
+      "voltage": 11000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-003",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0033"
+  },
+  {
+    "equipmentId": "EQ-0057",
+    "name": "Gas Turbine Generator Unit 2",
+    "description": "Gas Turbine Generator for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 126438,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2027-04-30",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-004",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0034"
+  },
+  {
+    "equipmentId": "EQ-0058",
+    "name": "Steam Turbine Unit 2",
+    "description": "Steam Turbine for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 116612,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2026-11-24",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-005",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0035"
+  },
+  {
+    "equipmentId": "EQ-0059",
+    "name": "Centrifugal Compressor Unit 2",
+    "description": "Centrifugal Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 16986,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-05-10",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-006",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0036"
+  },
+  {
+    "equipmentId": "EQ-0060",
+    "name": "Process Gas Compressor Unit 2",
+    "description": "Process Gas Compressor for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 28147,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-08-26",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-001",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0031"
+  },
+  {
+    "equipmentId": "EQ-0061",
+    "name": "Boiler Feed Water Pump Unit 2",
+    "description": "Boiler Feed Water Pump for PRJ-002 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 4148,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-04-30",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-002",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0032"
+  },
+  {
+    "equipmentId": "EQ-0062",
+    "name": "Crude Distillation Column",
+    "description": "Crude Distillation Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 271275,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-07-28",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0037"
+  },
+  {
+    "equipmentId": "EQ-0063",
+    "name": "Vacuum Distillation Column",
+    "description": "Vacuum Distillation Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 331818,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-09-17",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-011",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0039"
+  },
+  {
+    "equipmentId": "EQ-0064",
+    "name": "Pressure Vessel",
+    "description": "Pressure Vessel for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 36630,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-01-03",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-012",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0041"
+  },
+  {
+    "equipmentId": "EQ-0065",
+    "name": "Shell & Tube Heat Exchanger",
+    "description": "Shell & Tube Heat Exchanger for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11112,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2026-11-12",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-013",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0042"
+  },
+  {
+    "equipmentId": "EQ-0066",
+    "name": "Air Cooled Heat Exchanger",
+    "description": "Air Cooled Heat Exchanger for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 21317,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2027-03-29",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0043"
+  },
+  {
+    "equipmentId": "EQ-0067",
+    "name": "Reactor Vessel",
+    "description": "Reactor Vessel for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 185130,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2027-11-02",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0037"
+  },
+  {
+    "equipmentId": "EQ-0068",
+    "name": "Deaerator",
+    "description": "Deaerator for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 10070,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2027-05-17",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-011",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0039"
+  },
+  {
+    "equipmentId": "EQ-0069",
+    "name": "Flash Drum",
+    "description": "Flash Drum for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 9673,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-04-30",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-012",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0041"
+  },
+  {
+    "equipmentId": "EQ-0070",
+    "name": "Knock-out Drum",
+    "description": "Knock-out Drum for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 5536,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-08-27",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-013",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0042"
+  },
+  {
+    "equipmentId": "EQ-0071",
+    "name": "Splitter Column",
+    "description": "Splitter Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 67665,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-02-09",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0043"
+  },
+  {
+    "equipmentId": "EQ-0072",
+    "name": "Absorber Column",
+    "description": "Absorber Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 148038,
+    "dimensions": "35x5x5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-06-25",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "packing_type": "Random"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0037"
+  },
+  {
+    "equipmentId": "EQ-0073",
+    "name": "Stripper Column",
+    "description": "Stripper Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 116569,
+    "dimensions": "30x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-04-02",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "reboiler_duty_mw": 25
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-011",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0039"
+  },
+  {
+    "equipmentId": "EQ-0074",
+    "name": "Storage Tank",
+    "description": "Storage Tank for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Low",
+    "weight": 23727,
+    "dimensions": "20x20x15",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-03-17",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "capacity_m3": 5000,
+      "roof_type": "Floating"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-012",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0041"
+  },
+  {
+    "equipmentId": "EQ-0075",
+    "name": "Crude Distillation Column Unit 2",
+    "description": "Crude Distillation Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 167962,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-02-01",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-013",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0042"
+  },
+  {
+    "equipmentId": "EQ-0076",
+    "name": "Vacuum Distillation Column Unit 2",
+    "description": "Vacuum Distillation Column for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 225847,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-10-02",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0043"
+  },
+  {
+    "equipmentId": "EQ-0077",
+    "name": "Pressure Vessel Unit 2",
+    "description": "Pressure Vessel for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 35209,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-01-19",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0037"
+  },
+  {
+    "equipmentId": "EQ-0078",
+    "name": "Shell & Tube Heat Exchanger Unit 2",
+    "description": "Shell & Tube Heat Exchanger for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 39261,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2027-06-24",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-011",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0039"
+  },
+  {
+    "equipmentId": "EQ-0079",
+    "name": "Air Cooled Heat Exchanger Unit 2",
+    "description": "Air Cooled Heat Exchanger for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 29945,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2026-12-01",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-012",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0041"
+  },
+  {
+    "equipmentId": "EQ-0080",
+    "name": "Reactor Vessel Unit 2",
+    "description": "Reactor Vessel for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 149629,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2027-05-14",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-013",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0042"
+  },
+  {
+    "equipmentId": "EQ-0081",
+    "name": "Deaerator Unit 2",
+    "description": "Deaerator for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 24982,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2027-06-24",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-014",
+    "routeId": "RT-030",
+    "purchaseOrderId": "PO-0043"
+  },
+  {
+    "equipmentId": "EQ-0082",
+    "name": "Flash Drum Unit 2",
+    "description": "Flash Drum for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 12508,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-01-18",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-010",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0038"
+  },
+  {
+    "equipmentId": "EQ-0083",
+    "name": "Knock-out Drum Unit 2",
+    "description": "Knock-out Drum for PRJ-002 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 4200,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-03-02",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-011",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0040"
+  },
+  {
+    "equipmentId": "EQ-0084",
+    "name": "33kV GIS Switchgear",
+    "description": "33kV GIS Switchgear for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 10170,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2027-06-07",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-030",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0044"
+  },
+  {
+    "equipmentId": "EQ-0085",
+    "name": "Power Transformer 100MVA",
+    "description": "Power Transformer 100MVA for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 108434,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2027-07-10",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-031",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0045"
+  },
+  {
+    "equipmentId": "EQ-0086",
+    "name": "Motor Control Center",
+    "description": "Motor Control Center for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 7450,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2026-12-07",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-032",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0046"
+  },
+  {
+    "equipmentId": "EQ-0087",
+    "name": "UPS System 500kVA",
+    "description": "UPS System 500kVA for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 4735,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-10-10",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-033",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0047"
+  },
+  {
+    "equipmentId": "EQ-0088",
+    "name": "Variable Frequency Drive",
+    "description": "Variable Frequency Drive for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1858,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2027-10-10",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-030",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0044"
+  },
+  {
+    "equipmentId": "EQ-0089",
+    "name": "Bus Duct System",
+    "description": "Bus Duct System for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1472,
+    "dimensions": "50x0.5x0.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2027-10-09",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "rating_a": 5000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-031",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0045"
+  },
+  {
+    "equipmentId": "EQ-0090",
+    "name": "Emergency Diesel Generator",
+    "description": "Emergency Diesel Generator for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 23924,
+    "dimensions": "8x3x3.5",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2027-07-11",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "power_kva": 3000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-032",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0046"
+  },
+  {
+    "equipmentId": "EQ-0091",
+    "name": "Battery Energy Storage",
+    "description": "Battery Energy Storage for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 10617,
+    "dimensions": "6x3x3",
+    "hsCode": "8507.60",
+    "requiredOnSiteDate": "2027-08-20",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "capacity_kwh": 2000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-033",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0047"
+  },
+  {
+    "equipmentId": "EQ-0092",
+    "name": "33kV GIS Switchgear Unit 2",
+    "description": "33kV GIS Switchgear for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 12114,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2026-09-25",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-030",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0044"
+  },
+  {
+    "equipmentId": "EQ-0093",
+    "name": "Power Transformer 100MVA Unit 2",
+    "description": "Power Transformer 100MVA for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 143136,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2027-04-30",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-031",
+    "routeId": "RT-005",
+    "purchaseOrderId": "PO-0045"
+  },
+  {
+    "equipmentId": "EQ-0094",
+    "name": "Motor Control Center Unit 2",
+    "description": "Motor Control Center for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 3029,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2027-06-15",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-032",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0046"
+  },
+  {
+    "equipmentId": "EQ-0095",
+    "name": "UPS System 500kVA Unit 2",
+    "description": "UPS System 500kVA for PRJ-002 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 2661,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-11-18",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-033",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0047"
+  },
+  {
+    "equipmentId": "EQ-0096",
+    "name": "DCS System",
+    "description": "DCS System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 6594,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2027-11-28",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-020",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0048"
+  },
+  {
+    "equipmentId": "EQ-0097",
+    "name": "ESD System",
+    "description": "ESD System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 3830,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2027-09-17",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-021",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0049"
+  },
+  {
+    "equipmentId": "EQ-0098",
+    "name": "Fire & Gas Detection System",
+    "description": "Fire & Gas Detection System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1256,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2027-02-07",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-022",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0050"
+  },
+  {
+    "equipmentId": "EQ-0099",
+    "name": "Control Valve Assembly",
+    "description": "Control Valve Assembly for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1080,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-09-28",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-023",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0051"
+  },
+  {
+    "equipmentId": "EQ-0100",
+    "name": "Flow Meter Assembly",
+    "description": "Flow Meter Assembly for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 236,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2026-10-21",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-024",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0052"
+  },
+  {
+    "equipmentId": "EQ-0101",
+    "name": "Pressure Transmitter Package",
+    "description": "Pressure Transmitter Package for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 83,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2026-12-18",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-020",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0048"
+  },
+  {
+    "equipmentId": "EQ-0102",
+    "name": "Level Transmitter Package",
+    "description": "Level Transmitter Package for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 120,
+    "dimensions": "0.5x0.2x0.2",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2026-10-29",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "type": "Guided Wave Radar"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-021",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0049"
+  },
+  {
+    "equipmentId": "EQ-0103",
+    "name": "Analyzer System",
+    "description": "Analyzer System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1133,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.80",
+    "requiredOnSiteDate": "2027-08-03",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "type": "Gas Chromatograph",
+      "streams": 8
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-022",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0050"
+  },
+  {
+    "equipmentId": "EQ-0104",
+    "name": "DCS System Unit 2",
+    "description": "DCS System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 5377,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2027-11-20",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-023",
+    "routeId": "RT-006",
+    "purchaseOrderId": "PO-0051"
+  },
+  {
+    "equipmentId": "EQ-0105",
+    "name": "ESD System Unit 2",
+    "description": "ESD System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2686,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-10-18",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-024",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0052"
+  },
+  {
+    "equipmentId": "EQ-0106",
+    "name": "Fire & Gas Detection System Unit 2",
+    "description": "Fire & Gas Detection System for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 826,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2026-10-25",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-020",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0048"
+  },
+  {
+    "equipmentId": "EQ-0107",
+    "name": "Control Valve Assembly Unit 2",
+    "description": "Control Valve Assembly for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 279,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-09-19",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-021",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0049"
+  },
+  {
+    "equipmentId": "EQ-0108",
+    "name": "Flow Meter Assembly Unit 2",
+    "description": "Flow Meter Assembly for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 152,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2026-10-10",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-022",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0050"
+  },
+  {
+    "equipmentId": "EQ-0109",
+    "name": "Pressure Transmitter Package Unit 2",
+    "description": "Pressure Transmitter Package for PRJ-002 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 108,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2026-10-08",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-023",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0051"
+  },
+  {
+    "equipmentId": "EQ-0110",
+    "name": "Alloy Steel Pipe Spools",
+    "description": "Alloy Steel Pipe Spools for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 11550,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2026-12-30",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-040",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0053"
+  },
+  {
+    "equipmentId": "EQ-0111",
+    "name": "Large Bore CS Fittings",
+    "description": "Large Bore CS Fittings for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 10378,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2027-07-13",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-041",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0054"
+  },
+  {
+    "equipmentId": "EQ-0112",
+    "name": "Expansion Joint Assembly",
+    "description": "Expansion Joint Assembly for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 1938,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2027-01-08",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-042",
+    "routeId": "RT-030",
+    "purchaseOrderId": "PO-0055"
+  },
+  {
+    "equipmentId": "EQ-0113",
+    "name": "Inconel Alloy Piping",
+    "description": "Inconel Alloy Piping for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 14133,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2026-09-27",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-043",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0056"
+  },
+  {
+    "equipmentId": "EQ-0114",
+    "name": "Duplex Steel Pipe Package",
+    "description": "Duplex Steel Pipe Package for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 5904,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2027-10-04",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-044",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0057"
+  },
+  {
+    "equipmentId": "EQ-0115",
+    "name": "Alloy Steel Pipe Spools Unit 2",
+    "description": "Alloy Steel Pipe Spools for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 48049,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2027-07-20",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-040",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0053"
+  },
+  {
+    "equipmentId": "EQ-0116",
+    "name": "Large Bore CS Fittings Unit 2",
+    "description": "Large Bore CS Fittings for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 14774,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2027-04-24",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-041",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0054"
+  },
+  {
+    "equipmentId": "EQ-0117",
+    "name": "Expansion Joint Assembly Unit 2",
+    "description": "Expansion Joint Assembly for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 2287,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2027-01-26",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-042",
+    "routeId": "RT-030",
+    "purchaseOrderId": "PO-0055"
+  },
+  {
+    "equipmentId": "EQ-0118",
+    "name": "Inconel Alloy Piping Unit 2",
+    "description": "Inconel Alloy Piping for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 9311,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2027-02-10",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-043",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0056"
+  },
+  {
+    "equipmentId": "EQ-0119",
+    "name": "Duplex Steel Pipe Package Unit 2",
+    "description": "Duplex Steel Pipe Package for PRJ-002 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 6454,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2026-12-05",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-044",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0057"
+  },
+  {
+    "equipmentId": "EQ-0120",
+    "name": "Ball Valve 24\" 600#",
+    "description": "Ball Valve 24\" 600# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 6259,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-10-16",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-050",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0058"
+  },
+  {
+    "equipmentId": "EQ-0121",
+    "name": "Gate Valve 36\" 300#",
+    "description": "Gate Valve 36\" 300# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 8967,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-04-26",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-051",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0059"
+  },
+  {
+    "equipmentId": "EQ-0122",
+    "name": "Control Valve 8\" 150#",
+    "description": "Control Valve 8\" 150# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 838,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-06-25",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-052",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0060"
+  },
+  {
+    "equipmentId": "EQ-0123",
+    "name": "Safety Relief Valve",
+    "description": "Safety Relief Valve for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 619,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2027-06-27",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-053",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0061"
+  },
+  {
+    "equipmentId": "EQ-0124",
+    "name": "Check Valve 16\" 300#",
+    "description": "Check Valve 16\" 300# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 2648,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "8481.30",
+    "requiredOnSiteDate": "2026-12-11",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "size_inch": 16,
+      "class": 300
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-054",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0062"
+  },
+  {
+    "equipmentId": "EQ-0125",
+    "name": "Butterfly Valve 48\"",
+    "description": "Butterfly Valve 48\" for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 7143,
+    "dimensions": "2x1.5x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-05-01",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 48
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-050",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0058"
+  },
+  {
+    "equipmentId": "EQ-0126",
+    "name": "Ball Valve 24\" 600# Unit 2",
+    "description": "Ball Valve 24\" 600# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 7042,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-02-14",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-051",
+    "routeId": "RT-001",
+    "purchaseOrderId": "PO-0059"
+  },
+  {
+    "equipmentId": "EQ-0127",
+    "name": "Gate Valve 36\" 300# Unit 2",
+    "description": "Gate Valve 36\" 300# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 11977,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-10-02",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-052",
+    "routeId": "RT-012",
+    "purchaseOrderId": "PO-0060"
+  },
+  {
+    "equipmentId": "EQ-0128",
+    "name": "Control Valve 8\" 150# Unit 2",
+    "description": "Control Valve 8\" 150# for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 493,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-08-17",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-053",
+    "routeId": "RT-011",
+    "purchaseOrderId": "PO-0061"
+  },
+  {
+    "equipmentId": "EQ-0129",
+    "name": "Safety Relief Valve Unit 2",
+    "description": "Safety Relief Valve for PRJ-002 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 576,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2027-04-20",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-002",
+    "supplierId": "SUP-054",
+    "routeId": "RT-009",
+    "purchaseOrderId": "PO-0062"
+  },
+  {
+    "equipmentId": "EQ-0130",
+    "name": "Gas Turbine Generator",
+    "description": "Gas Turbine Generator for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 147000,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2028-01-04",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-001",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0063"
+  },
+  {
+    "equipmentId": "EQ-0131",
+    "name": "Steam Turbine",
+    "description": "Steam Turbine for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 78598,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2027-12-14",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-002",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0064"
+  },
+  {
+    "equipmentId": "EQ-0132",
+    "name": "Centrifugal Compressor",
+    "description": "Centrifugal Compressor for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 18060,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-07-11",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-003",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0065"
+  },
+  {
+    "equipmentId": "EQ-0133",
+    "name": "Process Gas Compressor",
+    "description": "Process Gas Compressor for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 27361,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-07-18",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-004",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0066"
+  },
+  {
+    "equipmentId": "EQ-0134",
+    "name": "Boiler Feed Water Pump",
+    "description": "Boiler Feed Water Pump for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 3200,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2028-08-10",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-005",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0067"
+  },
+  {
+    "equipmentId": "EQ-0135",
+    "name": "Centrifugal Pump",
+    "description": "Centrifugal Pump for PRJ-003 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 4003,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-06-25",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-006",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0068"
+  },
+  {
+    "equipmentId": "EQ-0136",
+    "name": "Crude Distillation Column",
+    "description": "Crude Distillation Column for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 258643,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-10-16",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-010",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0069"
+  },
+  {
+    "equipmentId": "EQ-0137",
+    "name": "Vacuum Distillation Column",
+    "description": "Vacuum Distillation Column for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 308310,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2027-09-12",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-011",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0070"
+  },
+  {
+    "equipmentId": "EQ-0138",
+    "name": "Pressure Vessel",
+    "description": "Pressure Vessel for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 82383,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-05-01",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-012",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0071"
+  },
+  {
+    "equipmentId": "EQ-0139",
+    "name": "Shell & Tube Heat Exchanger",
+    "description": "Shell & Tube Heat Exchanger for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11985,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2027-08-01",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-013",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0072"
+  },
+  {
+    "equipmentId": "EQ-0140",
+    "name": "Air Cooled Heat Exchanger",
+    "description": "Air Cooled Heat Exchanger for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 13763,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2027-07-19",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0073"
+  },
+  {
+    "equipmentId": "EQ-0141",
+    "name": "Reactor Vessel",
+    "description": "Reactor Vessel for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 93164,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2027-11-22",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-010",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0069"
+  },
+  {
+    "equipmentId": "EQ-0142",
+    "name": "Deaerator",
+    "description": "Deaerator for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 24957,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2028-06-26",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-011",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0070"
+  },
+  {
+    "equipmentId": "EQ-0143",
+    "name": "Flash Drum",
+    "description": "Flash Drum for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 17374,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-01-20",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-012",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0071"
+  },
+  {
+    "equipmentId": "EQ-0144",
+    "name": "Knock-out Drum",
+    "description": "Knock-out Drum for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11976,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-01-18",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-013",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0072"
+  },
+  {
+    "equipmentId": "EQ-0145",
+    "name": "Splitter Column",
+    "description": "Splitter Column for PRJ-003 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 118991,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-04-23",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-014",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0073"
+  },
+  {
+    "equipmentId": "EQ-0146",
+    "name": "33kV GIS Switchgear",
+    "description": "33kV GIS Switchgear for PRJ-003 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 16540,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2027-12-29",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-030",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0074"
+  },
+  {
+    "equipmentId": "EQ-0147",
+    "name": "Power Transformer 100MVA",
+    "description": "Power Transformer 100MVA for PRJ-003 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 117654,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2028-07-25",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-031",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0075"
+  },
+  {
+    "equipmentId": "EQ-0148",
+    "name": "Motor Control Center",
+    "description": "Motor Control Center for PRJ-003 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 5225,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2028-03-15",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-032",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0076"
+  },
+  {
+    "equipmentId": "EQ-0149",
+    "name": "UPS System 500kVA",
+    "description": "UPS System 500kVA for PRJ-003 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 2566,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2028-06-17",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-033",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0077"
+  },
+  {
+    "equipmentId": "EQ-0150",
+    "name": "Variable Frequency Drive",
+    "description": "Variable Frequency Drive for PRJ-003 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1921,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2028-06-16",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-030",
+    "routeId": "RT-010",
+    "purchaseOrderId": "PO-0074"
+  },
+  {
+    "equipmentId": "EQ-0151",
+    "name": "DCS System",
+    "description": "DCS System for PRJ-003 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 5398,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2028-02-07",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-020",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0078"
+  },
+  {
+    "equipmentId": "EQ-0152",
+    "name": "ESD System",
+    "description": "ESD System for PRJ-003 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2703,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2028-08-02",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-021",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0079"
+  },
+  {
+    "equipmentId": "EQ-0153",
+    "name": "Fire & Gas Detection System",
+    "description": "Fire & Gas Detection System for PRJ-003 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1297,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2027-08-05",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-022",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0080"
+  },
+  {
+    "equipmentId": "EQ-0154",
+    "name": "Control Valve Assembly",
+    "description": "Control Valve Assembly for PRJ-003 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1379,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2028-02-21",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-023",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0081"
+  },
+  {
+    "equipmentId": "EQ-0155",
+    "name": "Flow Meter Assembly",
+    "description": "Flow Meter Assembly for PRJ-003 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 230,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2028-04-03",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-024",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0082"
+  },
+  {
+    "equipmentId": "EQ-0156",
+    "name": "Alloy Steel Pipe Spools",
+    "description": "Alloy Steel Pipe Spools for PRJ-003 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 45272,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2027-08-17",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-040",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0083"
+  },
+  {
+    "equipmentId": "EQ-0157",
+    "name": "Large Bore CS Fittings",
+    "description": "Large Bore CS Fittings for PRJ-003 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 12999,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-05-13",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-041",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0084"
+  },
+  {
+    "equipmentId": "EQ-0158",
+    "name": "Expansion Joint Assembly",
+    "description": "Expansion Joint Assembly for PRJ-003 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 2489,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-08-19",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-042",
+    "routeId": "RT-007",
+    "purchaseOrderId": "PO-0085"
+  },
+  {
+    "equipmentId": "EQ-0159",
+    "name": "Inconel Alloy Piping",
+    "description": "Inconel Alloy Piping for PRJ-003 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 13958,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2027-09-21",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-043",
+    "routeId": "RT-004",
+    "purchaseOrderId": "PO-0086"
+  },
+  {
+    "equipmentId": "EQ-0160",
+    "name": "Ball Valve 24\" 600#",
+    "description": "Ball Valve 24\" 600# for PRJ-003 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 5828,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2028-06-29",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-050",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0087"
+  },
+  {
+    "equipmentId": "EQ-0161",
+    "name": "Gate Valve 36\" 300#",
+    "description": "Gate Valve 36\" 300# for PRJ-003 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 9455,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-11-04",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-051",
+    "routeId": "RT-003",
+    "purchaseOrderId": "PO-0088"
+  },
+  {
+    "equipmentId": "EQ-0162",
+    "name": "Control Valve 8\" 150#",
+    "description": "Control Valve 8\" 150# for PRJ-003 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 285,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2027-10-09",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-052",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0089"
+  },
+  {
+    "equipmentId": "EQ-0163",
+    "name": "Safety Relief Valve",
+    "description": "Safety Relief Valve for PRJ-003 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 572,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2028-06-01",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-003",
+    "supplierId": "SUP-053",
+    "routeId": "RT-002",
+    "purchaseOrderId": "PO-0090"
+  },
+  {
+    "equipmentId": "EQ-0164",
+    "name": "Gas Turbine Generator",
+    "description": "Gas Turbine Generator for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 129689,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2026-09-17",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-001",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0091"
+  },
+  {
+    "equipmentId": "EQ-0165",
+    "name": "Steam Turbine",
+    "description": "Steam Turbine for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 81420,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2026-09-12",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-002",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0092"
+  },
+  {
+    "equipmentId": "EQ-0166",
+    "name": "Centrifugal Compressor",
+    "description": "Centrifugal Compressor for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 39641,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2026-01-02",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-003",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0093"
+  },
+  {
+    "equipmentId": "EQ-0167",
+    "name": "Process Gas Compressor",
+    "description": "Process Gas Compressor for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 47358,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2027-01-21",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-004",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0094"
+  },
+  {
+    "equipmentId": "EQ-0168",
+    "name": "Boiler Feed Water Pump",
+    "description": "Boiler Feed Water Pump for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 7418,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-02-05",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-005",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0095"
+  },
+  {
+    "equipmentId": "EQ-0169",
+    "name": "Centrifugal Pump",
+    "description": "Centrifugal Pump for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 4162,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2027-01-27",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-006",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0096"
+  },
+  {
+    "equipmentId": "EQ-0170",
+    "name": "Reciprocating Compressor",
+    "description": "Reciprocating Compressor for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 18102,
+    "dimensions": "5x3x3",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2026-11-21",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "cylinders": 4,
+      "discharge_pressure_bar": 350
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-001",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0091"
+  },
+  {
+    "equipmentId": "EQ-0171",
+    "name": "Screw Compressor",
+    "description": "Screw Compressor for PRJ-004 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 8908,
+    "dimensions": "4x2x2",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2026-12-29",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "flow_rate_m3h": 8000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-002",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0092"
+  },
+  {
+    "equipmentId": "EQ-0172",
+    "name": "Crude Distillation Column",
+    "description": "Crude Distillation Column for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 297841,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-11-12",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-010",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0097"
+  },
+  {
+    "equipmentId": "EQ-0173",
+    "name": "Vacuum Distillation Column",
+    "description": "Vacuum Distillation Column for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 321037,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-08-27",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-011",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0098"
+  },
+  {
+    "equipmentId": "EQ-0174",
+    "name": "Pressure Vessel",
+    "description": "Pressure Vessel for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 51465,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-09-25",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-012",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0099"
+  },
+  {
+    "equipmentId": "EQ-0175",
+    "name": "Shell & Tube Heat Exchanger",
+    "description": "Shell & Tube Heat Exchanger for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 25444,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2026-05-13",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-013",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0100"
+  },
+  {
+    "equipmentId": "EQ-0176",
+    "name": "Air Cooled Heat Exchanger",
+    "description": "Air Cooled Heat Exchanger for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 14498,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2027-01-24",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-014",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0101"
+  },
+  {
+    "equipmentId": "EQ-0177",
+    "name": "Reactor Vessel",
+    "description": "Reactor Vessel for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 106712,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2026-03-12",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-010",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0097"
+  },
+  {
+    "equipmentId": "EQ-0178",
+    "name": "Deaerator",
+    "description": "Deaerator for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 28544,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2026-01-27",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-011",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0098"
+  },
+  {
+    "equipmentId": "EQ-0179",
+    "name": "Flash Drum",
+    "description": "Flash Drum for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 13728,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-07-27",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-012",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0099"
+  },
+  {
+    "equipmentId": "EQ-0180",
+    "name": "Knock-out Drum",
+    "description": "Knock-out Drum for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11289,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-04-06",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-013",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0100"
+  },
+  {
+    "equipmentId": "EQ-0181",
+    "name": "Splitter Column",
+    "description": "Splitter Column for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 171355,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-07-31",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-014",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0101"
+  },
+  {
+    "equipmentId": "EQ-0182",
+    "name": "Absorber Column",
+    "description": "Absorber Column for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 106822,
+    "dimensions": "35x5x5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-08-30",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "packing_type": "Random"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-010",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0097"
+  },
+  {
+    "equipmentId": "EQ-0183",
+    "name": "Stripper Column",
+    "description": "Stripper Column for PRJ-004 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 97080,
+    "dimensions": "30x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2026-12-03",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "reboiler_duty_mw": 25
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-011",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0098"
+  },
+  {
+    "equipmentId": "EQ-0184",
+    "name": "33kV GIS Switchgear",
+    "description": "33kV GIS Switchgear for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 18091,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2026-01-14",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-030",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0102"
+  },
+  {
+    "equipmentId": "EQ-0185",
+    "name": "Power Transformer 100MVA",
+    "description": "Power Transformer 100MVA for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 120931,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2026-07-23",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-031",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0103"
+  },
+  {
+    "equipmentId": "EQ-0186",
+    "name": "Motor Control Center",
+    "description": "Motor Control Center for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 5640,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2025-12-22",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-032",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0104"
+  },
+  {
+    "equipmentId": "EQ-0187",
+    "name": "UPS System 500kVA",
+    "description": "UPS System 500kVA for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 3142,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-07-16",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-033",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0105"
+  },
+  {
+    "equipmentId": "EQ-0188",
+    "name": "Variable Frequency Drive",
+    "description": "Variable Frequency Drive for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1667,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-04-25",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-030",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0102"
+  },
+  {
+    "equipmentId": "EQ-0189",
+    "name": "Bus Duct System",
+    "description": "Bus Duct System for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1117,
+    "dimensions": "50x0.5x0.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2026-06-23",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "rating_a": 5000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-031",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0103"
+  },
+  {
+    "equipmentId": "EQ-0190",
+    "name": "Emergency Diesel Generator",
+    "description": "Emergency Diesel Generator for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 30976,
+    "dimensions": "8x3x3.5",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2026-11-15",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "power_kva": 3000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-032",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0104"
+  },
+  {
+    "equipmentId": "EQ-0191",
+    "name": "Battery Energy Storage",
+    "description": "Battery Energy Storage for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 10576,
+    "dimensions": "6x3x3",
+    "hsCode": "8507.60",
+    "requiredOnSiteDate": "2026-10-11",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "capacity_kwh": 2000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-033",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0105"
+  },
+  {
+    "equipmentId": "EQ-0192",
+    "name": "33kV GIS Switchgear Unit 2",
+    "description": "33kV GIS Switchgear for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 17106,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2027-02-26",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-030",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0102"
+  },
+  {
+    "equipmentId": "EQ-0193",
+    "name": "Power Transformer 100MVA Unit 2",
+    "description": "Power Transformer 100MVA for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 71221,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2026-10-31",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-031",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0103"
+  },
+  {
+    "equipmentId": "EQ-0194",
+    "name": "Motor Control Center Unit 2",
+    "description": "Motor Control Center for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 7548,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2026-02-08",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-032",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0104"
+  },
+  {
+    "equipmentId": "EQ-0195",
+    "name": "UPS System 500kVA Unit 2",
+    "description": "UPS System 500kVA for PRJ-004 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 4645,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2026-03-04",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-033",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0105"
+  },
+  {
+    "equipmentId": "EQ-0196",
+    "name": "DCS System",
+    "description": "DCS System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2141,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2027-01-15",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-020",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0106"
+  },
+  {
+    "equipmentId": "EQ-0197",
+    "name": "ESD System",
+    "description": "ESD System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2656,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-03-14",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-021",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0107"
+  },
+  {
+    "equipmentId": "EQ-0198",
+    "name": "Fire & Gas Detection System",
+    "description": "Fire & Gas Detection System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1859,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2026-05-10",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-022",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0108"
+  },
+  {
+    "equipmentId": "EQ-0199",
+    "name": "Control Valve Assembly",
+    "description": "Control Valve Assembly for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1333,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-06-05",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-023",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0109"
+  },
+  {
+    "equipmentId": "EQ-0200",
+    "name": "Flow Meter Assembly",
+    "description": "Flow Meter Assembly for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 431,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2026-05-26",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-024",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0110"
+  },
+  {
+    "equipmentId": "EQ-0201",
+    "name": "Pressure Transmitter Package",
+    "description": "Pressure Transmitter Package for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 146,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2026-10-16",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-020",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0106"
+  },
+  {
+    "equipmentId": "EQ-0202",
+    "name": "Level Transmitter Package",
+    "description": "Level Transmitter Package for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 89,
+    "dimensions": "0.5x0.2x0.2",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2027-01-01",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "type": "Guided Wave Radar"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-021",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0107"
+  },
+  {
+    "equipmentId": "EQ-0203",
+    "name": "Analyzer System",
+    "description": "Analyzer System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 989,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.80",
+    "requiredOnSiteDate": "2026-02-16",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "type": "Gas Chromatograph",
+      "streams": 8
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-022",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0108"
+  },
+  {
+    "equipmentId": "EQ-0204",
+    "name": "DCS System Unit 2",
+    "description": "DCS System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 3569,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-11-13",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-023",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0109"
+  },
+  {
+    "equipmentId": "EQ-0205",
+    "name": "ESD System Unit 2",
+    "description": "ESD System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 3967,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2026-05-06",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-024",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0110"
+  },
+  {
+    "equipmentId": "EQ-0206",
+    "name": "Fire & Gas Detection System Unit 2",
+    "description": "Fire & Gas Detection System for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 705,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2026-01-01",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-020",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0106"
+  },
+  {
+    "equipmentId": "EQ-0207",
+    "name": "Control Valve Assembly Unit 2",
+    "description": "Control Valve Assembly for PRJ-004 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 665,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-08-31",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-021",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0107"
+  },
+  {
+    "equipmentId": "EQ-0208",
+    "name": "Alloy Steel Pipe Spools",
+    "description": "Alloy Steel Pipe Spools for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 10927,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2026-03-06",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-040",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0111"
+  },
+  {
+    "equipmentId": "EQ-0209",
+    "name": "Large Bore CS Fittings",
+    "description": "Large Bore CS Fittings for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 9494,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2027-02-08",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-041",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0112"
+  },
+  {
+    "equipmentId": "EQ-0210",
+    "name": "Expansion Joint Assembly",
+    "description": "Expansion Joint Assembly for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 1017,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2026-04-11",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-042",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0113"
+  },
+  {
+    "equipmentId": "EQ-0211",
+    "name": "Inconel Alloy Piping",
+    "description": "Inconel Alloy Piping for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 3200,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2026-05-14",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-043",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0114"
+  },
+  {
+    "equipmentId": "EQ-0212",
+    "name": "Duplex Steel Pipe Package",
+    "description": "Duplex Steel Pipe Package for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 20686,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2026-07-21",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-044",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0115"
+  },
+  {
+    "equipmentId": "EQ-0213",
+    "name": "Alloy Steel Pipe Spools Unit 2",
+    "description": "Alloy Steel Pipe Spools for PRJ-004 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 13367,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2026-10-25",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-040",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0111"
+  },
+  {
+    "equipmentId": "EQ-0214",
+    "name": "Ball Valve 24\" 600#",
+    "description": "Ball Valve 24\" 600# for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 2535,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-08-10",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-050",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0116"
+  },
+  {
+    "equipmentId": "EQ-0215",
+    "name": "Gate Valve 36\" 300#",
+    "description": "Gate Valve 36\" 300# for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 3878,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-12-16",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-051",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0117"
+  },
+  {
+    "equipmentId": "EQ-0216",
+    "name": "Control Valve 8\" 150#",
+    "description": "Control Valve 8\" 150# for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 287,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-10-27",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-052",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0118"
+  },
+  {
+    "equipmentId": "EQ-0217",
+    "name": "Safety Relief Valve",
+    "description": "Safety Relief Valve for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 720,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2026-05-02",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-053",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0119"
+  },
+  {
+    "equipmentId": "EQ-0218",
+    "name": "Check Valve 16\" 300#",
+    "description": "Check Valve 16\" 300# for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 4177,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "8481.30",
+    "requiredOnSiteDate": "2026-06-09",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 16,
+      "class": 300
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-054",
+    "routeId": "RT-021",
+    "purchaseOrderId": "PO-0120"
+  },
+  {
+    "equipmentId": "EQ-0219",
+    "name": "Butterfly Valve 48\"",
+    "description": "Butterfly Valve 48\" for PRJ-004 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 11253,
+    "dimensions": "2x1.5x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2026-10-02",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "size_inch": 48
+    },
+    "projectId": "PRJ-004",
+    "supplierId": "SUP-050",
+    "routeId": "RT-020",
+    "purchaseOrderId": "PO-0116"
+  },
+  {
+    "equipmentId": "EQ-0220",
+    "name": "Gas Turbine Generator",
+    "description": "Gas Turbine Generator for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 120026,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2028-12-16",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-001",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0121"
+  },
+  {
+    "equipmentId": "EQ-0221",
+    "name": "Steam Turbine",
+    "description": "Steam Turbine for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 99952,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2028-09-20",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-002",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0122"
+  },
+  {
+    "equipmentId": "EQ-0222",
+    "name": "Centrifugal Compressor",
+    "description": "Centrifugal Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 35496,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2029-06-17",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-003",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0123"
+  },
+  {
+    "equipmentId": "EQ-0223",
+    "name": "Process Gas Compressor",
+    "description": "Process Gas Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 25146,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2029-06-03",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-004",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0124"
+  },
+  {
+    "equipmentId": "EQ-0224",
+    "name": "Boiler Feed Water Pump",
+    "description": "Boiler Feed Water Pump for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 4282,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2029-10-02",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-005",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0125"
+  },
+  {
+    "equipmentId": "EQ-0225",
+    "name": "Centrifugal Pump",
+    "description": "Centrifugal Pump for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 4323,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2028-12-03",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-006",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0126"
+  },
+  {
+    "equipmentId": "EQ-0226",
+    "name": "Reciprocating Compressor",
+    "description": "Reciprocating Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 11069,
+    "dimensions": "5x3x3",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2029-06-07",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "cylinders": 4,
+      "discharge_pressure_bar": 350
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-001",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0121"
+  },
+  {
+    "equipmentId": "EQ-0227",
+    "name": "Screw Compressor",
+    "description": "Screw Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 12438,
+    "dimensions": "4x2x2",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2029-08-28",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "flow_rate_m3h": 8000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-002",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0122"
+  },
+  {
+    "equipmentId": "EQ-0228",
+    "name": "Diesel Generator Set",
+    "description": "Diesel Generator Set for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 14482,
+    "dimensions": "6x2.5x3",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2029-02-28",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "power_kva": 2500,
+      "voltage": 11000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-003",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0123"
+  },
+  {
+    "equipmentId": "EQ-0229",
+    "name": "Gas Turbine Generator Unit 2",
+    "description": "Gas Turbine Generator for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 99528,
+    "dimensions": "12x5x5",
+    "hsCode": "8406.82",
+    "requiredOnSiteDate": "2029-05-20",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "power_output_mw": 50,
+      "fuel_type": "Natural Gas",
+      "efficiency_pct": 38
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-004",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0124"
+  },
+  {
+    "equipmentId": "EQ-0230",
+    "name": "Steam Turbine Unit 2",
+    "description": "Steam Turbine for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 63908,
+    "dimensions": "10x4x4",
+    "hsCode": "8406.81",
+    "requiredOnSiteDate": "2029-07-11",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "power_output_mw": 30,
+      "inlet_pressure_bar": 120,
+      "speed_rpm": 3000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-005",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0125"
+  },
+  {
+    "equipmentId": "EQ-0231",
+    "name": "Centrifugal Compressor Unit 2",
+    "description": "Centrifugal Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 29390,
+    "dimensions": "6x3x3",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2029-08-01",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "flow_rate_m3h": 50000,
+      "discharge_pressure_bar": 80
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-006",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0126"
+  },
+  {
+    "equipmentId": "EQ-0232",
+    "name": "Process Gas Compressor Unit 2",
+    "description": "Process Gas Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Critical",
+    "weight": 42928,
+    "dimensions": "8x4x4",
+    "hsCode": "8414.80",
+    "requiredOnSiteDate": "2029-03-11",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "gas_type": "Mixed Hydrocarbon",
+      "stages": 3
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-001",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0121"
+  },
+  {
+    "equipmentId": "EQ-0233",
+    "name": "Boiler Feed Water Pump Unit 2",
+    "description": "Boiler Feed Water Pump for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 6586,
+    "dimensions": "3x1.5x1.5",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2029-08-23",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "flow_rate_m3h": 500,
+      "head_m": 800
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-002",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0122"
+  },
+  {
+    "equipmentId": "EQ-0234",
+    "name": "Centrifugal Pump Unit 2",
+    "description": "Centrifugal Pump for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "Medium",
+    "weight": 3269,
+    "dimensions": "2x1x1",
+    "hsCode": "8413.70",
+    "requiredOnSiteDate": "2028-09-22",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "flow_rate_m3h": 200,
+      "material": "Duplex SS"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-003",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0123"
+  },
+  {
+    "equipmentId": "EQ-0235",
+    "name": "Reciprocating Compressor Unit 2",
+    "description": "Reciprocating Compressor for PRJ-005 - Rotating equipment",
+    "category": "Rotating",
+    "criticality": "High",
+    "weight": 10847,
+    "dimensions": "5x3x3",
+    "hsCode": "8414.40",
+    "requiredOnSiteDate": "2029-08-18",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "cylinders": 4,
+      "discharge_pressure_bar": 350
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-004",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0124"
+  },
+  {
+    "equipmentId": "EQ-0236",
+    "name": "Crude Distillation Column",
+    "description": "Crude Distillation Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 350477,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-10-24",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-010",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0127"
+  },
+  {
+    "equipmentId": "EQ-0237",
+    "name": "Vacuum Distillation Column",
+    "description": "Vacuum Distillation Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 320044,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-09-11",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-011",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0129"
+  },
+  {
+    "equipmentId": "EQ-0238",
+    "name": "Pressure Vessel",
+    "description": "Pressure Vessel for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 98021,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-11-04",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-012",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0131"
+  },
+  {
+    "equipmentId": "EQ-0239",
+    "name": "Shell & Tube Heat Exchanger",
+    "description": "Shell & Tube Heat Exchanger for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 16894,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2028-12-08",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-013",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0133"
+  },
+  {
+    "equipmentId": "EQ-0240",
+    "name": "Air Cooled Heat Exchanger",
+    "description": "Air Cooled Heat Exchanger for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 10989,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2029-02-05",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-014",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0135"
+  },
+  {
+    "equipmentId": "EQ-0241",
+    "name": "Reactor Vessel",
+    "description": "Reactor Vessel for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 167374,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2029-04-22",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-010",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0127"
+  },
+  {
+    "equipmentId": "EQ-0242",
+    "name": "Deaerator",
+    "description": "Deaerator for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 20807,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2029-03-07",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-011",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0129"
+  },
+  {
+    "equipmentId": "EQ-0243",
+    "name": "Flash Drum",
+    "description": "Flash Drum for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 15855,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-03-12",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-012",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0131"
+  },
+  {
+    "equipmentId": "EQ-0244",
+    "name": "Knock-out Drum",
+    "description": "Knock-out Drum for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 10451,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-08-19",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-013",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0133"
+  },
+  {
+    "equipmentId": "EQ-0245",
+    "name": "Splitter Column",
+    "description": "Splitter Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 102372,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-08-05",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-014",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0135"
+  },
+  {
+    "equipmentId": "EQ-0246",
+    "name": "Absorber Column",
+    "description": "Absorber Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 136200,
+    "dimensions": "35x5x5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-07-15",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "packing_type": "Random"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-010",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0127"
+  },
+  {
+    "equipmentId": "EQ-0247",
+    "name": "Stripper Column",
+    "description": "Stripper Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 94165,
+    "dimensions": "30x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-09-06",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "reboiler_duty_mw": 25
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-011",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0129"
+  },
+  {
+    "equipmentId": "EQ-0248",
+    "name": "Storage Tank",
+    "description": "Storage Tank for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Low",
+    "weight": 60804,
+    "dimensions": "20x20x15",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-09-11",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_m3": 5000,
+      "roof_type": "Floating"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-012",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0131"
+  },
+  {
+    "equipmentId": "EQ-0249",
+    "name": "Crude Distillation Column Unit 2",
+    "description": "Crude Distillation Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 349226,
+    "dimensions": "50x6x6",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-09-07",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "trays": 50,
+      "design_pressure_bar": 5
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-013",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0133"
+  },
+  {
+    "equipmentId": "EQ-0250",
+    "name": "Vacuum Distillation Column Unit 2",
+    "description": "Vacuum Distillation Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 263974,
+    "dimensions": "45x8x8",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-07-28",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "trays": 30,
+      "packing_type": "Structured"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-014",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0135"
+  },
+  {
+    "equipmentId": "EQ-0251",
+    "name": "Pressure Vessel Unit 2",
+    "description": "Pressure Vessel for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 93532,
+    "dimensions": "15x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-08-02",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "design_pressure_bar": 45,
+      "material": "SA516 Gr70"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-010",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0127"
+  },
+  {
+    "equipmentId": "EQ-0252",
+    "name": "Shell & Tube Heat Exchanger Unit 2",
+    "description": "Shell & Tube Heat Exchanger for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 15379,
+    "dimensions": "8x2x2",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2029-04-27",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "duty_mw": 15,
+      "tube_material": "Titanium"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-011",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0129"
+  },
+  {
+    "equipmentId": "EQ-0253",
+    "name": "Air Cooled Heat Exchanger Unit 2",
+    "description": "Air Cooled Heat Exchanger for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 26096,
+    "dimensions": "12x6x4",
+    "hsCode": "8419.50",
+    "requiredOnSiteDate": "2029-03-09",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "duty_mw": 20,
+      "fans": 6
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-012",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0131"
+  },
+  {
+    "equipmentId": "EQ-0254",
+    "name": "Reactor Vessel Unit 2",
+    "description": "Reactor Vessel for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Critical",
+    "weight": 109743,
+    "dimensions": "20x5x5",
+    "hsCode": "8419.89",
+    "requiredOnSiteDate": "2029-02-09",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "catalyst_volume_m3": 150,
+      "design_pressure_bar": 200
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-013",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0133"
+  },
+  {
+    "equipmentId": "EQ-0255",
+    "name": "Deaerator Unit 2",
+    "description": "Deaerator for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 26330,
+    "dimensions": "8x3x3",
+    "hsCode": "8404.10",
+    "requiredOnSiteDate": "2028-10-02",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "capacity_tph": 500
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-014",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0135"
+  },
+  {
+    "equipmentId": "EQ-0256",
+    "name": "Flash Drum Unit 2",
+    "description": "Flash Drum for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 11807,
+    "dimensions": "6x2.5x2.5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2028-08-02",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "design_pressure_bar": 35
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-010",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0128"
+  },
+  {
+    "equipmentId": "EQ-0257",
+    "name": "Knock-out Drum Unit 2",
+    "description": "Knock-out Drum for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "Medium",
+    "weight": 6993,
+    "dimensions": "5x2x2",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-02-12",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "design_pressure_bar": 20
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-011",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0130"
+  },
+  {
+    "equipmentId": "EQ-0258",
+    "name": "Splitter Column Unit 2",
+    "description": "Splitter Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 110277,
+    "dimensions": "40x4x4",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-06-28",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "trays": 80
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-012",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0132"
+  },
+  {
+    "equipmentId": "EQ-0259",
+    "name": "Absorber Column Unit 2",
+    "description": "Absorber Column for PRJ-005 - Static equipment",
+    "category": "Static",
+    "criticality": "High",
+    "weight": 59150,
+    "dimensions": "35x5x5",
+    "hsCode": "7309.00",
+    "requiredOnSiteDate": "2029-05-15",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "packing_type": "Random"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-013",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0134"
+  },
+  {
+    "equipmentId": "EQ-0260",
+    "name": "33kV GIS Switchgear",
+    "description": "33kV GIS Switchgear for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 16318,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2029-05-20",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-030",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0136"
+  },
+  {
+    "equipmentId": "EQ-0261",
+    "name": "Power Transformer 100MVA",
+    "description": "Power Transformer 100MVA for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 99132,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2028-08-01",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-031",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0137"
+  },
+  {
+    "equipmentId": "EQ-0262",
+    "name": "Motor Control Center",
+    "description": "Motor Control Center for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 4217,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2029-02-17",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-032",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0138"
+  },
+  {
+    "equipmentId": "EQ-0263",
+    "name": "UPS System 500kVA",
+    "description": "UPS System 500kVA for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 3413,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2029-04-16",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-033",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0139"
+  },
+  {
+    "equipmentId": "EQ-0264",
+    "name": "Variable Frequency Drive",
+    "description": "Variable Frequency Drive for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1432,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2029-04-22",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-030",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0136"
+  },
+  {
+    "equipmentId": "EQ-0265",
+    "name": "Bus Duct System",
+    "description": "Bus Duct System for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 3342,
+    "dimensions": "50x0.5x0.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2029-03-21",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "rating_a": 5000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-031",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0137"
+  },
+  {
+    "equipmentId": "EQ-0266",
+    "name": "Emergency Diesel Generator",
+    "description": "Emergency Diesel Generator for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 16430,
+    "dimensions": "8x3x3.5",
+    "hsCode": "8502.13",
+    "requiredOnSiteDate": "2029-04-24",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "power_kva": 3000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-032",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0138"
+  },
+  {
+    "equipmentId": "EQ-0267",
+    "name": "Battery Energy Storage",
+    "description": "Battery Energy Storage for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 11325,
+    "dimensions": "6x3x3",
+    "hsCode": "8507.60",
+    "requiredOnSiteDate": "2028-10-29",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "capacity_kwh": 2000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-033",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0139"
+  },
+  {
+    "equipmentId": "EQ-0268",
+    "name": "33kV GIS Switchgear Unit 2",
+    "description": "33kV GIS Switchgear for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 8606,
+    "dimensions": "8x2x3",
+    "hsCode": "8537.20",
+    "requiredOnSiteDate": "2029-07-31",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "voltage_kv": 33,
+      "panels": 12
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-030",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0136"
+  },
+  {
+    "equipmentId": "EQ-0269",
+    "name": "Power Transformer 100MVA Unit 2",
+    "description": "Power Transformer 100MVA for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Critical",
+    "weight": 73154,
+    "dimensions": "8x4x5",
+    "hsCode": "8504.23",
+    "requiredOnSiteDate": "2028-07-13",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "capacity_mva": 100,
+      "ratio": "132/33kV"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-031",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0137"
+  },
+  {
+    "equipmentId": "EQ-0270",
+    "name": "Motor Control Center Unit 2",
+    "description": "Motor Control Center for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 7308,
+    "dimensions": "6x1x2.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2029-02-12",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "voltage_v": 400,
+      "sections": 20
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-032",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0138"
+  },
+  {
+    "equipmentId": "EQ-0271",
+    "name": "UPS System 500kVA Unit 2",
+    "description": "UPS System 500kVA for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "High",
+    "weight": 3679,
+    "dimensions": "3x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2028-07-15",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "capacity_kva": 500,
+      "autonomy_min": 30
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-033",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0139"
+  },
+  {
+    "equipmentId": "EQ-0272",
+    "name": "Variable Frequency Drive Unit 2",
+    "description": "Variable Frequency Drive for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 1461,
+    "dimensions": "2x1x2",
+    "hsCode": "8504.40",
+    "requiredOnSiteDate": "2028-08-29",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "motor_kw": 1500
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-030",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0136"
+  },
+  {
+    "equipmentId": "EQ-0273",
+    "name": "Bus Duct System Unit 2",
+    "description": "Bus Duct System for PRJ-005 - Electrical equipment",
+    "category": "Electrical",
+    "criticality": "Medium",
+    "weight": 3552,
+    "dimensions": "50x0.5x0.5",
+    "hsCode": "8537.10",
+    "requiredOnSiteDate": "2028-10-14",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "rating_a": 5000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-031",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0137"
+  },
+  {
+    "equipmentId": "EQ-0274",
+    "name": "DCS System",
+    "description": "DCS System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 4691,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2028-07-24",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-020",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0140"
+  },
+  {
+    "equipmentId": "EQ-0275",
+    "name": "ESD System",
+    "description": "ESD System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 2297,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2028-11-17",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-021",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0141"
+  },
+  {
+    "equipmentId": "EQ-0276",
+    "name": "Fire & Gas Detection System",
+    "description": "Fire & Gas Detection System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1764,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2029-08-29",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-022",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0142"
+  },
+  {
+    "equipmentId": "EQ-0277",
+    "name": "Control Valve Assembly",
+    "description": "Control Valve Assembly for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 665,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2028-09-16",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-023",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0143"
+  },
+  {
+    "equipmentId": "EQ-0278",
+    "name": "Flow Meter Assembly",
+    "description": "Flow Meter Assembly for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 100,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2028-09-09",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-024",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0144"
+  },
+  {
+    "equipmentId": "EQ-0279",
+    "name": "Pressure Transmitter Package",
+    "description": "Pressure Transmitter Package for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 72,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2028-10-13",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-020",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0140"
+  },
+  {
+    "equipmentId": "EQ-0280",
+    "name": "Level Transmitter Package",
+    "description": "Level Transmitter Package for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 41,
+    "dimensions": "0.5x0.2x0.2",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2029-04-20",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "type": "Guided Wave Radar"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-021",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0141"
+  },
+  {
+    "equipmentId": "EQ-0281",
+    "name": "Analyzer System",
+    "description": "Analyzer System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1968,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.80",
+    "requiredOnSiteDate": "2029-03-26",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "type": "Gas Chromatograph",
+      "streams": 8
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-022",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0142"
+  },
+  {
+    "equipmentId": "EQ-0282",
+    "name": "DCS System Unit 2",
+    "description": "DCS System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 4000,
+    "dimensions": "4x2x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2029-01-05",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "io_count": 5000,
+      "controllers": 12
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-023",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0143"
+  },
+  {
+    "equipmentId": "EQ-0283",
+    "name": "ESD System Unit 2",
+    "description": "ESD System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1696,
+    "dimensions": "3x1.5x2",
+    "hsCode": "9032.89",
+    "requiredOnSiteDate": "2029-07-06",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "sil_level": 3,
+      "io_count": 2000
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-024",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0144"
+  },
+  {
+    "equipmentId": "EQ-0284",
+    "name": "Fire & Gas Detection System Unit 2",
+    "description": "Fire & Gas Detection System for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Critical",
+    "weight": 1769,
+    "dimensions": "2x1x2",
+    "hsCode": "9027.10",
+    "requiredOnSiteDate": "2028-10-19",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "detectors": 500,
+      "zones": 50
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-020",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0140"
+  },
+  {
+    "equipmentId": "EQ-0285",
+    "name": "Control Valve Assembly Unit 2",
+    "description": "Control Valve Assembly for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "High",
+    "weight": 1394,
+    "dimensions": "1x0.5x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-07-22",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "size_inch": 8,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-021",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0141"
+  },
+  {
+    "equipmentId": "EQ-0286",
+    "name": "Flow Meter Assembly Unit 2",
+    "description": "Flow Meter Assembly for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Medium",
+    "weight": 376,
+    "dimensions": "0.5x0.3x0.3",
+    "hsCode": "9026.10",
+    "requiredOnSiteDate": "2029-05-26",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "type": "Coriolis"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-022",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0142"
+  },
+  {
+    "equipmentId": "EQ-0287",
+    "name": "Pressure Transmitter Package Unit 2",
+    "description": "Pressure Transmitter Package for PRJ-005 - Instrumentation equipment",
+    "category": "Instrumentation",
+    "criticality": "Low",
+    "weight": 200,
+    "dimensions": "0.3x0.2x0.2",
+    "hsCode": "9026.20",
+    "requiredOnSiteDate": "2029-09-29",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "range_bar": "0-100"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-023",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0143"
+  },
+  {
+    "equipmentId": "EQ-0288",
+    "name": "Alloy Steel Pipe Spools",
+    "description": "Alloy Steel Pipe Spools for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 45821,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2029-07-15",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-040",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0145"
+  },
+  {
+    "equipmentId": "EQ-0289",
+    "name": "Large Bore CS Fittings",
+    "description": "Large Bore CS Fittings for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 10661,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-12-07",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-041",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0146"
+  },
+  {
+    "equipmentId": "EQ-0290",
+    "name": "Expansion Joint Assembly",
+    "description": "Expansion Joint Assembly for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 1524,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2029-02-12",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-042",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0147"
+  },
+  {
+    "equipmentId": "EQ-0291",
+    "name": "Inconel Alloy Piping",
+    "description": "Inconel Alloy Piping for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 9302,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2028-07-24",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-043",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0148"
+  },
+  {
+    "equipmentId": "EQ-0292",
+    "name": "Duplex Steel Pipe Package",
+    "description": "Duplex Steel Pipe Package for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 12772,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2029-03-22",
+    "installationSequencePriority": 10,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-044",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0149"
+  },
+  {
+    "equipmentId": "EQ-0293",
+    "name": "Alloy Steel Pipe Spools Unit 2",
+    "description": "Alloy Steel Pipe Spools for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 47670,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2029-05-05",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-040",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0145"
+  },
+  {
+    "equipmentId": "EQ-0294",
+    "name": "Large Bore CS Fittings Unit 2",
+    "description": "Large Bore CS Fittings for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 18599,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-10-31",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-041",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0146"
+  },
+  {
+    "equipmentId": "EQ-0295",
+    "name": "Expansion Joint Assembly Unit 2",
+    "description": "Expansion Joint Assembly for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 533,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-12-18",
+    "installationSequencePriority": 1,
+    "specifications": {
+      "type": "Metallic Bellows"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-042",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0147"
+  },
+  {
+    "equipmentId": "EQ-0296",
+    "name": "Inconel Alloy Piping Unit 2",
+    "description": "Inconel Alloy Piping for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 7689,
+    "dimensions": "6x1x1",
+    "hsCode": "7507.12",
+    "requiredOnSiteDate": "2028-09-01",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "material": "Inconel 625"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-043",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0148"
+  },
+  {
+    "equipmentId": "EQ-0297",
+    "name": "Duplex Steel Pipe Package Unit 2",
+    "description": "Duplex Steel Pipe Package for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "High",
+    "weight": 12176,
+    "dimensions": "10x1.5x1.5",
+    "hsCode": "7304.49",
+    "requiredOnSiteDate": "2028-11-12",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "material": "UNS S31803"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-044",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0149"
+  },
+  {
+    "equipmentId": "EQ-0298",
+    "name": "Alloy Steel Pipe Spools Unit 3",
+    "description": "Alloy Steel Pipe Spools for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Medium",
+    "weight": 18963,
+    "dimensions": "12x2x2",
+    "hsCode": "7304.59",
+    "requiredOnSiteDate": "2028-11-16",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "material": "P91",
+      "sizes": "2\"-24\""
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-040",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0145"
+  },
+  {
+    "equipmentId": "EQ-0299",
+    "name": "Large Bore CS Fittings Unit 3",
+    "description": "Large Bore CS Fittings for PRJ-005 - Piping equipment",
+    "category": "Piping",
+    "criticality": "Low",
+    "weight": 10061,
+    "dimensions": "Various",
+    "hsCode": "7307.99",
+    "requiredOnSiteDate": "2028-08-26",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "material": "A234 WPB"
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-041",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0146"
+  },
+  {
+    "equipmentId": "EQ-0300",
+    "name": "Ball Valve 24\" 600#",
+    "description": "Ball Valve 24\" 600# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 6747,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-03-31",
+    "installationSequencePriority": 3,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-050",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0150"
+  },
+  {
+    "equipmentId": "EQ-0301",
+    "name": "Gate Valve 36\" 300#",
+    "description": "Gate Valve 36\" 300# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 7835,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-04-19",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-051",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0151"
+  },
+  {
+    "equipmentId": "EQ-0302",
+    "name": "Control Valve 8\" 150#",
+    "description": "Control Valve 8\" 150# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 405,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-07-28",
+    "installationSequencePriority": 9,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-052",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0152"
+  },
+  {
+    "equipmentId": "EQ-0303",
+    "name": "Safety Relief Valve",
+    "description": "Safety Relief Valve for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 643,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2029-01-20",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-053",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0153"
+  },
+  {
+    "equipmentId": "EQ-0304",
+    "name": "Check Valve 16\" 300#",
+    "description": "Check Valve 16\" 300# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 2052,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "8481.30",
+    "requiredOnSiteDate": "2028-08-07",
+    "installationSequencePriority": 8,
+    "specifications": {
+      "size_inch": 16,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-054",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0154"
+  },
+  {
+    "equipmentId": "EQ-0305",
+    "name": "Butterfly Valve 48\"",
+    "description": "Butterfly Valve 48\" for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 9549,
+    "dimensions": "2x1.5x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2028-08-18",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 48
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-050",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0150"
+  },
+  {
+    "equipmentId": "EQ-0306",
+    "name": "Ball Valve 24\" 600# Unit 2",
+    "description": "Ball Valve 24\" 600# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 2616,
+    "dimensions": "1.5x0.8x1",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-07-23",
+    "installationSequencePriority": 4,
+    "specifications": {
+      "size_inch": 24,
+      "class": 600
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-051",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0151"
+  },
+  {
+    "equipmentId": "EQ-0307",
+    "name": "Gate Valve 36\" 300# Unit 2",
+    "description": "Gate Valve 36\" 300# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "High",
+    "weight": 8992,
+    "dimensions": "2x1x1.5",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-08-18",
+    "installationSequencePriority": 7,
+    "specifications": {
+      "size_inch": 36,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-052",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0152"
+  },
+  {
+    "equipmentId": "EQ-0308",
+    "name": "Control Valve 8\" 150# Unit 2",
+    "description": "Control Valve 8\" 150# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 470,
+    "dimensions": "0.8x0.4x0.6",
+    "hsCode": "8481.80",
+    "requiredOnSiteDate": "2029-01-02",
+    "installationSequencePriority": 2,
+    "specifications": {
+      "size_inch": 8,
+      "class": 150
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-053",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0153"
+  },
+  {
+    "equipmentId": "EQ-0309",
+    "name": "Safety Relief Valve Unit 2",
+    "description": "Safety Relief Valve for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Critical",
+    "weight": 477,
+    "dimensions": "0.5x0.3x0.5",
+    "hsCode": "8481.40",
+    "requiredOnSiteDate": "2028-10-24",
+    "installationSequencePriority": 5,
+    "specifications": {
+      "set_pressure_bar": 50
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-054",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0154"
+  },
+  {
+    "equipmentId": "EQ-0310",
+    "name": "Check Valve 16\" 300# Unit 2",
+    "description": "Check Valve 16\" 300# for PRJ-005 - Valves equipment",
+    "category": "Valves",
+    "criticality": "Medium",
+    "weight": 4368,
+    "dimensions": "1x0.5x0.5",
+    "hsCode": "8481.30",
+    "requiredOnSiteDate": "2028-11-11",
+    "installationSequencePriority": 6,
+    "specifications": {
+      "size_inch": 16,
+      "class": 300
+    },
+    "projectId": "PRJ-005",
+    "supplierId": "SUP-050",
+    "routeId": "RT-008",
+    "purchaseOrderId": "PO-0150"
+  }
+]

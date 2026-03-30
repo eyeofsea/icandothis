@@ -1,0 +1,3700 @@
+[
+  {
+    "poNumber": "PO-0001",
+    "poId": "PO-0001",
+    "equipmentIds": [
+      "EQ-0001",
+      "EQ-0007"
+    ],
+    "supplierId": "SUP-001",
+    "projectId": "PRJ-001",
+    "value": 417397.63,
+    "currency": "USD",
+    "issueDate": "2025-09-11",
+    "deliveryDate": "2027-01-16",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-09-25",
+      "designApproval": "2025-11-10",
+      "fabricationStart": "2025-12-10",
+      "inspection": "2026-11-17",
+      "readyForShipment": "2026-12-17"
+    }
+  },
+  {
+    "poNumber": "PO-0002",
+    "poId": "PO-0002",
+    "equipmentIds": [
+      "EQ-0002",
+      "EQ-0008"
+    ],
+    "supplierId": "SUP-002",
+    "projectId": "PRJ-001",
+    "value": 883543.07,
+    "currency": "USD",
+    "issueDate": "2025-11-14",
+    "deliveryDate": "2026-07-11",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-11-28",
+      "designApproval": "2026-01-13",
+      "fabricationStart": "2026-02-12",
+      "inspection": "2026-05-12",
+      "readyForShipment": "2026-06-11"
+    }
+  },
+  {
+    "poNumber": "PO-0003",
+    "poId": "PO-0003",
+    "equipmentIds": [
+      "EQ-0003"
+    ],
+    "supplierId": "SUP-003",
+    "projectId": "PRJ-001",
+    "value": 493084.65,
+    "currency": "USD",
+    "issueDate": "2025-08-04",
+    "deliveryDate": "2026-03-21",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-08-18",
+      "designApproval": "2025-10-03",
+      "fabricationStart": "2025-11-02",
+      "inspection": "2026-01-20",
+      "readyForShipment": "2026-02-19"
+    }
+  },
+  {
+    "poNumber": "PO-0004",
+    "poId": "PO-0004",
+    "equipmentIds": [
+      "EQ-0004"
+    ],
+    "supplierId": "SUP-004",
+    "projectId": "PRJ-001",
+    "value": 176802.71,
+    "currency": "USD",
+    "issueDate": "2025-12-23",
+    "deliveryDate": "2027-03-24",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2026-01-06",
+      "designApproval": "2026-02-21",
+      "fabricationStart": "2026-03-23",
+      "inspection": "2027-01-23",
+      "readyForShipment": "2027-02-22"
+    }
+  },
+  {
+    "poNumber": "PO-0005",
+    "poId": "PO-0005",
+    "equipmentIds": [
+      "EQ-0005"
+    ],
+    "supplierId": "SUP-005",
+    "projectId": "PRJ-001",
+    "value": 103508.86,
+    "currency": "USD",
+    "issueDate": "2025-08-20",
+    "deliveryDate": "2026-09-12",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-09-03",
+      "designApproval": "2025-10-19",
+      "fabricationStart": "2025-11-18",
+      "inspection": "2026-07-14",
+      "readyForShipment": "2026-08-13"
+    }
+  },
+  {
+    "poNumber": "PO-0006",
+    "poId": "PO-0006",
+    "equipmentIds": [
+      "EQ-0006"
+    ],
+    "supplierId": "SUP-006",
+    "projectId": "PRJ-001",
+    "value": 27102.65,
+    "currency": "USD",
+    "issueDate": "2025-08-08",
+    "deliveryDate": "2026-08-08",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-08-22",
+      "designApproval": "2025-10-07",
+      "fabricationStart": "2025-11-06",
+      "inspection": "2026-06-09",
+      "readyForShipment": "2026-07-09"
+    }
+  },
+  {
+    "poNumber": "PO-0007",
+    "poId": "PO-0007",
+    "equipmentIds": [
+      "EQ-0009",
+      "EQ-0014",
+      "EQ-0019"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-001",
+    "value": 5662078.22,
+    "currency": "USD",
+    "issueDate": "2025-04-04",
+    "deliveryDate": "2026-05-21",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-18",
+      "designApproval": "2025-06-03",
+      "fabricationStart": "2025-07-03",
+      "inspection": "2026-03-22",
+      "readyForShipment": "2026-04-21"
+    }
+  },
+  {
+    "poNumber": "PO-0008",
+    "poId": "PO-0008",
+    "equipmentIds": [
+      "EQ-0010",
+      "EQ-0015",
+      "EQ-0020"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-001",
+    "value": 2805543.8,
+    "currency": "USD",
+    "issueDate": "2025-04-05",
+    "deliveryDate": "2026-07-18",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-04-19",
+      "designApproval": "2025-06-04",
+      "fabricationStart": "2025-07-04",
+      "inspection": "2026-05-19",
+      "readyForShipment": "2026-06-18"
+    }
+  },
+  {
+    "poNumber": "PO-0009",
+    "poId": "PO-0009",
+    "equipmentIds": [
+      "EQ-0011",
+      "EQ-0016"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-001",
+    "value": 946340.88,
+    "currency": "USD",
+    "issueDate": "2025-04-11",
+    "deliveryDate": "2025-12-22",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-25",
+      "designApproval": "2025-06-10",
+      "fabricationStart": "2025-07-10",
+      "inspection": "2025-10-23",
+      "readyForShipment": "2025-11-22"
+    }
+  },
+  {
+    "poNumber": "PO-0010",
+    "poId": "PO-0010",
+    "equipmentIds": [
+      "EQ-0012",
+      "EQ-0017"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-001",
+    "value": 167268.21,
+    "currency": "USD",
+    "issueDate": "2025-09-09",
+    "deliveryDate": "2026-06-05",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-09-23",
+      "designApproval": "2025-11-08",
+      "fabricationStart": "2025-12-08",
+      "inspection": "2026-04-06",
+      "readyForShipment": "2026-05-06"
+    }
+  },
+  {
+    "poNumber": "PO-0011",
+    "poId": "PO-0011",
+    "equipmentIds": [
+      "EQ-0013",
+      "EQ-0018"
+    ],
+    "supplierId": "SUP-014",
+    "projectId": "PRJ-001",
+    "value": 1210108.05,
+    "currency": "USD",
+    "issueDate": "2025-10-11",
+    "deliveryDate": "2026-04-17",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-10-25",
+      "designApproval": "2025-12-10",
+      "fabricationStart": "2026-01-09",
+      "inspection": "2026-02-16",
+      "readyForShipment": "2026-03-18"
+    }
+  },
+  {
+    "poNumber": "PO-0012",
+    "poId": "PO-0012",
+    "equipmentIds": [
+      "EQ-0021",
+      "EQ-0025"
+    ],
+    "supplierId": "SUP-030",
+    "projectId": "PRJ-001",
+    "value": 91342.31,
+    "currency": "USD",
+    "issueDate": "2025-12-03",
+    "deliveryDate": "2027-01-30",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-12-17",
+      "designApproval": "2026-02-01",
+      "fabricationStart": "2026-03-03",
+      "inspection": "2026-12-01",
+      "readyForShipment": "2026-12-31"
+    }
+  },
+  {
+    "poNumber": "PO-0013",
+    "poId": "PO-0013",
+    "equipmentIds": [
+      "EQ-0022",
+      "EQ-0026"
+    ],
+    "supplierId": "SUP-031",
+    "projectId": "PRJ-001",
+    "value": 594831.52,
+    "currency": "USD",
+    "issueDate": "2025-10-02",
+    "deliveryDate": "2027-03-03",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-10-16",
+      "designApproval": "2025-12-01",
+      "fabricationStart": "2025-12-31",
+      "inspection": "2027-01-02",
+      "readyForShipment": "2027-02-01"
+    }
+  },
+  {
+    "poNumber": "PO-0014",
+    "poId": "PO-0014",
+    "equipmentIds": [
+      "EQ-0023",
+      "EQ-0027"
+    ],
+    "supplierId": "SUP-032",
+    "projectId": "PRJ-001",
+    "value": 619250.29,
+    "currency": "USD",
+    "issueDate": "2025-08-28",
+    "deliveryDate": "2026-09-17",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-09-11",
+      "designApproval": "2025-10-27",
+      "fabricationStart": "2025-11-26",
+      "inspection": "2026-07-19",
+      "readyForShipment": "2026-08-18"
+    }
+  },
+  {
+    "poNumber": "PO-0015",
+    "poId": "PO-0015",
+    "equipmentIds": [
+      "EQ-0024",
+      "EQ-0028"
+    ],
+    "supplierId": "SUP-033",
+    "projectId": "PRJ-001",
+    "value": 177601.22,
+    "currency": "USD",
+    "issueDate": "2025-02-11",
+    "deliveryDate": "2026-06-17",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-02-25",
+      "designApproval": "2025-04-12",
+      "fabricationStart": "2025-05-12",
+      "inspection": "2026-04-18",
+      "readyForShipment": "2026-05-18"
+    }
+  },
+  {
+    "poNumber": "PO-0016",
+    "poId": "PO-0016",
+    "equipmentIds": [
+      "EQ-0029",
+      "EQ-0034"
+    ],
+    "supplierId": "SUP-020",
+    "projectId": "PRJ-001",
+    "value": 14139.37,
+    "currency": "USD",
+    "issueDate": "2025-12-11",
+    "deliveryDate": "2026-12-21",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-12-25",
+      "designApproval": "2026-02-09",
+      "fabricationStart": "2026-03-11",
+      "inspection": "2026-10-22",
+      "readyForShipment": "2026-11-21"
+    }
+  },
+  {
+    "poNumber": "PO-0017",
+    "poId": "PO-0017",
+    "equipmentIds": [
+      "EQ-0030",
+      "EQ-0035"
+    ],
+    "supplierId": "SUP-021",
+    "projectId": "PRJ-001",
+    "value": 14326.27,
+    "currency": "USD",
+    "issueDate": "2025-12-04",
+    "deliveryDate": "2027-05-03",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-12-18",
+      "designApproval": "2026-02-02",
+      "fabricationStart": "2026-03-04",
+      "inspection": "2027-03-04",
+      "readyForShipment": "2027-04-03"
+    }
+  },
+  {
+    "poNumber": "PO-0018",
+    "poId": "PO-0018",
+    "equipmentIds": [
+      "EQ-0031",
+      "EQ-0036"
+    ],
+    "supplierId": "SUP-022",
+    "projectId": "PRJ-001",
+    "value": 46248.23,
+    "currency": "USD",
+    "issueDate": "2025-08-13",
+    "deliveryDate": "2026-09-09",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-08-27",
+      "designApproval": "2025-10-12",
+      "fabricationStart": "2025-11-11",
+      "inspection": "2026-07-11",
+      "readyForShipment": "2026-08-10"
+    }
+  },
+  {
+    "poNumber": "PO-0019",
+    "poId": "PO-0019",
+    "equipmentIds": [
+      "EQ-0032"
+    ],
+    "supplierId": "SUP-023",
+    "projectId": "PRJ-001",
+    "value": 11532.06,
+    "currency": "USD",
+    "issueDate": "2025-06-05",
+    "deliveryDate": "2026-11-18",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-06-19",
+      "designApproval": "2025-08-04",
+      "fabricationStart": "2025-09-03",
+      "inspection": "2026-09-19",
+      "readyForShipment": "2026-10-19"
+    }
+  },
+  {
+    "poNumber": "PO-0020",
+    "poId": "PO-0020",
+    "equipmentIds": [
+      "EQ-0033"
+    ],
+    "supplierId": "SUP-024",
+    "projectId": "PRJ-001",
+    "value": 1363.53,
+    "currency": "USD",
+    "issueDate": "2025-07-04",
+    "deliveryDate": "2026-07-09",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-07-18",
+      "designApproval": "2025-09-02",
+      "fabricationStart": "2025-10-02",
+      "inspection": "2026-05-10",
+      "readyForShipment": "2026-06-09"
+    }
+  },
+  {
+    "poNumber": "PO-0021",
+    "poId": "PO-0021",
+    "equipmentIds": [
+      "EQ-0037",
+      "EQ-0042"
+    ],
+    "supplierId": "SUP-040",
+    "projectId": "PRJ-001",
+    "value": 586391.75,
+    "currency": "USD",
+    "issueDate": "2025-02-14",
+    "deliveryDate": "2026-02-10",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-02-28",
+      "designApproval": "2025-04-15",
+      "fabricationStart": "2025-05-15",
+      "inspection": "2025-12-12",
+      "readyForShipment": "2026-01-11"
+    }
+  },
+  {
+    "poNumber": "PO-0022",
+    "poId": "PO-0022",
+    "equipmentIds": [
+      "EQ-0038"
+    ],
+    "supplierId": "SUP-041",
+    "projectId": "PRJ-001",
+    "value": 109714.36,
+    "currency": "USD",
+    "issueDate": "2025-06-04",
+    "deliveryDate": "2026-09-22",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-06-18",
+      "designApproval": "2025-08-03",
+      "fabricationStart": "2025-09-02",
+      "inspection": "2026-07-24",
+      "readyForShipment": "2026-08-23"
+    }
+  },
+  {
+    "poNumber": "PO-0023",
+    "poId": "PO-0023",
+    "equipmentIds": [
+      "EQ-0039"
+    ],
+    "supplierId": "SUP-042",
+    "projectId": "PRJ-001",
+    "value": 14342.02,
+    "currency": "USD",
+    "issueDate": "2025-02-12",
+    "deliveryDate": "2026-05-22",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-02-26",
+      "designApproval": "2025-04-13",
+      "fabricationStart": "2025-05-13",
+      "inspection": "2026-03-23",
+      "readyForShipment": "2026-04-22"
+    }
+  },
+  {
+    "poNumber": "PO-0024",
+    "poId": "PO-0024",
+    "equipmentIds": [
+      "EQ-0040"
+    ],
+    "supplierId": "SUP-043",
+    "projectId": "PRJ-001",
+    "value": 58714.92,
+    "currency": "USD",
+    "issueDate": "2025-07-28",
+    "deliveryDate": "2026-11-07",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-08-11",
+      "designApproval": "2025-09-26",
+      "fabricationStart": "2025-10-26",
+      "inspection": "2026-09-08",
+      "readyForShipment": "2026-10-08"
+    }
+  },
+  {
+    "poNumber": "PO-0025",
+    "poId": "PO-0025",
+    "equipmentIds": [
+      "EQ-0041"
+    ],
+    "supplierId": "SUP-044",
+    "projectId": "PRJ-001",
+    "value": 71104.16,
+    "currency": "USD",
+    "issueDate": "2025-12-09",
+    "deliveryDate": "2026-06-21",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-12-23",
+      "designApproval": "2026-02-07",
+      "fabricationStart": "2026-03-09",
+      "inspection": "2026-04-22",
+      "readyForShipment": "2026-05-22"
+    }
+  },
+  {
+    "poNumber": "PO-0026",
+    "poId": "PO-0026",
+    "equipmentIds": [
+      "EQ-0043"
+    ],
+    "supplierId": "SUP-050",
+    "projectId": "PRJ-001",
+    "value": 72744.27,
+    "currency": "USD",
+    "issueDate": "2025-06-12",
+    "deliveryDate": "2025-12-12",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-06-26",
+      "designApproval": "2025-08-11",
+      "fabricationStart": "2025-09-10",
+      "inspection": "2025-10-13",
+      "readyForShipment": "2025-11-12"
+    }
+  },
+  {
+    "poNumber": "PO-0027",
+    "poId": "PO-0027",
+    "equipmentIds": [
+      "EQ-0044"
+    ],
+    "supplierId": "SUP-051",
+    "projectId": "PRJ-001",
+    "value": 105667.87,
+    "currency": "USD",
+    "issueDate": "2025-03-24",
+    "deliveryDate": "2026-08-10",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-07",
+      "designApproval": "2025-05-23",
+      "fabricationStart": "2025-06-22",
+      "inspection": "2026-06-11",
+      "readyForShipment": "2026-07-11"
+    }
+  },
+  {
+    "poNumber": "PO-0028",
+    "poId": "PO-0028",
+    "equipmentIds": [
+      "EQ-0045"
+    ],
+    "supplierId": "SUP-052",
+    "projectId": "PRJ-001",
+    "value": 8845.47,
+    "currency": "USD",
+    "issueDate": "2025-07-15",
+    "deliveryDate": "2026-07-04",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-07-29",
+      "designApproval": "2025-09-13",
+      "fabricationStart": "2025-10-13",
+      "inspection": "2026-05-05",
+      "readyForShipment": "2026-06-04"
+    }
+  },
+  {
+    "poNumber": "PO-0029",
+    "poId": "PO-0029",
+    "equipmentIds": [
+      "EQ-0046"
+    ],
+    "supplierId": "SUP-053",
+    "projectId": "PRJ-001",
+    "value": 2129.73,
+    "currency": "USD",
+    "issueDate": "2025-10-20",
+    "deliveryDate": "2026-05-31",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-11-03",
+      "designApproval": "2025-12-19",
+      "fabricationStart": "2026-01-18",
+      "inspection": "2026-04-01",
+      "readyForShipment": "2026-05-01"
+    }
+  },
+  {
+    "poNumber": "PO-0030",
+    "poId": "PO-0030",
+    "equipmentIds": [
+      "EQ-0047"
+    ],
+    "supplierId": "SUP-054",
+    "projectId": "PRJ-001",
+    "value": 12877.41,
+    "currency": "USD",
+    "issueDate": "2025-11-03",
+    "deliveryDate": "2026-09-18",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-11-17",
+      "designApproval": "2026-01-02",
+      "fabricationStart": "2026-02-01",
+      "inspection": "2026-07-20",
+      "readyForShipment": "2026-08-19"
+    }
+  },
+  {
+    "poNumber": "PO-0031",
+    "poId": "PO-0031",
+    "equipmentIds": [
+      "EQ-0048",
+      "EQ-0054",
+      "EQ-0060"
+    ],
+    "supplierId": "SUP-001",
+    "projectId": "PRJ-002",
+    "value": 1623163.92,
+    "currency": "USD",
+    "issueDate": "2025-02-12",
+    "deliveryDate": "2026-03-19",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-02-26",
+      "designApproval": "2025-04-13",
+      "fabricationStart": "2025-05-13",
+      "inspection": "2026-01-18",
+      "readyForShipment": "2026-02-17"
+    }
+  },
+  {
+    "poNumber": "PO-0032",
+    "poId": "PO-0032",
+    "equipmentIds": [
+      "EQ-0049",
+      "EQ-0055",
+      "EQ-0061"
+    ],
+    "supplierId": "SUP-002",
+    "projectId": "PRJ-002",
+    "value": 961871.92,
+    "currency": "USD",
+    "issueDate": "2025-04-13",
+    "deliveryDate": "2026-08-12",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-27",
+      "designApproval": "2025-06-12",
+      "fabricationStart": "2025-07-12",
+      "inspection": "2026-06-13",
+      "readyForShipment": "2026-07-13"
+    }
+  },
+  {
+    "poNumber": "PO-0033",
+    "poId": "PO-0033",
+    "equipmentIds": [
+      "EQ-0050",
+      "EQ-0056"
+    ],
+    "supplierId": "SUP-003",
+    "projectId": "PRJ-002",
+    "value": 391157.77,
+    "currency": "USD",
+    "issueDate": "2025-05-10",
+    "deliveryDate": "2026-04-22",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-05-24",
+      "designApproval": "2025-07-09",
+      "fabricationStart": "2025-08-08",
+      "inspection": "2026-02-21",
+      "readyForShipment": "2026-03-23"
+    }
+  },
+  {
+    "poNumber": "PO-0034",
+    "poId": "PO-0034",
+    "equipmentIds": [
+      "EQ-0051",
+      "EQ-0057"
+    ],
+    "supplierId": "SUP-004",
+    "projectId": "PRJ-002",
+    "value": 1214208.01,
+    "currency": "USD",
+    "issueDate": "2025-09-23",
+    "deliveryDate": "2026-07-17",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-10-07",
+      "designApproval": "2025-11-22",
+      "fabricationStart": "2025-12-22",
+      "inspection": "2026-05-18",
+      "readyForShipment": "2026-06-17"
+    }
+  },
+  {
+    "poNumber": "PO-0035",
+    "poId": "PO-0035",
+    "equipmentIds": [
+      "EQ-0052",
+      "EQ-0058"
+    ],
+    "supplierId": "SUP-005",
+    "projectId": "PRJ-002",
+    "value": 1569468.94,
+    "currency": "USD",
+    "issueDate": "2025-01-15",
+    "deliveryDate": "2025-08-22",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-01-29",
+      "designApproval": "2025-03-16",
+      "fabricationStart": "2025-04-15",
+      "inspection": "2025-06-23",
+      "readyForShipment": "2025-07-23"
+    }
+  },
+  {
+    "poNumber": "PO-0036",
+    "poId": "PO-0036",
+    "equipmentIds": [
+      "EQ-0053",
+      "EQ-0059"
+    ],
+    "supplierId": "SUP-006",
+    "projectId": "PRJ-002",
+    "value": 231196.86,
+    "currency": "USD",
+    "issueDate": "2025-02-13",
+    "deliveryDate": "2025-08-22",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-02-27",
+      "designApproval": "2025-04-14",
+      "fabricationStart": "2025-05-14",
+      "inspection": "2025-06-23",
+      "readyForShipment": "2025-07-23"
+    }
+  },
+  {
+    "poNumber": "PO-0037",
+    "poId": "PO-0037",
+    "equipmentIds": [
+      "EQ-0062",
+      "EQ-0067",
+      "EQ-0072",
+      "EQ-0077"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-002",
+    "value": 7767369.87,
+    "currency": "USD",
+    "issueDate": "2025-02-08",
+    "deliveryDate": "2026-03-18",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-02-22",
+      "designApproval": "2025-04-09",
+      "fabricationStart": "2025-05-09",
+      "inspection": "2026-01-17",
+      "readyForShipment": "2026-02-16"
+    }
+  },
+  {
+    "poNumber": "PO-0038",
+    "poId": "PO-0038",
+    "equipmentIds": [
+      "EQ-0082"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-002",
+    "value": 116168.68,
+    "currency": "USD",
+    "issueDate": "2025-05-24",
+    "deliveryDate": "2026-05-12",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-06-07",
+      "designApproval": "2025-07-23",
+      "fabricationStart": "2025-08-22",
+      "inspection": "2026-03-13",
+      "readyForShipment": "2026-04-12"
+    }
+  },
+  {
+    "poNumber": "PO-0039",
+    "poId": "PO-0039",
+    "equipmentIds": [
+      "EQ-0063",
+      "EQ-0068",
+      "EQ-0073",
+      "EQ-0078"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-002",
+    "value": 5740444.98,
+    "currency": "USD",
+    "issueDate": "2025-06-12",
+    "deliveryDate": "2026-11-04",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-06-26",
+      "designApproval": "2025-08-11",
+      "fabricationStart": "2025-09-10",
+      "inspection": "2026-09-05",
+      "readyForShipment": "2026-10-05"
+    }
+  },
+  {
+    "poNumber": "PO-0040",
+    "poId": "PO-0040",
+    "equipmentIds": [
+      "EQ-0083"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-002",
+    "value": 17781.35,
+    "currency": "USD",
+    "issueDate": "2025-03-20",
+    "deliveryDate": "2025-12-03",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-03",
+      "designApproval": "2025-05-19",
+      "fabricationStart": "2025-06-18",
+      "inspection": "2025-10-04",
+      "readyForShipment": "2025-11-03"
+    }
+  },
+  {
+    "poNumber": "PO-0041",
+    "poId": "PO-0041",
+    "equipmentIds": [
+      "EQ-0064",
+      "EQ-0069",
+      "EQ-0074",
+      "EQ-0079"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-002",
+    "value": 1125636.04,
+    "currency": "USD",
+    "issueDate": "2025-11-19",
+    "deliveryDate": "2027-04-12",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-12-03",
+      "designApproval": "2026-01-18",
+      "fabricationStart": "2026-02-17",
+      "inspection": "2027-02-11",
+      "readyForShipment": "2027-03-13"
+    }
+  },
+  {
+    "poNumber": "PO-0042",
+    "poId": "PO-0042",
+    "equipmentIds": [
+      "EQ-0065",
+      "EQ-0070",
+      "EQ-0075",
+      "EQ-0080"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-002",
+    "value": 1586498.98,
+    "currency": "USD",
+    "issueDate": "2025-05-26",
+    "deliveryDate": "2026-04-11",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-06-09",
+      "designApproval": "2025-07-25",
+      "fabricationStart": "2025-08-24",
+      "inspection": "2026-02-10",
+      "readyForShipment": "2026-03-12"
+    }
+  },
+  {
+    "poNumber": "PO-0043",
+    "poId": "PO-0043",
+    "equipmentIds": [
+      "EQ-0066",
+      "EQ-0071",
+      "EQ-0076",
+      "EQ-0081"
+    ],
+    "supplierId": "SUP-014",
+    "projectId": "PRJ-002",
+    "value": 2432374.47,
+    "currency": "USD",
+    "issueDate": "2025-05-03",
+    "deliveryDate": "2026-09-25",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-05-17",
+      "designApproval": "2025-07-02",
+      "fabricationStart": "2025-08-01",
+      "inspection": "2026-07-27",
+      "readyForShipment": "2026-08-26"
+    }
+  },
+  {
+    "poNumber": "PO-0044",
+    "poId": "PO-0044",
+    "equipmentIds": [
+      "EQ-0084",
+      "EQ-0088",
+      "EQ-0092"
+    ],
+    "supplierId": "SUP-030",
+    "projectId": "PRJ-002",
+    "value": 256359.34,
+    "currency": "USD",
+    "issueDate": "2025-08-26",
+    "deliveryDate": "2026-12-11",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-09-09",
+      "designApproval": "2025-10-25",
+      "fabricationStart": "2025-11-24",
+      "inspection": "2026-10-12",
+      "readyForShipment": "2026-11-11"
+    }
+  },
+  {
+    "poNumber": "PO-0045",
+    "poId": "PO-0045",
+    "equipmentIds": [
+      "EQ-0085",
+      "EQ-0089",
+      "EQ-0093"
+    ],
+    "supplierId": "SUP-031",
+    "projectId": "PRJ-002",
+    "value": 3200235.15,
+    "currency": "USD",
+    "issueDate": "2025-06-23",
+    "deliveryDate": "2026-02-01",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-07",
+      "designApproval": "2025-08-22",
+      "fabricationStart": "2025-09-21",
+      "inspection": "2025-12-03",
+      "readyForShipment": "2026-01-02"
+    }
+  },
+  {
+    "poNumber": "PO-0046",
+    "poId": "PO-0046",
+    "equipmentIds": [
+      "EQ-0086",
+      "EQ-0090",
+      "EQ-0094"
+    ],
+    "supplierId": "SUP-032",
+    "projectId": "PRJ-002",
+    "value": 345878.37,
+    "currency": "USD",
+    "issueDate": "2025-10-06",
+    "deliveryDate": "2026-10-07",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-10-20",
+      "designApproval": "2025-12-05",
+      "fabricationStart": "2026-01-04",
+      "inspection": "2026-08-08",
+      "readyForShipment": "2026-09-07"
+    }
+  },
+  {
+    "poNumber": "PO-0047",
+    "poId": "PO-0047",
+    "equipmentIds": [
+      "EQ-0087",
+      "EQ-0091",
+      "EQ-0095"
+    ],
+    "supplierId": "SUP-033",
+    "projectId": "PRJ-002",
+    "value": 196400.48,
+    "currency": "USD",
+    "issueDate": "2025-11-21",
+    "deliveryDate": "2026-11-07",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-12-05",
+      "designApproval": "2026-01-20",
+      "fabricationStart": "2026-02-19",
+      "inspection": "2026-09-08",
+      "readyForShipment": "2026-10-08"
+    }
+  },
+  {
+    "poNumber": "PO-0048",
+    "poId": "PO-0048",
+    "equipmentIds": [
+      "EQ-0096",
+      "EQ-0101",
+      "EQ-0106"
+    ],
+    "supplierId": "SUP-020",
+    "projectId": "PRJ-002",
+    "value": 33479.2,
+    "currency": "USD",
+    "issueDate": "2025-11-20",
+    "deliveryDate": "2026-08-03",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-12-04",
+      "designApproval": "2026-01-19",
+      "fabricationStart": "2026-02-18",
+      "inspection": "2026-06-04",
+      "readyForShipment": "2026-07-04"
+    }
+  },
+  {
+    "poNumber": "PO-0049",
+    "poId": "PO-0049",
+    "equipmentIds": [
+      "EQ-0097",
+      "EQ-0102",
+      "EQ-0107"
+    ],
+    "supplierId": "SUP-021",
+    "projectId": "PRJ-002",
+    "value": 40844.56,
+    "currency": "USD",
+    "issueDate": "2025-12-22",
+    "deliveryDate": "2027-01-06",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2026-01-05",
+      "designApproval": "2026-02-20",
+      "fabricationStart": "2026-03-22",
+      "inspection": "2026-11-07",
+      "readyForShipment": "2026-12-07"
+    }
+  },
+  {
+    "poNumber": "PO-0050",
+    "poId": "PO-0050",
+    "equipmentIds": [
+      "EQ-0098",
+      "EQ-0103",
+      "EQ-0108"
+    ],
+    "supplierId": "SUP-022",
+    "projectId": "PRJ-002",
+    "value": 18854.34,
+    "currency": "USD",
+    "issueDate": "2025-11-23",
+    "deliveryDate": "2027-05-07",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-12-07",
+      "designApproval": "2026-01-22",
+      "fabricationStart": "2026-02-21",
+      "inspection": "2027-03-08",
+      "readyForShipment": "2027-04-07"
+    }
+  },
+  {
+    "poNumber": "PO-0051",
+    "poId": "PO-0051",
+    "equipmentIds": [
+      "EQ-0099",
+      "EQ-0104",
+      "EQ-0109"
+    ],
+    "supplierId": "SUP-023",
+    "projectId": "PRJ-002",
+    "value": 55856.28,
+    "currency": "USD",
+    "issueDate": "2025-03-07",
+    "deliveryDate": "2026-02-24",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-03-21",
+      "designApproval": "2025-05-06",
+      "fabricationStart": "2025-06-05",
+      "inspection": "2025-12-26",
+      "readyForShipment": "2026-01-25"
+    }
+  },
+  {
+    "poNumber": "PO-0052",
+    "poId": "PO-0052",
+    "equipmentIds": [
+      "EQ-0100",
+      "EQ-0105"
+    ],
+    "supplierId": "SUP-024",
+    "projectId": "PRJ-002",
+    "value": 13841.58,
+    "currency": "USD",
+    "issueDate": "2025-02-17",
+    "deliveryDate": "2026-05-19",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-03-03",
+      "designApproval": "2025-04-18",
+      "fabricationStart": "2025-05-18",
+      "inspection": "2026-03-20",
+      "readyForShipment": "2026-04-19"
+    }
+  },
+  {
+    "poNumber": "PO-0053",
+    "poId": "PO-0053",
+    "equipmentIds": [
+      "EQ-0110",
+      "EQ-0115"
+    ],
+    "supplierId": "SUP-040",
+    "projectId": "PRJ-002",
+    "value": 775857.95,
+    "currency": "USD",
+    "issueDate": "2025-10-13",
+    "deliveryDate": "2026-06-28",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-10-27",
+      "designApproval": "2025-12-12",
+      "fabricationStart": "2026-01-11",
+      "inspection": "2026-04-29",
+      "readyForShipment": "2026-05-29"
+    }
+  },
+  {
+    "poNumber": "PO-0054",
+    "poId": "PO-0054",
+    "equipmentIds": [
+      "EQ-0111",
+      "EQ-0116"
+    ],
+    "supplierId": "SUP-041",
+    "projectId": "PRJ-002",
+    "value": 315694.78,
+    "currency": "USD",
+    "issueDate": "2025-03-24",
+    "deliveryDate": "2026-05-02",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-04-07",
+      "designApproval": "2025-05-23",
+      "fabricationStart": "2025-06-22",
+      "inspection": "2026-03-03",
+      "readyForShipment": "2026-04-02"
+    }
+  },
+  {
+    "poNumber": "PO-0055",
+    "poId": "PO-0055",
+    "equipmentIds": [
+      "EQ-0112",
+      "EQ-0117"
+    ],
+    "supplierId": "SUP-042",
+    "projectId": "PRJ-002",
+    "value": 40895.46,
+    "currency": "USD",
+    "issueDate": "2025-10-10",
+    "deliveryDate": "2026-11-23",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-10-24",
+      "designApproval": "2025-12-09",
+      "fabricationStart": "2026-01-08",
+      "inspection": "2026-09-24",
+      "readyForShipment": "2026-10-24"
+    }
+  },
+  {
+    "poNumber": "PO-0056",
+    "poId": "PO-0056",
+    "equipmentIds": [
+      "EQ-0113",
+      "EQ-0118"
+    ],
+    "supplierId": "SUP-043",
+    "projectId": "PRJ-002",
+    "value": 213165.68,
+    "currency": "USD",
+    "issueDate": "2025-04-12",
+    "deliveryDate": "2026-09-21",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-04-26",
+      "designApproval": "2025-06-11",
+      "fabricationStart": "2025-07-11",
+      "inspection": "2026-07-23",
+      "readyForShipment": "2026-08-22"
+    }
+  },
+  {
+    "poNumber": "PO-0057",
+    "poId": "PO-0057",
+    "equipmentIds": [
+      "EQ-0114",
+      "EQ-0119"
+    ],
+    "supplierId": "SUP-044",
+    "projectId": "PRJ-002",
+    "value": 91605.76,
+    "currency": "USD",
+    "issueDate": "2025-09-14",
+    "deliveryDate": "2026-06-03",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-09-28",
+      "designApproval": "2025-11-13",
+      "fabricationStart": "2025-12-13",
+      "inspection": "2026-04-04",
+      "readyForShipment": "2026-05-04"
+    }
+  },
+  {
+    "poNumber": "PO-0058",
+    "poId": "PO-0058",
+    "equipmentIds": [
+      "EQ-0120",
+      "EQ-0125"
+    ],
+    "supplierId": "SUP-050",
+    "projectId": "PRJ-002",
+    "value": 110248.07,
+    "currency": "USD",
+    "issueDate": "2025-06-18",
+    "deliveryDate": "2026-02-05",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-02",
+      "designApproval": "2025-08-17",
+      "fabricationStart": "2025-09-16",
+      "inspection": "2025-12-07",
+      "readyForShipment": "2026-01-06"
+    }
+  },
+  {
+    "poNumber": "PO-0059",
+    "poId": "PO-0059",
+    "equipmentIds": [
+      "EQ-0121",
+      "EQ-0126"
+    ],
+    "supplierId": "SUP-051",
+    "projectId": "PRJ-002",
+    "value": 143187.35,
+    "currency": "USD",
+    "issueDate": "2025-09-05",
+    "deliveryDate": "2026-10-13",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-09-19",
+      "designApproval": "2025-11-04",
+      "fabricationStart": "2025-12-04",
+      "inspection": "2026-08-14",
+      "readyForShipment": "2026-09-13"
+    }
+  },
+  {
+    "poNumber": "PO-0060",
+    "poId": "PO-0060",
+    "equipmentIds": [
+      "EQ-0122",
+      "EQ-0127"
+    ],
+    "supplierId": "SUP-052",
+    "projectId": "PRJ-002",
+    "value": 173800.3,
+    "currency": "USD",
+    "issueDate": "2025-07-02",
+    "deliveryDate": "2026-07-19",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-07-16",
+      "designApproval": "2025-08-31",
+      "fabricationStart": "2025-09-30",
+      "inspection": "2026-05-20",
+      "readyForShipment": "2026-06-19"
+    }
+  },
+  {
+    "poNumber": "PO-0061",
+    "poId": "PO-0061",
+    "equipmentIds": [
+      "EQ-0123",
+      "EQ-0128"
+    ],
+    "supplierId": "SUP-053",
+    "projectId": "PRJ-002",
+    "value": 10970.97,
+    "currency": "USD",
+    "issueDate": "2025-01-11",
+    "deliveryDate": "2025-08-29",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-01-25",
+      "designApproval": "2025-03-12",
+      "fabricationStart": "2025-04-11",
+      "inspection": "2025-06-30",
+      "readyForShipment": "2025-07-30"
+    }
+  },
+  {
+    "poNumber": "PO-0062",
+    "poId": "PO-0062",
+    "equipmentIds": [
+      "EQ-0124",
+      "EQ-0129"
+    ],
+    "supplierId": "SUP-054",
+    "projectId": "PRJ-002",
+    "value": 16027.27,
+    "currency": "USD",
+    "issueDate": "2025-12-27",
+    "deliveryDate": "2026-09-04",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2026-01-10",
+      "designApproval": "2026-02-25",
+      "fabricationStart": "2026-03-27",
+      "inspection": "2026-07-06",
+      "readyForShipment": "2026-08-05"
+    }
+  },
+  {
+    "poNumber": "PO-0063",
+    "poId": "PO-0063",
+    "equipmentIds": [
+      "EQ-0130"
+    ],
+    "supplierId": "SUP-001",
+    "projectId": "PRJ-003",
+    "value": 1526474.33,
+    "currency": "USD",
+    "issueDate": "2025-01-09",
+    "deliveryDate": "2025-10-26",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-01-23",
+      "designApproval": "2025-03-10",
+      "fabricationStart": "2025-04-09",
+      "inspection": "2025-08-27",
+      "readyForShipment": "2025-09-26"
+    }
+  },
+  {
+    "poNumber": "PO-0064",
+    "poId": "PO-0064",
+    "equipmentIds": [
+      "EQ-0131"
+    ],
+    "supplierId": "SUP-002",
+    "projectId": "PRJ-003",
+    "value": 340662.78,
+    "currency": "USD",
+    "issueDate": "2025-05-04",
+    "deliveryDate": "2025-11-24",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-05-18",
+      "designApproval": "2025-07-03",
+      "fabricationStart": "2025-08-02",
+      "inspection": "2025-09-25",
+      "readyForShipment": "2025-10-25"
+    }
+  },
+  {
+    "poNumber": "PO-0065",
+    "poId": "PO-0065",
+    "equipmentIds": [
+      "EQ-0132"
+    ],
+    "supplierId": "SUP-003",
+    "projectId": "PRJ-003",
+    "value": 192653.62,
+    "currency": "USD",
+    "issueDate": "2025-02-04",
+    "deliveryDate": "2026-04-15",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-02-18",
+      "designApproval": "2025-04-05",
+      "fabricationStart": "2025-05-05",
+      "inspection": "2026-02-14",
+      "readyForShipment": "2026-03-16"
+    }
+  },
+  {
+    "poNumber": "PO-0066",
+    "poId": "PO-0066",
+    "equipmentIds": [
+      "EQ-0133"
+    ],
+    "supplierId": "SUP-004",
+    "projectId": "PRJ-003",
+    "value": 289574.03,
+    "currency": "USD",
+    "issueDate": "2025-12-05",
+    "deliveryDate": "2026-10-30",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-12-19",
+      "designApproval": "2026-02-03",
+      "fabricationStart": "2026-03-05",
+      "inspection": "2026-08-31",
+      "readyForShipment": "2026-09-30"
+    }
+  },
+  {
+    "poNumber": "PO-0067",
+    "poId": "PO-0067",
+    "equipmentIds": [
+      "EQ-0134"
+    ],
+    "supplierId": "SUP-005",
+    "projectId": "PRJ-003",
+    "value": 33208.69,
+    "currency": "USD",
+    "issueDate": "2025-07-06",
+    "deliveryDate": "2026-12-08",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-20",
+      "designApproval": "2025-09-04",
+      "fabricationStart": "2025-10-04",
+      "inspection": "2026-10-09",
+      "readyForShipment": "2026-11-08"
+    }
+  },
+  {
+    "poNumber": "PO-0068",
+    "poId": "PO-0068",
+    "equipmentIds": [
+      "EQ-0135"
+    ],
+    "supplierId": "SUP-006",
+    "projectId": "PRJ-003",
+    "value": 15260.04,
+    "currency": "USD",
+    "issueDate": "2025-09-26",
+    "deliveryDate": "2026-12-09",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-10-10",
+      "designApproval": "2025-11-25",
+      "fabricationStart": "2025-12-25",
+      "inspection": "2026-10-10",
+      "readyForShipment": "2026-11-09"
+    }
+  },
+  {
+    "poNumber": "PO-0069",
+    "poId": "PO-0069",
+    "equipmentIds": [
+      "EQ-0136",
+      "EQ-0141"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-003",
+    "value": 2792874.47,
+    "currency": "USD",
+    "issueDate": "2025-06-09",
+    "deliveryDate": "2025-12-14",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-06-23",
+      "designApproval": "2025-08-08",
+      "fabricationStart": "2025-09-07",
+      "inspection": "2025-10-15",
+      "readyForShipment": "2025-11-14"
+    }
+  },
+  {
+    "poNumber": "PO-0070",
+    "poId": "PO-0070",
+    "equipmentIds": [
+      "EQ-0137",
+      "EQ-0142"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-003",
+    "value": 2494977.79,
+    "currency": "USD",
+    "issueDate": "2025-10-24",
+    "deliveryDate": "2026-10-09",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-07",
+      "designApproval": "2025-12-23",
+      "fabricationStart": "2026-01-22",
+      "inspection": "2026-08-10",
+      "readyForShipment": "2026-09-09"
+    }
+  },
+  {
+    "poNumber": "PO-0071",
+    "poId": "PO-0071",
+    "equipmentIds": [
+      "EQ-0138",
+      "EQ-0143"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-003",
+    "value": 718135.47,
+    "currency": "USD",
+    "issueDate": "2025-11-15",
+    "deliveryDate": "2027-05-05",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-29",
+      "designApproval": "2026-01-14",
+      "fabricationStart": "2026-02-13",
+      "inspection": "2027-03-06",
+      "readyForShipment": "2027-04-05"
+    }
+  },
+  {
+    "poNumber": "PO-0072",
+    "poId": "PO-0072",
+    "equipmentIds": [
+      "EQ-0139",
+      "EQ-0144"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-003",
+    "value": 197660.9,
+    "currency": "USD",
+    "issueDate": "2025-08-02",
+    "deliveryDate": "2026-06-28",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-16",
+      "designApproval": "2025-10-01",
+      "fabricationStart": "2025-10-31",
+      "inspection": "2026-04-29",
+      "readyForShipment": "2026-05-29"
+    }
+  },
+  {
+    "poNumber": "PO-0073",
+    "poId": "PO-0073",
+    "equipmentIds": [
+      "EQ-0140",
+      "EQ-0145"
+    ],
+    "supplierId": "SUP-014",
+    "projectId": "PRJ-003",
+    "value": 1793731.44,
+    "currency": "USD",
+    "issueDate": "2025-05-17",
+    "deliveryDate": "2026-06-04",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-05-31",
+      "designApproval": "2025-07-16",
+      "fabricationStart": "2025-08-15",
+      "inspection": "2026-04-05",
+      "readyForShipment": "2026-05-05"
+    }
+  },
+  {
+    "poNumber": "PO-0074",
+    "poId": "PO-0074",
+    "equipmentIds": [
+      "EQ-0146",
+      "EQ-0150"
+    ],
+    "supplierId": "SUP-030",
+    "projectId": "PRJ-003",
+    "value": 123025.58,
+    "currency": "USD",
+    "issueDate": "2025-06-28",
+    "deliveryDate": "2026-01-18",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-12",
+      "designApproval": "2025-08-27",
+      "fabricationStart": "2025-09-26",
+      "inspection": "2025-11-19",
+      "readyForShipment": "2025-12-19"
+    }
+  },
+  {
+    "poNumber": "PO-0075",
+    "poId": "PO-0075",
+    "equipmentIds": [
+      "EQ-0147"
+    ],
+    "supplierId": "SUP-031",
+    "projectId": "PRJ-003",
+    "value": 528701.79,
+    "currency": "USD",
+    "issueDate": "2025-07-24",
+    "deliveryDate": "2026-09-02",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-08-07",
+      "designApproval": "2025-09-22",
+      "fabricationStart": "2025-10-22",
+      "inspection": "2026-07-04",
+      "readyForShipment": "2026-08-03"
+    }
+  },
+  {
+    "poNumber": "PO-0076",
+    "poId": "PO-0076",
+    "equipmentIds": [
+      "EQ-0148"
+    ],
+    "supplierId": "SUP-032",
+    "projectId": "PRJ-003",
+    "value": 76727.47,
+    "currency": "USD",
+    "issueDate": "2025-08-12",
+    "deliveryDate": "2026-10-31",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-08-26",
+      "designApproval": "2025-10-11",
+      "fabricationStart": "2025-11-10",
+      "inspection": "2026-09-01",
+      "readyForShipment": "2026-10-01"
+    }
+  },
+  {
+    "poNumber": "PO-0077",
+    "poId": "PO-0077",
+    "equipmentIds": [
+      "EQ-0149"
+    ],
+    "supplierId": "SUP-033",
+    "projectId": "PRJ-003",
+    "value": 30086.29,
+    "currency": "USD",
+    "issueDate": "2025-10-27",
+    "deliveryDate": "2026-07-26",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-11-10",
+      "designApproval": "2025-12-26",
+      "fabricationStart": "2026-01-25",
+      "inspection": "2026-05-27",
+      "readyForShipment": "2026-06-26"
+    }
+  },
+  {
+    "poNumber": "PO-0078",
+    "poId": "PO-0078",
+    "equipmentIds": [
+      "EQ-0151"
+    ],
+    "supplierId": "SUP-020",
+    "projectId": "PRJ-003",
+    "value": 37000.79,
+    "currency": "USD",
+    "issueDate": "2025-11-10",
+    "deliveryDate": "2026-10-12",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-11-24",
+      "designApproval": "2026-01-09",
+      "fabricationStart": "2026-02-08",
+      "inspection": "2026-08-13",
+      "readyForShipment": "2026-09-12"
+    }
+  },
+  {
+    "poNumber": "PO-0079",
+    "poId": "PO-0079",
+    "equipmentIds": [
+      "EQ-0152"
+    ],
+    "supplierId": "SUP-021",
+    "projectId": "PRJ-003",
+    "value": 13514.29,
+    "currency": "USD",
+    "issueDate": "2025-08-02",
+    "deliveryDate": "2026-07-28",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-08-16",
+      "designApproval": "2025-10-01",
+      "fabricationStart": "2025-10-31",
+      "inspection": "2026-05-29",
+      "readyForShipment": "2026-06-28"
+    }
+  },
+  {
+    "poNumber": "PO-0080",
+    "poId": "PO-0080",
+    "equipmentIds": [
+      "EQ-0153"
+    ],
+    "supplierId": "SUP-022",
+    "projectId": "PRJ-003",
+    "value": 8164.18,
+    "currency": "USD",
+    "issueDate": "2025-01-03",
+    "deliveryDate": "2026-06-10",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-01-17",
+      "designApproval": "2025-03-04",
+      "fabricationStart": "2025-04-03",
+      "inspection": "2026-04-11",
+      "readyForShipment": "2026-05-11"
+    }
+  },
+  {
+    "poNumber": "PO-0081",
+    "poId": "PO-0081",
+    "equipmentIds": [
+      "EQ-0154"
+    ],
+    "supplierId": "SUP-023",
+    "projectId": "PRJ-003",
+    "value": 12627.55,
+    "currency": "USD",
+    "issueDate": "2025-03-01",
+    "deliveryDate": "2025-11-09",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-03-15",
+      "designApproval": "2025-04-30",
+      "fabricationStart": "2025-05-30",
+      "inspection": "2025-09-10",
+      "readyForShipment": "2025-10-10"
+    }
+  },
+  {
+    "poNumber": "PO-0082",
+    "poId": "PO-0082",
+    "equipmentIds": [
+      "EQ-0155"
+    ],
+    "supplierId": "SUP-024",
+    "projectId": "PRJ-003",
+    "value": 786.05,
+    "currency": "USD",
+    "issueDate": "2025-11-12",
+    "deliveryDate": "2026-11-12",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-11-26",
+      "designApproval": "2026-01-11",
+      "fabricationStart": "2026-02-10",
+      "inspection": "2026-09-13",
+      "readyForShipment": "2026-10-13"
+    }
+  },
+  {
+    "poNumber": "PO-0083",
+    "poId": "PO-0083",
+    "equipmentIds": [
+      "EQ-0156"
+    ],
+    "supplierId": "SUP-040",
+    "projectId": "PRJ-003",
+    "value": 464542.24,
+    "currency": "USD",
+    "issueDate": "2025-06-12",
+    "deliveryDate": "2026-07-24",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-06-26",
+      "designApproval": "2025-08-11",
+      "fabricationStart": "2025-09-10",
+      "inspection": "2026-05-25",
+      "readyForShipment": "2026-06-24"
+    }
+  },
+  {
+    "poNumber": "PO-0084",
+    "poId": "PO-0084",
+    "equipmentIds": [
+      "EQ-0157"
+    ],
+    "supplierId": "SUP-041",
+    "projectId": "PRJ-003",
+    "value": 121586.39,
+    "currency": "USD",
+    "issueDate": "2025-11-09",
+    "deliveryDate": "2026-09-12",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-11-23",
+      "designApproval": "2026-01-08",
+      "fabricationStart": "2026-02-07",
+      "inspection": "2026-07-14",
+      "readyForShipment": "2026-08-13"
+    }
+  },
+  {
+    "poNumber": "PO-0085",
+    "poId": "PO-0085",
+    "equipmentIds": [
+      "EQ-0158"
+    ],
+    "supplierId": "SUP-042",
+    "projectId": "PRJ-003",
+    "value": 29440.14,
+    "currency": "USD",
+    "issueDate": "2025-07-18",
+    "deliveryDate": "2026-03-15",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-08-01",
+      "designApproval": "2025-09-16",
+      "fabricationStart": "2025-10-16",
+      "inspection": "2026-01-14",
+      "readyForShipment": "2026-02-13"
+    }
+  },
+  {
+    "poNumber": "PO-0086",
+    "poId": "PO-0086",
+    "equipmentIds": [
+      "EQ-0159"
+    ],
+    "supplierId": "SUP-043",
+    "projectId": "PRJ-003",
+    "value": 159797.52,
+    "currency": "USD",
+    "issueDate": "2025-10-10",
+    "deliveryDate": "2027-03-29",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-10-24",
+      "designApproval": "2025-12-09",
+      "fabricationStart": "2026-01-08",
+      "inspection": "2027-01-28",
+      "readyForShipment": "2027-02-27"
+    }
+  },
+  {
+    "poNumber": "PO-0087",
+    "poId": "PO-0087",
+    "equipmentIds": [
+      "EQ-0160"
+    ],
+    "supplierId": "SUP-050",
+    "projectId": "PRJ-003",
+    "value": 26060.77,
+    "currency": "USD",
+    "issueDate": "2025-08-06",
+    "deliveryDate": "2026-09-17",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-20",
+      "designApproval": "2025-10-05",
+      "fabricationStart": "2025-11-04",
+      "inspection": "2026-07-19",
+      "readyForShipment": "2026-08-18"
+    }
+  },
+  {
+    "poNumber": "PO-0088",
+    "poId": "PO-0088",
+    "equipmentIds": [
+      "EQ-0161"
+    ],
+    "supplierId": "SUP-051",
+    "projectId": "PRJ-003",
+    "value": 104138.1,
+    "currency": "USD",
+    "issueDate": "2025-09-18",
+    "deliveryDate": "2026-08-12",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-10-02",
+      "designApproval": "2025-11-17",
+      "fabricationStart": "2025-12-17",
+      "inspection": "2026-06-13",
+      "readyForShipment": "2026-07-13"
+    }
+  },
+  {
+    "poNumber": "PO-0089",
+    "poId": "PO-0089",
+    "equipmentIds": [
+      "EQ-0162"
+    ],
+    "supplierId": "SUP-052",
+    "projectId": "PRJ-003",
+    "value": 3289.39,
+    "currency": "USD",
+    "issueDate": "2025-11-06",
+    "deliveryDate": "2026-11-06",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-20",
+      "designApproval": "2026-01-05",
+      "fabricationStart": "2026-02-04",
+      "inspection": "2026-09-07",
+      "readyForShipment": "2026-10-07"
+    }
+  },
+  {
+    "poNumber": "PO-0090",
+    "poId": "PO-0090",
+    "equipmentIds": [
+      "EQ-0163"
+    ],
+    "supplierId": "SUP-053",
+    "projectId": "PRJ-003",
+    "value": 2549.03,
+    "currency": "USD",
+    "issueDate": "2025-03-08",
+    "deliveryDate": "2026-05-14",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-03-22",
+      "designApproval": "2025-05-07",
+      "fabricationStart": "2025-06-06",
+      "inspection": "2026-03-15",
+      "readyForShipment": "2026-04-14"
+    }
+  },
+  {
+    "poNumber": "PO-0091",
+    "poId": "PO-0091",
+    "equipmentIds": [
+      "EQ-0164",
+      "EQ-0170"
+    ],
+    "supplierId": "SUP-001",
+    "projectId": "PRJ-004",
+    "value": 1385715.19,
+    "currency": "USD",
+    "issueDate": "2025-09-05",
+    "deliveryDate": "2027-01-11",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-09-19",
+      "designApproval": "2025-11-04",
+      "fabricationStart": "2025-12-04",
+      "inspection": "2026-11-12",
+      "readyForShipment": "2026-12-12"
+    }
+  },
+  {
+    "poNumber": "PO-0092",
+    "poId": "PO-0092",
+    "equipmentIds": [
+      "EQ-0165",
+      "EQ-0171"
+    ],
+    "supplierId": "SUP-002",
+    "projectId": "PRJ-004",
+    "value": 680026.11,
+    "currency": "USD",
+    "issueDate": "2025-09-14",
+    "deliveryDate": "2026-10-08",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-09-28",
+      "designApproval": "2025-11-13",
+      "fabricationStart": "2025-12-13",
+      "inspection": "2026-08-09",
+      "readyForShipment": "2026-09-08"
+    }
+  },
+  {
+    "poNumber": "PO-0093",
+    "poId": "PO-0093",
+    "equipmentIds": [
+      "EQ-0166"
+    ],
+    "supplierId": "SUP-003",
+    "projectId": "PRJ-004",
+    "value": 178539.95,
+    "currency": "USD",
+    "issueDate": "2025-02-15",
+    "deliveryDate": "2026-04-09",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-03-01",
+      "designApproval": "2025-04-16",
+      "fabricationStart": "2025-05-16",
+      "inspection": "2026-02-08",
+      "readyForShipment": "2026-03-10"
+    }
+  },
+  {
+    "poNumber": "PO-0094",
+    "poId": "PO-0094",
+    "equipmentIds": [
+      "EQ-0167"
+    ],
+    "supplierId": "SUP-004",
+    "projectId": "PRJ-004",
+    "value": 215006.05,
+    "currency": "USD",
+    "issueDate": "2025-09-21",
+    "deliveryDate": "2027-01-14",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-10-05",
+      "designApproval": "2025-11-20",
+      "fabricationStart": "2025-12-20",
+      "inspection": "2026-11-15",
+      "readyForShipment": "2026-12-15"
+    }
+  },
+  {
+    "poNumber": "PO-0095",
+    "poId": "PO-0095",
+    "equipmentIds": [
+      "EQ-0168"
+    ],
+    "supplierId": "SUP-005",
+    "projectId": "PRJ-004",
+    "value": 60763.95,
+    "currency": "USD",
+    "issueDate": "2025-01-27",
+    "deliveryDate": "2025-09-27",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-02-10",
+      "designApproval": "2025-03-28",
+      "fabricationStart": "2025-04-27",
+      "inspection": "2025-07-29",
+      "readyForShipment": "2025-08-28"
+    }
+  },
+  {
+    "poNumber": "PO-0096",
+    "poId": "PO-0096",
+    "equipmentIds": [
+      "EQ-0169"
+    ],
+    "supplierId": "SUP-006",
+    "projectId": "PRJ-004",
+    "value": 27675.2,
+    "currency": "USD",
+    "issueDate": "2025-12-08",
+    "deliveryDate": "2026-11-30",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-12-22",
+      "designApproval": "2026-02-06",
+      "fabricationStart": "2026-03-08",
+      "inspection": "2026-10-01",
+      "readyForShipment": "2026-10-31"
+    }
+  },
+  {
+    "poNumber": "PO-0097",
+    "poId": "PO-0097",
+    "equipmentIds": [
+      "EQ-0172",
+      "EQ-0177",
+      "EQ-0182"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-004",
+    "value": 5692537.84,
+    "currency": "USD",
+    "issueDate": "2025-03-21",
+    "deliveryDate": "2026-02-19",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-04",
+      "designApproval": "2025-05-20",
+      "fabricationStart": "2025-06-19",
+      "inspection": "2025-12-21",
+      "readyForShipment": "2026-01-20"
+    }
+  },
+  {
+    "poNumber": "PO-0098",
+    "poId": "PO-0098",
+    "equipmentIds": [
+      "EQ-0173",
+      "EQ-0178",
+      "EQ-0183"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-004",
+    "value": 4430814.89,
+    "currency": "USD",
+    "issueDate": "2025-11-20",
+    "deliveryDate": "2027-03-24",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-12-04",
+      "designApproval": "2026-01-19",
+      "fabricationStart": "2026-02-18",
+      "inspection": "2027-01-23",
+      "readyForShipment": "2027-02-22"
+    }
+  },
+  {
+    "poNumber": "PO-0099",
+    "poId": "PO-0099",
+    "equipmentIds": [
+      "EQ-0174",
+      "EQ-0179"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-004",
+    "value": 709902.55,
+    "currency": "USD",
+    "issueDate": "2025-11-25",
+    "deliveryDate": "2027-03-15",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-12-09",
+      "designApproval": "2026-01-24",
+      "fabricationStart": "2026-02-23",
+      "inspection": "2027-01-14",
+      "readyForShipment": "2027-02-13"
+    }
+  },
+  {
+    "poNumber": "PO-0100",
+    "poId": "PO-0100",
+    "equipmentIds": [
+      "EQ-0175",
+      "EQ-0180"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-004",
+    "value": 400807.24,
+    "currency": "USD",
+    "issueDate": "2025-08-21",
+    "deliveryDate": "2026-11-23",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-09-04",
+      "designApproval": "2025-10-20",
+      "fabricationStart": "2025-11-19",
+      "inspection": "2026-09-24",
+      "readyForShipment": "2026-10-24"
+    }
+  },
+  {
+    "poNumber": "PO-0101",
+    "poId": "PO-0101",
+    "equipmentIds": [
+      "EQ-0176",
+      "EQ-0181"
+    ],
+    "supplierId": "SUP-014",
+    "projectId": "PRJ-004",
+    "value": 2296227.87,
+    "currency": "USD",
+    "issueDate": "2025-05-15",
+    "deliveryDate": "2025-12-18",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-05-29",
+      "designApproval": "2025-07-14",
+      "fabricationStart": "2025-08-13",
+      "inspection": "2025-10-19",
+      "readyForShipment": "2025-11-18"
+    }
+  },
+  {
+    "poNumber": "PO-0102",
+    "poId": "PO-0102",
+    "equipmentIds": [
+      "EQ-0184",
+      "EQ-0188",
+      "EQ-0192"
+    ],
+    "supplierId": "SUP-030",
+    "projectId": "PRJ-004",
+    "value": 257594.01,
+    "currency": "USD",
+    "issueDate": "2025-06-28",
+    "deliveryDate": "2026-06-06",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-07-12",
+      "designApproval": "2025-08-27",
+      "fabricationStart": "2025-09-26",
+      "inspection": "2026-04-07",
+      "readyForShipment": "2026-05-07"
+    }
+  },
+  {
+    "poNumber": "PO-0103",
+    "poId": "PO-0103",
+    "equipmentIds": [
+      "EQ-0185",
+      "EQ-0189",
+      "EQ-0193"
+    ],
+    "supplierId": "SUP-031",
+    "projectId": "PRJ-004",
+    "value": 1254554.23,
+    "currency": "USD",
+    "issueDate": "2025-08-04",
+    "deliveryDate": "2026-06-16",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-08-18",
+      "designApproval": "2025-10-03",
+      "fabricationStart": "2025-11-02",
+      "inspection": "2026-04-17",
+      "readyForShipment": "2026-05-17"
+    }
+  },
+  {
+    "poNumber": "PO-0104",
+    "poId": "PO-0104",
+    "equipmentIds": [
+      "EQ-0186",
+      "EQ-0190",
+      "EQ-0194"
+    ],
+    "supplierId": "SUP-032",
+    "projectId": "PRJ-004",
+    "value": 246466.37,
+    "currency": "USD",
+    "issueDate": "2025-07-08",
+    "deliveryDate": "2026-03-26",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-22",
+      "designApproval": "2025-09-06",
+      "fabricationStart": "2025-10-06",
+      "inspection": "2026-01-25",
+      "readyForShipment": "2026-02-24"
+    }
+  },
+  {
+    "poNumber": "PO-0105",
+    "poId": "PO-0105",
+    "equipmentIds": [
+      "EQ-0187",
+      "EQ-0191",
+      "EQ-0195"
+    ],
+    "supplierId": "SUP-033",
+    "projectId": "PRJ-004",
+    "value": 137984.3,
+    "currency": "USD",
+    "issueDate": "2025-05-16",
+    "deliveryDate": "2025-11-23",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-05-30",
+      "designApproval": "2025-07-15",
+      "fabricationStart": "2025-08-14",
+      "inspection": "2025-09-24",
+      "readyForShipment": "2025-10-24"
+    }
+  },
+  {
+    "poNumber": "PO-0106",
+    "poId": "PO-0106",
+    "equipmentIds": [
+      "EQ-0196",
+      "EQ-0201",
+      "EQ-0206"
+    ],
+    "supplierId": "SUP-020",
+    "projectId": "PRJ-004",
+    "value": 25475.64,
+    "currency": "USD",
+    "issueDate": "2025-01-10",
+    "deliveryDate": "2026-03-19",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-01-24",
+      "designApproval": "2025-03-11",
+      "fabricationStart": "2025-04-10",
+      "inspection": "2026-01-18",
+      "readyForShipment": "2026-02-17"
+    }
+  },
+  {
+    "poNumber": "PO-0107",
+    "poId": "PO-0107",
+    "equipmentIds": [
+      "EQ-0197",
+      "EQ-0202",
+      "EQ-0207"
+    ],
+    "supplierId": "SUP-021",
+    "projectId": "PRJ-004",
+    "value": 20203.93,
+    "currency": "USD",
+    "issueDate": "2025-05-24",
+    "deliveryDate": "2026-05-26",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-06-07",
+      "designApproval": "2025-07-23",
+      "fabricationStart": "2025-08-22",
+      "inspection": "2026-03-27",
+      "readyForShipment": "2026-04-26"
+    }
+  },
+  {
+    "poNumber": "PO-0108",
+    "poId": "PO-0108",
+    "equipmentIds": [
+      "EQ-0198",
+      "EQ-0203"
+    ],
+    "supplierId": "SUP-022",
+    "projectId": "PRJ-004",
+    "value": 10160.41,
+    "currency": "USD",
+    "issueDate": "2025-06-18",
+    "deliveryDate": "2026-05-11",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-07-02",
+      "designApproval": "2025-08-17",
+      "fabricationStart": "2025-09-16",
+      "inspection": "2026-03-12",
+      "readyForShipment": "2026-04-11"
+    }
+  },
+  {
+    "poNumber": "PO-0109",
+    "poId": "PO-0109",
+    "equipmentIds": [
+      "EQ-0199",
+      "EQ-0204"
+    ],
+    "supplierId": "SUP-023",
+    "projectId": "PRJ-004",
+    "value": 55509.97,
+    "currency": "USD",
+    "issueDate": "2025-10-22",
+    "deliveryDate": "2027-02-26",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-11-05",
+      "designApproval": "2025-12-21",
+      "fabricationStart": "2026-01-20",
+      "inspection": "2026-12-28",
+      "readyForShipment": "2027-01-27"
+    }
+  },
+  {
+    "poNumber": "PO-0110",
+    "poId": "PO-0110",
+    "equipmentIds": [
+      "EQ-0200",
+      "EQ-0205"
+    ],
+    "supplierId": "SUP-024",
+    "projectId": "PRJ-004",
+    "value": 36988.52,
+    "currency": "USD",
+    "issueDate": "2025-06-18",
+    "deliveryDate": "2026-06-20",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-07-02",
+      "designApproval": "2025-08-17",
+      "fabricationStart": "2025-09-16",
+      "inspection": "2026-04-21",
+      "readyForShipment": "2026-05-21"
+    }
+  },
+  {
+    "poNumber": "PO-0111",
+    "poId": "PO-0111",
+    "equipmentIds": [
+      "EQ-0208",
+      "EQ-0213"
+    ],
+    "supplierId": "SUP-040",
+    "projectId": "PRJ-004",
+    "value": 216263.45,
+    "currency": "USD",
+    "issueDate": "2025-01-05",
+    "deliveryDate": "2025-12-21",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-01-19",
+      "designApproval": "2025-03-06",
+      "fabricationStart": "2025-04-05",
+      "inspection": "2025-10-22",
+      "readyForShipment": "2025-11-21"
+    }
+  },
+  {
+    "poNumber": "PO-0112",
+    "poId": "PO-0112",
+    "equipmentIds": [
+      "EQ-0209"
+    ],
+    "supplierId": "SUP-041",
+    "projectId": "PRJ-004",
+    "value": 45450.51,
+    "currency": "USD",
+    "issueDate": "2025-03-11",
+    "deliveryDate": "2026-07-17",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-03-25",
+      "designApproval": "2025-05-10",
+      "fabricationStart": "2025-06-09",
+      "inspection": "2026-05-18",
+      "readyForShipment": "2026-06-17"
+    }
+  },
+  {
+    "poNumber": "PO-0113",
+    "poId": "PO-0113",
+    "equipmentIds": [
+      "EQ-0210"
+    ],
+    "supplierId": "SUP-042",
+    "projectId": "PRJ-004",
+    "value": 7846.62,
+    "currency": "USD",
+    "issueDate": "2025-05-19",
+    "deliveryDate": "2026-05-06",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-06-02",
+      "designApproval": "2025-07-18",
+      "fabricationStart": "2025-08-17",
+      "inspection": "2026-03-07",
+      "readyForShipment": "2026-04-06"
+    }
+  },
+  {
+    "poNumber": "PO-0114",
+    "poId": "PO-0114",
+    "equipmentIds": [
+      "EQ-0211"
+    ],
+    "supplierId": "SUP-043",
+    "projectId": "PRJ-004",
+    "value": 36815.61,
+    "currency": "USD",
+    "issueDate": "2025-01-12",
+    "deliveryDate": "2025-12-27",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-01-26",
+      "designApproval": "2025-03-13",
+      "fabricationStart": "2025-04-12",
+      "inspection": "2025-10-28",
+      "readyForShipment": "2025-11-27"
+    }
+  },
+  {
+    "poNumber": "PO-0115",
+    "poId": "PO-0115",
+    "equipmentIds": [
+      "EQ-0212"
+    ],
+    "supplierId": "SUP-044",
+    "projectId": "PRJ-004",
+    "value": 206951.55,
+    "currency": "USD",
+    "issueDate": "2025-12-28",
+    "deliveryDate": "2027-06-13",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2026-01-11",
+      "designApproval": "2026-02-26",
+      "fabricationStart": "2026-03-28",
+      "inspection": "2027-04-14",
+      "readyForShipment": "2027-05-14"
+    }
+  },
+  {
+    "poNumber": "PO-0116",
+    "poId": "PO-0116",
+    "equipmentIds": [
+      "EQ-0214",
+      "EQ-0219"
+    ],
+    "supplierId": "SUP-050",
+    "projectId": "PRJ-004",
+    "value": 137969.82,
+    "currency": "USD",
+    "issueDate": "2025-10-19",
+    "deliveryDate": "2026-08-11",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-11-02",
+      "designApproval": "2025-12-18",
+      "fabricationStart": "2026-01-17",
+      "inspection": "2026-06-12",
+      "readyForShipment": "2026-07-12"
+    }
+  },
+  {
+    "poNumber": "PO-0117",
+    "poId": "PO-0117",
+    "equipmentIds": [
+      "EQ-0215"
+    ],
+    "supplierId": "SUP-051",
+    "projectId": "PRJ-004",
+    "value": 19568.95,
+    "currency": "USD",
+    "issueDate": "2025-10-25",
+    "deliveryDate": "2026-11-03",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-11-08",
+      "designApproval": "2025-12-24",
+      "fabricationStart": "2026-01-23",
+      "inspection": "2026-09-04",
+      "readyForShipment": "2026-10-04"
+    }
+  },
+  {
+    "poNumber": "PO-0118",
+    "poId": "PO-0118",
+    "equipmentIds": [
+      "EQ-0216"
+    ],
+    "supplierId": "SUP-052",
+    "projectId": "PRJ-004",
+    "value": 969.73,
+    "currency": "USD",
+    "issueDate": "2025-02-07",
+    "deliveryDate": "2025-08-15",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-02-21",
+      "designApproval": "2025-04-08",
+      "fabricationStart": "2025-05-08",
+      "inspection": "2025-06-16",
+      "readyForShipment": "2025-07-16"
+    }
+  },
+  {
+    "poNumber": "PO-0119",
+    "poId": "PO-0119",
+    "equipmentIds": [
+      "EQ-0217"
+    ],
+    "supplierId": "SUP-053",
+    "projectId": "PRJ-004",
+    "value": 5778.26,
+    "currency": "USD",
+    "issueDate": "2025-04-14",
+    "deliveryDate": "2026-06-24",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-04-28",
+      "designApproval": "2025-06-13",
+      "fabricationStart": "2025-07-13",
+      "inspection": "2026-04-25",
+      "readyForShipment": "2026-05-25"
+    }
+  },
+  {
+    "poNumber": "PO-0120",
+    "poId": "PO-0120",
+    "equipmentIds": [
+      "EQ-0218"
+    ],
+    "supplierId": "SUP-054",
+    "projectId": "PRJ-004",
+    "value": 56280.11,
+    "currency": "USD",
+    "issueDate": "2025-01-23",
+    "deliveryDate": "2025-09-30",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-02-06",
+      "designApproval": "2025-03-24",
+      "fabricationStart": "2025-04-23",
+      "inspection": "2025-08-01",
+      "readyForShipment": "2025-08-31"
+    }
+  },
+  {
+    "poNumber": "PO-0121",
+    "poId": "PO-0121",
+    "equipmentIds": [
+      "EQ-0220",
+      "EQ-0226",
+      "EQ-0232"
+    ],
+    "supplierId": "SUP-001",
+    "projectId": "PRJ-005",
+    "value": 1708925.73,
+    "currency": "USD",
+    "issueDate": "2025-03-15",
+    "deliveryDate": "2026-06-10",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-03-29",
+      "designApproval": "2025-05-14",
+      "fabricationStart": "2025-06-13",
+      "inspection": "2026-04-11",
+      "readyForShipment": "2026-05-11"
+    }
+  },
+  {
+    "poNumber": "PO-0122",
+    "poId": "PO-0122",
+    "equipmentIds": [
+      "EQ-0221",
+      "EQ-0227",
+      "EQ-0233"
+    ],
+    "supplierId": "SUP-002",
+    "projectId": "PRJ-005",
+    "value": 1350884.33,
+    "currency": "USD",
+    "issueDate": "2025-05-20",
+    "deliveryDate": "2026-07-21",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-06-03",
+      "designApproval": "2025-07-19",
+      "fabricationStart": "2025-08-18",
+      "inspection": "2026-05-22",
+      "readyForShipment": "2026-06-21"
+    }
+  },
+  {
+    "poNumber": "PO-0123",
+    "poId": "PO-0123",
+    "equipmentIds": [
+      "EQ-0222",
+      "EQ-0228",
+      "EQ-0234"
+    ],
+    "supplierId": "SUP-003",
+    "projectId": "PRJ-005",
+    "value": 367391.31,
+    "currency": "USD",
+    "issueDate": "2025-05-23",
+    "deliveryDate": "2026-03-05",
+    "incoterms": "EXW",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-06-06",
+      "designApproval": "2025-07-22",
+      "fabricationStart": "2025-08-21",
+      "inspection": "2026-01-04",
+      "readyForShipment": "2026-02-03"
+    }
+  },
+  {
+    "poNumber": "PO-0124",
+    "poId": "PO-0124",
+    "equipmentIds": [
+      "EQ-0223",
+      "EQ-0229",
+      "EQ-0235"
+    ],
+    "supplierId": "SUP-004",
+    "projectId": "PRJ-005",
+    "value": 1342391.51,
+    "currency": "USD",
+    "issueDate": "2025-05-04",
+    "deliveryDate": "2026-08-20",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-05-18",
+      "designApproval": "2025-07-03",
+      "fabricationStart": "2025-08-02",
+      "inspection": "2026-06-21",
+      "readyForShipment": "2026-07-21"
+    }
+  },
+  {
+    "poNumber": "PO-0125",
+    "poId": "PO-0125",
+    "equipmentIds": [
+      "EQ-0224",
+      "EQ-0230"
+    ],
+    "supplierId": "SUP-005",
+    "projectId": "PRJ-005",
+    "value": 553163.12,
+    "currency": "USD",
+    "issueDate": "2025-03-10",
+    "deliveryDate": "2025-09-27",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-03-24",
+      "designApproval": "2025-05-09",
+      "fabricationStart": "2025-06-08",
+      "inspection": "2025-07-29",
+      "readyForShipment": "2025-08-28"
+    }
+  },
+  {
+    "poNumber": "PO-0126",
+    "poId": "PO-0126",
+    "equipmentIds": [
+      "EQ-0225",
+      "EQ-0231"
+    ],
+    "supplierId": "SUP-006",
+    "projectId": "PRJ-005",
+    "value": 275124.16,
+    "currency": "USD",
+    "issueDate": "2025-08-07",
+    "deliveryDate": "2026-05-17",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-08-21",
+      "designApproval": "2025-10-06",
+      "fabricationStart": "2025-11-05",
+      "inspection": "2026-03-18",
+      "readyForShipment": "2026-04-17"
+    }
+  },
+  {
+    "poNumber": "PO-0127",
+    "poId": "PO-0127",
+    "equipmentIds": [
+      "EQ-0236",
+      "EQ-0241",
+      "EQ-0246",
+      "EQ-0251"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-005",
+    "value": 8480426.82,
+    "currency": "USD",
+    "issueDate": "2025-04-02",
+    "deliveryDate": "2026-09-06",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-04-16",
+      "designApproval": "2025-06-01",
+      "fabricationStart": "2025-07-01",
+      "inspection": "2026-07-08",
+      "readyForShipment": "2026-08-07"
+    }
+  },
+  {
+    "poNumber": "PO-0128",
+    "poId": "PO-0128",
+    "equipmentIds": [
+      "EQ-0256"
+    ],
+    "supplierId": "SUP-010",
+    "projectId": "PRJ-005",
+    "value": 125807.54,
+    "currency": "USD",
+    "issueDate": "2025-07-11",
+    "deliveryDate": "2026-09-05",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-07-25",
+      "designApproval": "2025-09-09",
+      "fabricationStart": "2025-10-09",
+      "inspection": "2026-07-07",
+      "readyForShipment": "2026-08-06"
+    }
+  },
+  {
+    "poNumber": "PO-0129",
+    "poId": "PO-0129",
+    "equipmentIds": [
+      "EQ-0237",
+      "EQ-0242",
+      "EQ-0247",
+      "EQ-0252"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-005",
+    "value": 2633456.73,
+    "currency": "USD",
+    "issueDate": "2025-08-16",
+    "deliveryDate": "2027-01-11",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-30",
+      "designApproval": "2025-10-15",
+      "fabricationStart": "2025-11-14",
+      "inspection": "2026-11-12",
+      "readyForShipment": "2026-12-12"
+    }
+  },
+  {
+    "poNumber": "PO-0130",
+    "poId": "PO-0130",
+    "equipmentIds": [
+      "EQ-0257"
+    ],
+    "supplierId": "SUP-011",
+    "projectId": "PRJ-005",
+    "value": 47930.11,
+    "currency": "USD",
+    "issueDate": "2025-02-21",
+    "deliveryDate": "2026-06-09",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-03-07",
+      "designApproval": "2025-04-22",
+      "fabricationStart": "2025-05-22",
+      "inspection": "2026-04-10",
+      "readyForShipment": "2026-05-10"
+    }
+  },
+  {
+    "poNumber": "PO-0131",
+    "poId": "PO-0131",
+    "equipmentIds": [
+      "EQ-0238",
+      "EQ-0243",
+      "EQ-0248",
+      "EQ-0253"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-005",
+    "value": 2408600.98,
+    "currency": "USD",
+    "issueDate": "2025-07-26",
+    "deliveryDate": "2026-10-02",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-09",
+      "designApproval": "2025-09-24",
+      "fabricationStart": "2025-10-24",
+      "inspection": "2026-08-03",
+      "readyForShipment": "2026-09-02"
+    }
+  },
+  {
+    "poNumber": "PO-0132",
+    "poId": "PO-0132",
+    "equipmentIds": [
+      "EQ-0258"
+    ],
+    "supplierId": "SUP-012",
+    "projectId": "PRJ-005",
+    "value": 1491046.28,
+    "currency": "USD",
+    "issueDate": "2025-10-20",
+    "deliveryDate": "2026-06-11",
+    "incoterms": "DDP",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Delivered",
+    "milestones": {
+      "kickoff": "2025-11-03",
+      "designApproval": "2025-12-19",
+      "fabricationStart": "2026-01-18",
+      "inspection": "2026-04-12",
+      "readyForShipment": "2026-05-12"
+    }
+  },
+  {
+    "poNumber": "PO-0133",
+    "poId": "PO-0133",
+    "equipmentIds": [
+      "EQ-0239",
+      "EQ-0244",
+      "EQ-0249",
+      "EQ-0254"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-005",
+    "value": 4999828.2,
+    "currency": "USD",
+    "issueDate": "2025-09-15",
+    "deliveryDate": "2026-07-31",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-09-29",
+      "designApproval": "2025-11-14",
+      "fabricationStart": "2025-12-14",
+      "inspection": "2026-06-01",
+      "readyForShipment": "2026-07-01"
+    }
+  },
+  {
+    "poNumber": "PO-0134",
+    "poId": "PO-0134",
+    "equipmentIds": [
+      "EQ-0259"
+    ],
+    "supplierId": "SUP-013",
+    "projectId": "PRJ-005",
+    "value": 412169.57,
+    "currency": "USD",
+    "issueDate": "2025-11-09",
+    "deliveryDate": "2026-08-11",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-23",
+      "designApproval": "2026-01-08",
+      "fabricationStart": "2026-02-07",
+      "inspection": "2026-06-12",
+      "readyForShipment": "2026-07-12"
+    }
+  },
+  {
+    "poNumber": "PO-0135",
+    "poId": "PO-0135",
+    "equipmentIds": [
+      "EQ-0240",
+      "EQ-0245",
+      "EQ-0250",
+      "EQ-0255"
+    ],
+    "supplierId": "SUP-014",
+    "projectId": "PRJ-005",
+    "value": 4467055.6,
+    "currency": "USD",
+    "issueDate": "2025-07-27",
+    "deliveryDate": "2026-08-29",
+    "incoterms": "FCA",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-10",
+      "designApproval": "2025-09-25",
+      "fabricationStart": "2025-10-25",
+      "inspection": "2026-06-30",
+      "readyForShipment": "2026-07-30"
+    }
+  },
+  {
+    "poNumber": "PO-0136",
+    "poId": "PO-0136",
+    "equipmentIds": [
+      "EQ-0260",
+      "EQ-0264",
+      "EQ-0268",
+      "EQ-0272"
+    ],
+    "supplierId": "SUP-030",
+    "projectId": "PRJ-005",
+    "value": 133484.07,
+    "currency": "USD",
+    "issueDate": "2025-04-01",
+    "deliveryDate": "2026-02-08",
+    "incoterms": "EXW",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-04-15",
+      "designApproval": "2025-05-31",
+      "fabricationStart": "2025-06-30",
+      "inspection": "2025-12-10",
+      "readyForShipment": "2026-01-09"
+    }
+  },
+  {
+    "poNumber": "PO-0137",
+    "poId": "PO-0137",
+    "equipmentIds": [
+      "EQ-0261",
+      "EQ-0265",
+      "EQ-0269",
+      "EQ-0273"
+    ],
+    "supplierId": "SUP-031",
+    "projectId": "PRJ-005",
+    "value": 1393864.69,
+    "currency": "USD",
+    "issueDate": "2025-05-21",
+    "deliveryDate": "2026-05-20",
+    "incoterms": "CIF",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-06-04",
+      "designApproval": "2025-07-20",
+      "fabricationStart": "2025-08-19",
+      "inspection": "2026-03-21",
+      "readyForShipment": "2026-04-20"
+    }
+  },
+  {
+    "poNumber": "PO-0138",
+    "poId": "PO-0138",
+    "equipmentIds": [
+      "EQ-0262",
+      "EQ-0266",
+      "EQ-0270"
+    ],
+    "supplierId": "SUP-032",
+    "projectId": "PRJ-005",
+    "value": 223421.45,
+    "currency": "USD",
+    "issueDate": "2025-12-25",
+    "deliveryDate": "2026-11-29",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2026-01-08",
+      "designApproval": "2026-02-23",
+      "fabricationStart": "2026-03-25",
+      "inspection": "2026-09-30",
+      "readyForShipment": "2026-10-30"
+    }
+  },
+  {
+    "poNumber": "PO-0139",
+    "poId": "PO-0139",
+    "equipmentIds": [
+      "EQ-0263",
+      "EQ-0267",
+      "EQ-0271"
+    ],
+    "supplierId": "SUP-033",
+    "projectId": "PRJ-005",
+    "value": 142583.09,
+    "currency": "USD",
+    "issueDate": "2025-08-24",
+    "deliveryDate": "2026-12-27",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-09-07",
+      "designApproval": "2025-10-23",
+      "fabricationStart": "2025-11-22",
+      "inspection": "2026-10-28",
+      "readyForShipment": "2026-11-27"
+    }
+  },
+  {
+    "poNumber": "PO-0140",
+    "poId": "PO-0140",
+    "equipmentIds": [
+      "EQ-0274",
+      "EQ-0279",
+      "EQ-0284"
+    ],
+    "supplierId": "SUP-020",
+    "projectId": "PRJ-005",
+    "value": 75975.34,
+    "currency": "USD",
+    "issueDate": "2025-04-25",
+    "deliveryDate": "2026-02-25",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-05-09",
+      "designApproval": "2025-06-24",
+      "fabricationStart": "2025-07-24",
+      "inspection": "2025-12-27",
+      "readyForShipment": "2026-01-26"
+    }
+  },
+  {
+    "poNumber": "PO-0141",
+    "poId": "PO-0141",
+    "equipmentIds": [
+      "EQ-0275",
+      "EQ-0280",
+      "EQ-0285"
+    ],
+    "supplierId": "SUP-021",
+    "projectId": "PRJ-005",
+    "value": 31992.86,
+    "currency": "USD",
+    "issueDate": "2025-02-02",
+    "deliveryDate": "2026-05-08",
+    "incoterms": "FCA",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-02-16",
+      "designApproval": "2025-04-03",
+      "fabricationStart": "2025-05-03",
+      "inspection": "2026-03-09",
+      "readyForShipment": "2026-04-08"
+    }
+  },
+  {
+    "poNumber": "PO-0142",
+    "poId": "PO-0142",
+    "equipmentIds": [
+      "EQ-0276",
+      "EQ-0281",
+      "EQ-0286"
+    ],
+    "supplierId": "SUP-022",
+    "projectId": "PRJ-005",
+    "value": 29466.33,
+    "currency": "USD",
+    "issueDate": "2025-02-22",
+    "deliveryDate": "2025-12-04",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-03-08",
+      "designApproval": "2025-04-23",
+      "fabricationStart": "2025-05-23",
+      "inspection": "2025-10-05",
+      "readyForShipment": "2025-11-04"
+    }
+  },
+  {
+    "poNumber": "PO-0143",
+    "poId": "PO-0143",
+    "equipmentIds": [
+      "EQ-0277",
+      "EQ-0282",
+      "EQ-0287"
+    ],
+    "supplierId": "SUP-023",
+    "projectId": "PRJ-005",
+    "value": 41759.59,
+    "currency": "USD",
+    "issueDate": "2025-09-14",
+    "deliveryDate": "2026-11-01",
+    "incoterms": "FCA",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-09-28",
+      "designApproval": "2025-11-13",
+      "fabricationStart": "2025-12-13",
+      "inspection": "2026-09-02",
+      "readyForShipment": "2026-10-02"
+    }
+  },
+  {
+    "poNumber": "PO-0144",
+    "poId": "PO-0144",
+    "equipmentIds": [
+      "EQ-0278",
+      "EQ-0283"
+    ],
+    "supplierId": "SUP-024",
+    "projectId": "PRJ-005",
+    "value": 19750.73,
+    "currency": "USD",
+    "issueDate": "2025-01-13",
+    "deliveryDate": "2025-11-19",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-01-27",
+      "designApproval": "2025-03-14",
+      "fabricationStart": "2025-04-13",
+      "inspection": "2025-09-20",
+      "readyForShipment": "2025-10-20"
+    }
+  },
+  {
+    "poNumber": "PO-0145",
+    "poId": "PO-0145",
+    "equipmentIds": [
+      "EQ-0288",
+      "EQ-0293",
+      "EQ-0298"
+    ],
+    "supplierId": "SUP-040",
+    "projectId": "PRJ-005",
+    "value": 759654.8,
+    "currency": "USD",
+    "issueDate": "2025-01-03",
+    "deliveryDate": "2026-02-28",
+    "incoterms": "FOB",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Shipped",
+    "milestones": {
+      "kickoff": "2025-01-17",
+      "designApproval": "2025-03-04",
+      "fabricationStart": "2025-04-03",
+      "inspection": "2025-12-30",
+      "readyForShipment": "2026-01-29"
+    }
+  },
+  {
+    "poNumber": "PO-0146",
+    "poId": "PO-0146",
+    "equipmentIds": [
+      "EQ-0289",
+      "EQ-0294",
+      "EQ-0299"
+    ],
+    "supplierId": "SUP-041",
+    "projectId": "PRJ-005",
+    "value": 434355.41,
+    "currency": "USD",
+    "issueDate": "2025-11-14",
+    "deliveryDate": "2026-11-20",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 90 from BL date",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-28",
+      "designApproval": "2026-01-13",
+      "fabricationStart": "2026-02-12",
+      "inspection": "2026-09-21",
+      "readyForShipment": "2026-10-21"
+    }
+  },
+  {
+    "poNumber": "PO-0147",
+    "poId": "PO-0147",
+    "equipmentIds": [
+      "EQ-0290",
+      "EQ-0295"
+    ],
+    "supplierId": "SUP-042",
+    "projectId": "PRJ-005",
+    "value": 27874.3,
+    "currency": "USD",
+    "issueDate": "2025-11-22",
+    "deliveryDate": "2027-02-21",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-12-06",
+      "designApproval": "2026-01-21",
+      "fabricationStart": "2026-02-20",
+      "inspection": "2026-12-23",
+      "readyForShipment": "2027-01-22"
+    }
+  },
+  {
+    "poNumber": "PO-0148",
+    "poId": "PO-0148",
+    "equipmentIds": [
+      "EQ-0291",
+      "EQ-0296"
+    ],
+    "supplierId": "SUP-043",
+    "projectId": "PRJ-005",
+    "value": 155823.3,
+    "currency": "USD",
+    "issueDate": "2025-03-24",
+    "deliveryDate": "2026-01-12",
+    "incoterms": "FOB",
+    "paymentTerms": "Net 60",
+    "status": "Acknowledged",
+    "milestones": {
+      "kickoff": "2025-04-07",
+      "designApproval": "2025-05-23",
+      "fabricationStart": "2025-06-22",
+      "inspection": "2025-11-13",
+      "readyForShipment": "2025-12-13"
+    }
+  },
+  {
+    "poNumber": "PO-0149",
+    "poId": "PO-0149",
+    "equipmentIds": [
+      "EQ-0292",
+      "EQ-0297"
+    ],
+    "supplierId": "SUP-044",
+    "projectId": "PRJ-005",
+    "value": 292461.82,
+    "currency": "USD",
+    "issueDate": "2025-07-18",
+    "deliveryDate": "2026-07-27",
+    "incoterms": "CIF",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-08-01",
+      "designApproval": "2025-09-16",
+      "fabricationStart": "2025-10-16",
+      "inspection": "2026-05-28",
+      "readyForShipment": "2026-06-27"
+    }
+  },
+  {
+    "poNumber": "PO-0150",
+    "poId": "PO-0150",
+    "equipmentIds": [
+      "EQ-0300",
+      "EQ-0305",
+      "EQ-0310"
+    ],
+    "supplierId": "SUP-050",
+    "projectId": "PRJ-005",
+    "value": 126940.5,
+    "currency": "USD",
+    "issueDate": "2025-02-02",
+    "deliveryDate": "2026-07-05",
+    "incoterms": "EXW",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-02-16",
+      "designApproval": "2025-04-03",
+      "fabricationStart": "2025-05-03",
+      "inspection": "2026-05-06",
+      "readyForShipment": "2026-06-05"
+    }
+  },
+  {
+    "poNumber": "PO-0151",
+    "poId": "PO-0151",
+    "equipmentIds": [
+      "EQ-0301",
+      "EQ-0306"
+    ],
+    "supplierId": "SUP-051",
+    "projectId": "PRJ-005",
+    "value": 56092.84,
+    "currency": "USD",
+    "issueDate": "2025-08-20",
+    "deliveryDate": "2027-01-26",
+    "incoterms": "FOB",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-09-03",
+      "designApproval": "2025-10-19",
+      "fabricationStart": "2025-11-18",
+      "inspection": "2026-11-27",
+      "readyForShipment": "2026-12-27"
+    }
+  },
+  {
+    "poNumber": "PO-0152",
+    "poId": "PO-0152",
+    "equipmentIds": [
+      "EQ-0302",
+      "EQ-0307"
+    ],
+    "supplierId": "SUP-052",
+    "projectId": "PRJ-005",
+    "value": 75196.07,
+    "currency": "USD",
+    "issueDate": "2025-04-25",
+    "deliveryDate": "2025-11-19",
+    "incoterms": "CIF",
+    "paymentTerms": "30% advance, 60% on inspection, 10% on delivery",
+    "status": "In Production",
+    "milestones": {
+      "kickoff": "2025-05-09",
+      "designApproval": "2025-06-24",
+      "fabricationStart": "2025-07-24",
+      "inspection": "2025-09-20",
+      "readyForShipment": "2025-10-20"
+    }
+  },
+  {
+    "poNumber": "PO-0153",
+    "poId": "PO-0153",
+    "equipmentIds": [
+      "EQ-0303",
+      "EQ-0308"
+    ],
+    "supplierId": "SUP-053",
+    "projectId": "PRJ-005",
+    "value": 10314.27,
+    "currency": "USD",
+    "issueDate": "2025-10-20",
+    "deliveryDate": "2027-03-28",
+    "incoterms": "DDP",
+    "paymentTerms": "10% advance, 80% on shipment, 10% on acceptance",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-11-03",
+      "designApproval": "2025-12-19",
+      "fabricationStart": "2026-01-18",
+      "inspection": "2027-01-27",
+      "readyForShipment": "2027-02-26"
+    }
+  },
+  {
+    "poNumber": "PO-0154",
+    "poId": "PO-0154",
+    "equipmentIds": [
+      "EQ-0304",
+      "EQ-0309"
+    ],
+    "supplierId": "SUP-054",
+    "projectId": "PRJ-005",
+    "value": 15837.67,
+    "currency": "USD",
+    "issueDate": "2025-04-14",
+    "deliveryDate": "2026-03-13",
+    "incoterms": "DDP",
+    "paymentTerms": "Net 60",
+    "status": "Issued",
+    "milestones": {
+      "kickoff": "2025-04-28",
+      "designApproval": "2025-06-13",
+      "fabricationStart": "2025-07-13",
+      "inspection": "2026-01-12",
+      "readyForShipment": "2026-02-11"
+    }
+  }
+]

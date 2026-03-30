@@ -4,10 +4,21 @@
     "name": "Atlas Copco Gas & Process",
     "country": "USA",
     "city": "Houston",
-    "coordinates": [-95.37, 29.76],
+    "coordinates": [
+      -95.37,
+      29.76
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 617", "API 672", "ASME"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 617",
+      "API 672",
+      "ASME"
+    ],
     "financialRating": 92,
     "onTimeDeliveryRate": 94.5,
     "qualityRejectRate": 0.8,
@@ -15,17 +26,36 @@
     "capacityUtilization": 78,
     "pastOrderCount": 45,
     "totalHistoricalValue": 890000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-002",
+      "SUP-006"
+    ]
   },
   {
     "supplierId": "SUP-002",
     "name": "MAN Energy Solutions",
     "country": "Germany",
     "city": "Augsburg",
-    "coordinates": [10.90, 48.37],
+    "coordinates": [
+      10.9,
+      48.37
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 617", "API 618", "API 612", "ASME", "PED", "ATEX"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 617",
+      "API 618",
+      "API 612",
+      "ASME",
+      "PED",
+      "ATEX"
+    ],
     "financialRating": 88,
     "onTimeDeliveryRate": 93.0,
     "qualityRejectRate": 0.7,
@@ -33,17 +63,36 @@
     "capacityUtilization": 83,
     "pastOrderCount": 134,
     "totalHistoricalValue": 1450000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-010",
+    "alternativeSuppliers": [
+      "SUP-001",
+      "SUP-003"
+    ]
   },
   {
     "supplierId": "SUP-003",
     "name": "Mitsubishi Heavy Industries",
     "country": "Japan",
     "city": "Yokohama",
-    "coordinates": [139.64, 35.44],
+    "coordinates": [
+      139.64,
+      35.44
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "JIS", "ASME U", "ASME S", "API 616", "API 618", "API 617"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "JIS",
+      "ASME U",
+      "ASME S",
+      "API 616",
+      "API 618",
+      "API 617"
+    ],
     "financialRating": 91,
     "onTimeDeliveryRate": 96.8,
     "qualityRejectRate": 0.5,
@@ -51,17 +100,38 @@
     "capacityUtilization": 89,
     "pastOrderCount": 97,
     "totalHistoricalValue": 1950000000,
-    "riskFlags": ["seismic zone"]
+    "riskFlags": [
+      "seismic zone"
+    ],
+    "nearestPortId": "PORT-006",
+    "alternativeSuppliers": [
+      "SUP-006",
+      "SUP-004"
+    ]
   },
   {
     "supplierId": "SUP-004",
     "name": "Siemens Energy",
     "country": "Germany",
     "city": "Berlin",
-    "coordinates": [13.41, 52.52],
+    "coordinates": [
+      13.41,
+      52.52
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "ISO 45001", "ASME U", "ASME S", "API 616", "API 612", "ATEX"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ISO 45001",
+      "ASME U",
+      "ASME S",
+      "API 616",
+      "API 612",
+      "ATEX"
+    ],
     "financialRating": 93,
     "onTimeDeliveryRate": 94.2,
     "qualityRejectRate": 0.8,
@@ -69,17 +139,36 @@
     "capacityUtilization": 87,
     "pastOrderCount": 142,
     "totalHistoricalValue": 2800000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-010",
+    "alternativeSuppliers": [
+      "SUP-005",
+      "SUP-002"
+    ]
   },
   {
     "supplierId": "SUP-005",
     "name": "Baker Hughes",
     "country": "Italy",
     "city": "Florence",
-    "coordinates": [11.25, 43.77],
+    "coordinates": [
+      11.25,
+      43.77
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 617", "API 618", "API 616", "API 610", "ASME", "PED"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 617",
+      "API 618",
+      "API 616",
+      "API 610",
+      "ASME",
+      "PED"
+    ],
     "financialRating": 89,
     "onTimeDeliveryRate": 91.2,
     "qualityRejectRate": 1.0,
@@ -87,17 +176,35 @@
     "capacityUtilization": 80,
     "pastOrderCount": 156,
     "totalHistoricalValue": 1780000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-004",
+      "SUP-001"
+    ]
   },
   {
     "supplierId": "SUP-006",
     "name": "Doosan Enerbility",
     "country": "South Korea",
     "city": "Changwon",
-    "coordinates": [128.68, 35.23],
+    "coordinates": [
+      128.68,
+      35.23
+    ],
     "category": "OEM",
-    "capabilities": ["Rotating"],
-    "certifications": ["ISO 9001", "ISO 14001", "ASME U", "ASME S", "API 616", "KEPIC", "KS"],
+    "capabilities": [
+      "Rotating"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ASME U",
+      "ASME S",
+      "API 616",
+      "KEPIC",
+      "KS"
+    ],
     "financialRating": 84,
     "onTimeDeliveryRate": 90.8,
     "qualityRejectRate": 1.4,
@@ -105,17 +212,36 @@
     "capacityUtilization": 78,
     "pastOrderCount": 88,
     "totalHistoricalValue": 1650000000,
-    "riskFlags": ["secondary sanctions risk"]
+    "riskFlags": [
+      "secondary sanctions risk"
+    ],
+    "nearestPortId": "PORT-007",
+    "alternativeSuppliers": [
+      "SUP-001",
+      "SUP-003"
+    ]
   },
   {
     "supplierId": "SUP-010",
     "name": "Koch-Glitsch",
     "country": "USA",
     "city": "Tulsa",
-    "coordinates": [-95.99, 36.15],
+    "coordinates": [
+      -95.99,
+      36.15
+    ],
     "category": "Fabricator",
-    "capabilities": ["Static"],
-    "certifications": ["ISO 9001", "ASME U", "ASME U2", "API 650", "TEMA", "NACE MR0175"],
+    "capabilities": [
+      "Static"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ASME U",
+      "ASME U2",
+      "API 650",
+      "TEMA",
+      "NACE MR0175"
+    ],
     "financialRating": 86,
     "onTimeDeliveryRate": 92.5,
     "qualityRejectRate": 1.3,
@@ -123,17 +249,34 @@
     "capacityUtilization": 74,
     "pastOrderCount": 189,
     "totalHistoricalValue": 760000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-011",
+      "SUP-014"
+    ]
   },
   {
     "supplierId": "SUP-011",
     "name": "Alfa Laval",
     "country": "Sweden",
     "city": "Lund",
-    "coordinates": [13.19, 55.70],
+    "coordinates": [
+      13.19,
+      55.7
+    ],
     "category": "OEM",
-    "capabilities": ["Static"],
-    "certifications": ["ISO 9001", "ISO 14001", "ASME U", "PED", "TEMA", "API 662"],
+    "capabilities": [
+      "Static"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ASME U",
+      "PED",
+      "TEMA",
+      "API 662"
+    ],
     "financialRating": 87,
     "onTimeDeliveryRate": 94.0,
     "qualityRejectRate": 0.9,
@@ -141,17 +284,33 @@
     "capacityUtilization": 79,
     "pastOrderCount": 245,
     "totalHistoricalValue": 620000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-013",
+    "alternativeSuppliers": [
+      "SUP-010",
+      "SUP-013"
+    ]
   },
   {
     "supplierId": "SUP-012",
     "name": "Haldor Topsoe",
     "country": "Denmark",
     "city": "Copenhagen",
-    "coordinates": [12.57, 55.68],
+    "coordinates": [
+      12.57,
+      55.68
+    ],
     "category": "OEM",
-    "capabilities": ["Static"],
-    "certifications": ["ISO 9001", "ISO 14001", "ASME U", "PED", "ATEX"],
+    "capabilities": [
+      "Static"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ASME U",
+      "PED",
+      "ATEX"
+    ],
     "financialRating": 83,
     "onTimeDeliveryRate": 95.2,
     "qualityRejectRate": 0.6,
@@ -159,17 +318,35 @@
     "capacityUtilization": 85,
     "pastOrderCount": 78,
     "totalHistoricalValue": 920000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-010",
+    "alternativeSuppliers": [
+      "SUP-013",
+      "SUP-010"
+    ]
   },
   {
     "supplierId": "SUP-013",
     "name": "Linde Engineering",
     "country": "Germany",
     "city": "Munich",
-    "coordinates": [11.58, 48.14],
+    "coordinates": [
+      11.58,
+      48.14
+    ],
     "category": "OEM",
-    "capabilities": ["Static"],
-    "certifications": ["ISO 9001", "ISO 14001", "ASME U", "ASME U2", "PED", "AD 2000", "NACE MR0175"],
+    "capabilities": [
+      "Static"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ASME U",
+      "ASME U2",
+      "PED",
+      "AD 2000",
+      "NACE MR0175"
+    ],
     "financialRating": 91,
     "onTimeDeliveryRate": 93.8,
     "qualityRejectRate": 0.7,
@@ -177,17 +354,38 @@
     "capacityUtilization": 88,
     "pastOrderCount": 62,
     "totalHistoricalValue": 1850000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-010",
+    "alternativeSuppliers": [
+      "SUP-012",
+      "SUP-014"
+    ]
   },
   {
     "supplierId": "SUP-014",
     "name": "L&T Heavy Engineering",
     "country": "India",
     "city": "Hazira",
-    "coordinates": [72.65, 21.10],
+    "coordinates": [
+      72.65,
+      21.1
+    ],
     "category": "Fabricator",
-    "capabilities": ["Static"],
-    "certifications": ["ISO 9001", "ISO 14001", "ASME U", "ASME U2", "ASME U3", "ASME S", "NBBI R", "API 650", "TEMA", "NACE MR0175"],
+    "capabilities": [
+      "Static"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "ASME U",
+      "ASME U2",
+      "ASME U3",
+      "ASME S",
+      "NBBI R",
+      "API 650",
+      "TEMA",
+      "NACE MR0175"
+    ],
     "financialRating": 82,
     "onTimeDeliveryRate": 89.5,
     "qualityRejectRate": 1.8,
@@ -195,17 +393,38 @@
     "capacityUtilization": 72,
     "pastOrderCount": 175,
     "totalHistoricalValue": 1100000000,
-    "riskFlags": ["monsoon season port delays"]
+    "riskFlags": [
+      "monsoon season port delays"
+    ],
+    "nearestPortId": "PORT-021",
+    "alternativeSuppliers": [
+      "SUP-010",
+      "SUP-013"
+    ]
   },
   {
     "supplierId": "SUP-020",
     "name": "Emerson Automation",
     "country": "USA",
     "city": "Pittsburgh",
-    "coordinates": [-79.99, 40.44],
+    "coordinates": [
+      -79.99,
+      40.44
+    ],
     "category": "OEM",
-    "capabilities": ["Instrumentation"],
-    "certifications": ["ISO 9001", "IEC 61511", "IEC 61508 SIL3", "ATEX", "FM", "CSA", "HART", "Foundation Fieldbus"],
+    "capabilities": [
+      "Instrumentation"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "IEC 61511",
+      "IEC 61508 SIL3",
+      "ATEX",
+      "FM",
+      "CSA",
+      "HART",
+      "Foundation Fieldbus"
+    ],
     "financialRating": 92,
     "onTimeDeliveryRate": 93.2,
     "qualityRejectRate": 0.8,
@@ -213,17 +432,35 @@
     "capacityUtilization": 82,
     "pastOrderCount": 287,
     "totalHistoricalValue": 870000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-021",
+      "SUP-022"
+    ]
   },
   {
     "supplierId": "SUP-021",
     "name": "Honeywell Process Solutions",
     "country": "USA",
     "city": "Phoenix",
-    "coordinates": [-112.07, 33.45],
+    "coordinates": [
+      -112.07,
+      33.45
+    ],
     "category": "OEM",
-    "capabilities": ["Instrumentation"],
-    "certifications": ["ISO 9001", "IEC 61511", "IEC 61508 SIL3", "ISA 84", "ATEX", "FM", "CSA"],
+    "capabilities": [
+      "Instrumentation"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "IEC 61511",
+      "IEC 61508 SIL3",
+      "ISA 84",
+      "ATEX",
+      "FM",
+      "CSA"
+    ],
     "financialRating": 94,
     "onTimeDeliveryRate": 95.5,
     "qualityRejectRate": 0.5,
@@ -231,17 +468,35 @@
     "capacityUtilization": 86,
     "pastOrderCount": 312,
     "totalHistoricalValue": 980000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-020",
+      "SUP-023"
+    ]
   },
   {
     "supplierId": "SUP-022",
     "name": "Yokogawa Electric",
     "country": "Japan",
     "city": "Tokyo",
-    "coordinates": [139.75, 35.68],
+    "coordinates": [
+      139.75,
+      35.68
+    ],
     "category": "OEM",
-    "capabilities": ["Instrumentation"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 61511", "IEC 61508 SIL3", "ATEX", "TIIS", "FM"],
+    "capabilities": [
+      "Instrumentation"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 61511",
+      "IEC 61508 SIL3",
+      "ATEX",
+      "TIIS",
+      "FM"
+    ],
     "financialRating": 88,
     "onTimeDeliveryRate": 96.5,
     "qualityRejectRate": 0.5,
@@ -249,17 +504,37 @@
     "capacityUtilization": 84,
     "pastOrderCount": 198,
     "totalHistoricalValue": 720000000,
-    "riskFlags": ["seismic zone"]
+    "riskFlags": [
+      "seismic zone"
+    ],
+    "nearestPortId": "PORT-006",
+    "alternativeSuppliers": [
+      "SUP-024",
+      "SUP-020"
+    ]
   },
   {
     "supplierId": "SUP-023",
     "name": "ABB Ltd",
     "country": "Switzerland",
     "city": "Zurich",
-    "coordinates": [8.54, 47.38],
+    "coordinates": [
+      8.54,
+      47.38
+    ],
     "category": "OEM",
-    "capabilities": ["Instrumentation"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 61508", "ATEX", "SIL2", "FM", "CSA"],
+    "capabilities": [
+      "Instrumentation"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 61508",
+      "ATEX",
+      "SIL2",
+      "FM",
+      "CSA"
+    ],
     "financialRating": 90,
     "onTimeDeliveryRate": 92.8,
     "qualityRejectRate": 0.9,
@@ -267,17 +542,35 @@
     "capacityUtilization": 77,
     "pastOrderCount": 256,
     "totalHistoricalValue": 540000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-021",
+      "SUP-024"
+    ]
   },
   {
     "supplierId": "SUP-024",
     "name": "Schneider Electric",
     "country": "France",
     "city": "Paris",
-    "coordinates": [2.35, 48.86],
+    "coordinates": [
+      2.35,
+      48.86
+    ],
     "category": "OEM",
-    "capabilities": ["Instrumentation"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 61131", "IEC 61850", "ATEX", "UL", "CE"],
+    "capabilities": [
+      "Instrumentation"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 61131",
+      "IEC 61850",
+      "ATEX",
+      "UL",
+      "CE"
+    ],
     "financialRating": 91,
     "onTimeDeliveryRate": 93.0,
     "qualityRejectRate": 1.0,
@@ -285,17 +578,34 @@
     "capacityUtilization": 80,
     "pastOrderCount": 178,
     "totalHistoricalValue": 430000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-023",
+      "SUP-022"
+    ]
   },
   {
     "supplierId": "SUP-030",
     "name": "Siemens Switchgear",
     "country": "Germany",
     "city": "Erlangen",
-    "coordinates": [11.01, 49.59],
+    "coordinates": [
+      11.01,
+      49.59
+    ],
     "category": "OEM",
-    "capabilities": ["Electrical"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 62271", "IEC 61850", "IEEE C37", "KEMA tested"],
+    "capabilities": [
+      "Electrical"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 62271",
+      "IEC 61850",
+      "IEEE C37",
+      "KEMA tested"
+    ],
     "financialRating": 93,
     "onTimeDeliveryRate": 94.5,
     "qualityRejectRate": 0.6,
@@ -303,17 +613,34 @@
     "capacityUtilization": 85,
     "pastOrderCount": 167,
     "totalHistoricalValue": 890000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-010",
+    "alternativeSuppliers": [
+      "SUP-031",
+      "SUP-032"
+    ]
   },
   {
     "supplierId": "SUP-031",
     "name": "ABB Power Grids",
     "country": "Switzerland",
     "city": "Zurich",
-    "coordinates": [8.54, 47.38],
+    "coordinates": [
+      8.54,
+      47.38
+    ],
     "category": "OEM",
-    "capabilities": ["Electrical"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 60076", "IEC 62271", "IEEE C57", "KEMA tested"],
+    "capabilities": [
+      "Electrical"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 60076",
+      "IEC 62271",
+      "IEEE C57",
+      "KEMA tested"
+    ],
     "financialRating": 91,
     "onTimeDeliveryRate": 93.8,
     "qualityRejectRate": 0.7,
@@ -321,17 +648,35 @@
     "capacityUtilization": 83,
     "pastOrderCount": 198,
     "totalHistoricalValue": 1120000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-030",
+      "SUP-033"
+    ]
   },
   {
     "supplierId": "SUP-032",
     "name": "Hyundai Electric",
     "country": "South Korea",
     "city": "Ulsan",
-    "coordinates": [129.31, 35.54],
+    "coordinates": [
+      129.31,
+      35.54
+    ],
     "category": "OEM",
-    "capabilities": ["Electrical"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 60076", "IEC 62271", "IEEE C57", "KS", "KEPIC"],
+    "capabilities": [
+      "Electrical"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 60076",
+      "IEC 62271",
+      "IEEE C57",
+      "KS",
+      "KEPIC"
+    ],
     "financialRating": 83,
     "onTimeDeliveryRate": 90.2,
     "qualityRejectRate": 1.5,
@@ -339,17 +684,34 @@
     "capacityUtilization": 75,
     "pastOrderCount": 124,
     "totalHistoricalValue": 680000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-007",
+    "alternativeSuppliers": [
+      "SUP-030",
+      "SUP-033"
+    ]
   },
   {
     "supplierId": "SUP-033",
     "name": "Eaton Corporation",
     "country": "Ireland",
     "city": "Dublin",
-    "coordinates": [-6.26, 53.35],
+    "coordinates": [
+      -6.26,
+      53.35
+    ],
     "category": "OEM",
-    "capabilities": ["Electrical"],
-    "certifications": ["ISO 9001", "ISO 14001", "IEC 61439", "UL 845", "NEMA", "IEEE 1584"],
+    "capabilities": [
+      "Electrical"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "IEC 61439",
+      "UL 845",
+      "NEMA",
+      "IEEE 1584"
+    ],
     "financialRating": 87,
     "onTimeDeliveryRate": 92.0,
     "qualityRejectRate": 1.1,
@@ -357,17 +719,33 @@
     "capacityUtilization": 73,
     "pastOrderCount": 210,
     "totalHistoricalValue": 520000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-031",
+      "SUP-032"
+    ]
   },
   {
     "supplierId": "SUP-040",
     "name": "Bechtel Pipe & Spool",
     "country": "USA",
     "city": "Houston",
-    "coordinates": [-95.37, 29.76],
+    "coordinates": [
+      -95.37,
+      29.76
+    ],
     "category": "Fabricator",
-    "capabilities": ["Piping"],
-    "certifications": ["ISO 9001", "ASME B31.3", "ASME B31.1", "AWS D1.1", "NACE MR0175"],
+    "capabilities": [
+      "Piping"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ASME B31.3",
+      "ASME B31.1",
+      "AWS D1.1",
+      "NACE MR0175"
+    ],
     "financialRating": 95,
     "onTimeDeliveryRate": 91.5,
     "qualityRejectRate": 1.6,
@@ -375,17 +753,35 @@
     "capacityUtilization": 70,
     "pastOrderCount": 320,
     "totalHistoricalValue": 980000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-041",
+      "SUP-042"
+    ]
   },
   {
     "supplierId": "SUP-041",
     "name": "Hyundai Steel",
     "country": "South Korea",
     "city": "Ulsan",
-    "coordinates": [129.31, 35.54],
+    "coordinates": [
+      129.31,
+      35.54
+    ],
     "category": "Fabricator",
-    "capabilities": ["Piping"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 5L", "API 5CT", "ASTM A106", "NACE MR0175", "KS"],
+    "capabilities": [
+      "Piping"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 5L",
+      "API 5CT",
+      "ASTM A106",
+      "NACE MR0175",
+      "KS"
+    ],
     "financialRating": 81,
     "onTimeDeliveryRate": 89.0,
     "qualityRejectRate": 2.1,
@@ -393,17 +789,35 @@
     "capacityUtilization": 68,
     "pastOrderCount": 275,
     "totalHistoricalValue": 620000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-007",
+    "alternativeSuppliers": [
+      "SUP-044",
+      "SUP-040"
+    ]
   },
   {
     "supplierId": "SUP-042",
     "name": "JSW Steel",
     "country": "India",
     "city": "Mumbai",
-    "coordinates": [72.88, 19.08],
+    "coordinates": [
+      72.88,
+      19.08
+    ],
     "category": "Fabricator",
-    "capabilities": ["Piping"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 5L", "ASTM A516", "Lloyd's", "BV", "DNV"],
+    "capabilities": [
+      "Piping"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 5L",
+      "ASTM A516",
+      "Lloyd's",
+      "BV",
+      "DNV"
+    ],
     "financialRating": 78,
     "onTimeDeliveryRate": 86.5,
     "qualityRejectRate": 2.8,
@@ -411,17 +825,38 @@
     "capacityUtilization": 65,
     "pastOrderCount": 180,
     "totalHistoricalValue": 380000000,
-    "riskFlags": ["monsoon season port delays"]
+    "riskFlags": [
+      "monsoon season port delays"
+    ],
+    "nearestPortId": "PORT-009",
+    "alternativeSuppliers": [
+      "SUP-043",
+      "SUP-044"
+    ]
   },
   {
     "supplierId": "SUP-043",
     "name": "Nippon Steel",
     "country": "Japan",
     "city": "Tokyo",
-    "coordinates": [139.75, 35.68],
+    "coordinates": [
+      139.75,
+      35.68
+    ],
     "category": "Fabricator",
-    "capabilities": ["Piping"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 5L", "API 5CT", "ASTM", "JIS", "DNV", "Lloyd's"],
+    "capabilities": [
+      "Piping"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 5L",
+      "API 5CT",
+      "ASTM",
+      "JIS",
+      "DNV",
+      "Lloyd's"
+    ],
     "financialRating": 89,
     "onTimeDeliveryRate": 95.0,
     "qualityRejectRate": 0.8,
@@ -429,17 +864,38 @@
     "capacityUtilization": 82,
     "pastOrderCount": 145,
     "totalHistoricalValue": 720000000,
-    "riskFlags": ["seismic zone"]
+    "riskFlags": [
+      "seismic zone"
+    ],
+    "nearestPortId": "PORT-006",
+    "alternativeSuppliers": [
+      "SUP-044",
+      "SUP-041"
+    ]
   },
   {
     "supplierId": "SUP-044",
     "name": "POSCO",
     "country": "South Korea",
     "city": "Pohang",
-    "coordinates": [129.37, 36.02],
+    "coordinates": [
+      129.37,
+      36.02
+    ],
     "category": "Fabricator",
-    "capabilities": ["Piping"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 5L", "ASTM", "KS", "Lloyd's", "DNV", "ABS"],
+    "capabilities": [
+      "Piping"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 5L",
+      "ASTM",
+      "KS",
+      "Lloyd's",
+      "DNV",
+      "ABS"
+    ],
     "financialRating": 87,
     "onTimeDeliveryRate": 93.2,
     "qualityRejectRate": 1.0,
@@ -447,17 +903,36 @@
     "capacityUtilization": 77,
     "pastOrderCount": 198,
     "totalHistoricalValue": 540000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-007",
+    "alternativeSuppliers": [
+      "SUP-043",
+      "SUP-041"
+    ]
   },
   {
     "supplierId": "SUP-050",
     "name": "Emerson (Fisher)",
     "country": "USA",
     "city": "Marshalltown",
-    "coordinates": [-92.91, 42.05],
+    "coordinates": [
+      -92.91,
+      42.05
+    ],
     "category": "OEM",
-    "capabilities": ["Valves"],
-    "certifications": ["ISO 9001", "API 6D", "API 607", "API 598", "ASME B16.34", "ATEX", "SIL3", "NACE MR0175"],
+    "capabilities": [
+      "Valves"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "API 6D",
+      "API 607",
+      "API 598",
+      "ASME B16.34",
+      "ATEX",
+      "SIL3",
+      "NACE MR0175"
+    ],
     "financialRating": 92,
     "onTimeDeliveryRate": 91.8,
     "qualityRejectRate": 0.7,
@@ -465,17 +940,35 @@
     "capacityUtilization": 79,
     "pastOrderCount": 420,
     "totalHistoricalValue": 650000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-051",
+      "SUP-052"
+    ]
   },
   {
     "supplierId": "SUP-051",
     "name": "Flowserve",
     "country": "USA",
     "city": "Dallas",
-    "coordinates": [-96.80, 32.78],
+    "coordinates": [
+      -96.8,
+      32.78
+    ],
     "category": "OEM",
-    "capabilities": ["Valves"],
-    "certifications": ["ISO 9001", "API 6D", "API 608", "API 600", "ASME B16.34", "ATEX", "NACE MR0175"],
+    "capabilities": [
+      "Valves"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "API 6D",
+      "API 608",
+      "API 600",
+      "ASME B16.34",
+      "ATEX",
+      "NACE MR0175"
+    ],
     "financialRating": 85,
     "onTimeDeliveryRate": 89.5,
     "qualityRejectRate": 1.3,
@@ -483,17 +976,37 @@
     "capacityUtilization": 72,
     "pastOrderCount": 356,
     "totalHistoricalValue": 580000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-001",
+    "alternativeSuppliers": [
+      "SUP-050",
+      "SUP-053"
+    ]
   },
   {
     "supplierId": "SUP-052",
     "name": "IMI Critical Engineering",
     "country": "United Kingdom",
     "city": "Birmingham",
-    "coordinates": [-1.89, 52.49],
+    "coordinates": [
+      -1.89,
+      52.49
+    ],
     "category": "OEM",
-    "capabilities": ["Valves"],
-    "certifications": ["ISO 9001", "API 6D", "API 600", "API 594", "ASME B16.34", "PED", "ATEX", "NACE MR0175", "SIL3"],
+    "capabilities": [
+      "Valves"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "API 6D",
+      "API 600",
+      "API 594",
+      "ASME B16.34",
+      "PED",
+      "ATEX",
+      "NACE MR0175",
+      "SIL3"
+    ],
     "financialRating": 84,
     "onTimeDeliveryRate": 90.8,
     "qualityRejectRate": 0.9,
@@ -501,17 +1014,37 @@
     "capacityUtilization": 76,
     "pastOrderCount": 189,
     "totalHistoricalValue": 420000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-011",
+    "alternativeSuppliers": [
+      "SUP-053",
+      "SUP-051"
+    ]
   },
   {
     "supplierId": "SUP-053",
     "name": "Metso Outotec",
     "country": "Finland",
     "city": "Helsinki",
-    "coordinates": [24.94, 60.17],
+    "coordinates": [
+      24.94,
+      60.17
+    ],
     "category": "OEM",
-    "capabilities": ["Valves"],
-    "certifications": ["ISO 9001", "ISO 14001", "API 6D", "API 608", "API 609", "ASME B16.34", "PED", "ATEX", "SIL3"],
+    "capabilities": [
+      "Valves"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "ISO 14001",
+      "API 6D",
+      "API 608",
+      "API 609",
+      "ASME B16.34",
+      "PED",
+      "ATEX",
+      "SIL3"
+    ],
     "financialRating": 86,
     "onTimeDeliveryRate": 93.5,
     "qualityRejectRate": 0.8,
@@ -519,17 +1052,36 @@
     "capacityUtilization": 74,
     "pastOrderCount": 267,
     "totalHistoricalValue": 490000000,
-    "riskFlags": []
+    "riskFlags": [],
+    "nearestPortId": "PORT-013",
+    "alternativeSuppliers": [
+      "SUP-052",
+      "SUP-054"
+    ]
   },
   {
     "supplierId": "SUP-054",
     "name": "Neway Valve",
     "country": "China",
     "city": "Suzhou",
-    "coordinates": [120.59, 31.30],
+    "coordinates": [
+      120.59,
+      31.3
+    ],
     "category": "Fabricator",
-    "capabilities": ["Valves"],
-    "certifications": ["ISO 9001", "API 6D", "API 600", "API 602", "API 594", "ASME B16.34", "CE", "TS"],
+    "capabilities": [
+      "Valves"
+    ],
+    "certifications": [
+      "ISO 9001",
+      "API 6D",
+      "API 600",
+      "API 602",
+      "API 594",
+      "ASME B16.34",
+      "CE",
+      "TS"
+    ],
     "financialRating": 75,
     "onTimeDeliveryRate": 87.0,
     "qualityRejectRate": 3.2,
@@ -537,6 +1089,14 @@
     "capacityUtilization": 62,
     "pastOrderCount": 340,
     "totalHistoricalValue": 280000000,
-    "riskFlags": ["US-China tariff exposure", "quality consistency concerns"]
+    "riskFlags": [
+      "US-China tariff exposure",
+      "quality consistency concerns"
+    ],
+    "nearestPortId": "PORT-024",
+    "alternativeSuppliers": [
+      "SUP-053",
+      "SUP-050"
+    ]
   }
 ]
