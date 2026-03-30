@@ -1,0 +1,56 @@
+{
+  "eventId": "EVT-005",
+  "name": "Expanded Russia Sanctions",
+  "type": "Sanctions",
+  "severity": 5,
+  "description": "The EU, US, and UK have announced a comprehensive 15th sanctions package targeting Russia's energy sector. All industrial equipment exports to Russia are now prohibited, including previously exempted energy processing equipment. Secondary sanctions apply to any entity facilitating transshipment.",
+  "startDate": "2026-03-30",
+  "estimatedEndDate": null,
+  "affectedZones": ["ZONE-005"],
+  "source": "EU Official Journal / US Treasury OFAC",
+  "verificationStatus": "Confirmed",
+  "impacts": {
+    "blockedRoutes": ["RT-008", "RT-015", "RT-016"],
+    "affectedProjects": ["PRJ-005"],
+    "affectedSuppliers": ["SUP-001", "SUP-002", "SUP-003", "SUP-004", "SUP-005", "SUP-006", "SUP-010", "SUP-015"],
+    "supplierDetails": [
+      {"supplierId": "SUP-001", "name": "Siemens Energy", "impact": "Full export ban to Russia", "complianceStatus": "Blocked"},
+      {"supplierId": "SUP-002", "name": "GE Vernova", "impact": "Full export ban to Russia", "complianceStatus": "Blocked"},
+      {"supplierId": "SUP-003", "name": "Mitsubishi Heavy Industries", "impact": "Secondary sanctions risk", "complianceStatus": "Under Review"},
+      {"supplierId": "SUP-004", "name": "Sulzer", "impact": "Full export ban to Russia (Swiss alignment with EU)", "complianceStatus": "Blocked"},
+      {"supplierId": "SUP-005", "name": "Atlas Copco", "impact": "Full export ban to Russia", "complianceStatus": "Blocked"},
+      {"supplierId": "SUP-006", "name": "Doosan Enerbility", "impact": "Secondary sanctions risk from US", "complianceStatus": "Under Review"},
+      {"supplierId": "SUP-010", "name": "Baker Hughes", "impact": "Full export ban to Russia", "complianceStatus": "Blocked"},
+      {"supplierId": "SUP-015", "name": "Honeywell", "impact": "Full export ban to Russia", "complianceStatus": "Blocked"}
+    ],
+    "estimatedCostImpact": 890000000,
+    "affectedEquipmentCount": 91,
+    "maxDelayDays": 365,
+    "sanctionsDetails": {
+      "sanctioningBodies": ["EU", "US", "UK", "Switzerland", "Japan", "Australia"],
+      "prohibitedCategories": ["Industrial machinery", "Process control systems", "Compressors", "Heat exchangers", "Valves", "Electrical equipment"],
+      "secondarySanctionsRisk": true,
+      "windDownPeriod": 0
+    }
+  },
+  "recommendations": {
+    "alternativeRoutes": [
+      {"original": "RT-008", "alternative": "RT-017", "additionalDays": 12, "additionalCost": 180000},
+      {"original": "RT-015", "alternative": "RT-018", "additionalDays": 8, "additionalCost": 140000}
+    ],
+    "alternativeSuppliers": [
+      {"original": "SUP-001", "alternative": "SUP-060", "costDelta": 2500000, "leadTimeDelta": 180},
+      {"original": "SUP-002", "alternative": "SUP-061", "costDelta": 3200000, "leadTimeDelta": 210},
+      {"original": "SUP-015", "alternative": "SUP-062", "costDelta": 450000, "leadTimeDelta": 120}
+    ],
+    "emergencyActions": [
+      "Immediately halt all shipments in transit to Russia pending legal review",
+      "Engage sanctions compliance counsel for full supply chain audit",
+      "Evaluate Chinese suppliers (Shanghai Electric, Harbin Turbine) as non-sanctioned alternatives",
+      "Assess Indian suppliers (BHEL, L&T) for equipment that does not fall under secondary sanctions",
+      "Brief Gazprom project team on force majeure implications",
+      "Review insurance coverage for sanctions-related losses",
+      "Document all compliance steps for regulatory defense"
+    ]
+  }
+}

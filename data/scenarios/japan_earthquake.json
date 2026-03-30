@@ -1,0 +1,44 @@
+{
+  "eventId": "EVT-003",
+  "name": "Yokohama Area Earthquake",
+  "type": "Natural Disaster",
+  "severity": 4,
+  "description": "A magnitude 7.2 earthquake has struck the Yokohama-Kawasaki industrial corridor in Japan. Multiple manufacturing facilities have sustained structural damage. Port of Yokohama operations are suspended pending safety inspections.",
+  "startDate": "2026-03-30",
+  "estimatedEndDate": "2026-06-30",
+  "affectedZones": ["ZONE-003"],
+  "source": "Japan Meteorological Agency / NHK",
+  "verificationStatus": "Confirmed",
+  "impacts": {
+    "blockedRoutes": ["RT-004", "RT-009"],
+    "affectedProjects": ["PRJ-001", "PRJ-002", "PRJ-005"],
+    "affectedSuppliers": ["SUP-003", "SUP-022", "SUP-043"],
+    "supplierDetails": [
+      {"supplierId": "SUP-003", "name": "Mitsubishi Heavy Industries", "facilityDamage": "Severe", "estimatedRecoveryDays": 90},
+      {"supplierId": "SUP-022", "name": "Yokogawa Electric", "facilityDamage": "Moderate", "estimatedRecoveryDays": 60},
+      {"supplierId": "SUP-043", "name": "Nippon Steel", "facilityDamage": "Moderate", "estimatedRecoveryDays": 75}
+    ],
+    "estimatedCostImpact": 38000000,
+    "affectedEquipmentCount": 41,
+    "maxDelayDays": 90
+  },
+  "recommendations": {
+    "alternativeRoutes": [
+      {"original": "RT-004", "alternative": "RT-013", "additionalDays": 7, "additionalCost": 95000},
+      {"original": "RT-009", "alternative": "RT-014", "additionalDays": 5, "additionalCost": 72000}
+    ],
+    "alternativeSuppliers": [
+      {"original": "SUP-003", "alternative": "SUP-006", "costDelta": 150000, "leadTimeDelta": 30},
+      {"original": "SUP-003", "alternative": "SUP-010", "costDelta": 220000, "leadTimeDelta": 45},
+      {"original": "SUP-022", "alternative": "SUP-015", "costDelta": 80000, "leadTimeDelta": 21},
+      {"original": "SUP-043", "alternative": "SUP-018", "costDelta": 95000, "leadTimeDelta": 28}
+    ],
+    "emergencyActions": [
+      "Activate force majeure clauses with MHI, Yokogawa, and Nippon Steel",
+      "Issue emergency POs to Doosan Heavy (Korea) for turbine components",
+      "Source DCS/instrumentation from Honeywell (US) or Emerson (US) as Yokogawa alternatives",
+      "Redirect steel plate orders to POSCO (Korea) or ArcelorMittal (Europe)",
+      "Ship via Kobe or Osaka ports as Yokohama alternatives"
+    ]
+  }
+}

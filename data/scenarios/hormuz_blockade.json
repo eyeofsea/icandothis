@@ -1,0 +1,33 @@
+{
+  "eventId": "EVT-001",
+  "name": "Strait of Hormuz Blockade",
+  "type": "Geopolitical",
+  "severity": 5,
+  "description": "Iran has announced a complete naval blockade of the Strait of Hormuz in response to escalating tensions. All commercial shipping through the strait has been halted indefinitely.",
+  "startDate": "2026-03-30",
+  "estimatedEndDate": null,
+  "affectedZones": ["ZONE-001"],
+  "source": "Reuters / BBC News",
+  "verificationStatus": "Confirmed",
+  "impacts": {
+    "blockedRoutes": ["RT-001", "RT-004", "RT-005", "RT-006", "RT-007", "RT-008", "RT-009"],
+    "affectedProjects": ["PRJ-001", "PRJ-002"],
+    "estimatedCostImpact": 47000000,
+    "affectedEquipmentCount": 89,
+    "maxDelayDays": 120
+  },
+  "recommendations": {
+    "alternativeRoutes": [
+      {"original": "RT-005", "alternative": "RT-003", "additionalDays": 33, "additionalCost": 450000},
+      {"original": "RT-007", "alternative": "RT-003", "additionalDays": 35, "additionalCost": 520000}
+    ],
+    "alternativeSuppliers": [
+      {"original": "SUP-003", "alternative": "SUP-006", "costDelta": 150000, "leadTimeDelta": 30}
+    ],
+    "emergencyActions": [
+      "Activate air freight for critical items under 5 tons",
+      "Issue emergency RFQs to Indian suppliers (L&T, JSW) for non-critical items",
+      "Reroute European shipments via Cape of Good Hope"
+    ]
+  }
+}

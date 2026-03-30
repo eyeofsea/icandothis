@@ -1,0 +1,36 @@
+{
+  "eventId": "EVT-002",
+  "name": "Suez Canal Obstruction",
+  "type": "Logistics",
+  "severity": 4,
+  "description": "A large container vessel has run aground in the Suez Canal, blocking all northbound and southbound traffic. Salvage operations are underway but the canal is expected to remain closed for 2-4 weeks.",
+  "startDate": "2026-03-30",
+  "estimatedEndDate": "2026-04-20",
+  "affectedZones": ["ZONE-002"],
+  "source": "Suez Canal Authority / Lloyd's List",
+  "verificationStatus": "Confirmed",
+  "impacts": {
+    "blockedRoutes": ["RT-002", "RT-005", "RT-006"],
+    "affectedProjects": ["PRJ-001", "PRJ-002", "PRJ-003"],
+    "estimatedCostImpact": 28000000,
+    "affectedEquipmentCount": 64,
+    "maxDelayDays": 45
+  },
+  "recommendations": {
+    "alternativeRoutes": [
+      {"original": "RT-002", "alternative": "RT-010", "additionalDays": 14, "additionalCost": 280000},
+      {"original": "RT-005", "alternative": "RT-011", "additionalDays": 18, "additionalCost": 350000},
+      {"original": "RT-006", "alternative": "RT-012", "additionalDays": 16, "additionalCost": 310000}
+    ],
+    "alternativeSuppliers": [
+      {"original": "SUP-001", "alternative": "SUP-008", "costDelta": 85000, "leadTimeDelta": 14},
+      {"original": "SUP-004", "alternative": "SUP-009", "costDelta": 120000, "leadTimeDelta": 21}
+    ],
+    "emergencyActions": [
+      "Reroute all Europe-to-Middle East shipments via Cape of Good Hope",
+      "Pre-position critical spares at Jebel Ali free zone warehouse",
+      "Accelerate procurement of long-lead items with Asian suppliers unaffected by Suez",
+      "Coordinate with freight forwarders for rail alternatives via Turkey corridor"
+    ]
+  }
+}

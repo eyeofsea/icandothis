@@ -1,0 +1,44 @@
+{
+  "eventId": "EVT-004",
+  "name": "US-China Tariff Escalation",
+  "type": "Trade Policy",
+  "severity": 3,
+  "description": "The United States has imposed an additional 45% tariff on all industrial equipment and components imported from China, effective immediately. China has announced retaliatory tariffs on US energy sector exports. This impacts all procurement through Chinese manufacturers and transshipment through Chinese ports.",
+  "startDate": "2026-03-30",
+  "estimatedEndDate": null,
+  "affectedZones": ["ZONE-004"],
+  "source": "US Department of Commerce / MOFCOM",
+  "verificationStatus": "Confirmed",
+  "impacts": {
+    "blockedRoutes": [],
+    "affectedRoutes": ["RT-003", "RT-004", "RT-009"],
+    "affectedProjects": ["PRJ-001", "PRJ-002", "PRJ-003", "PRJ-004"],
+    "affectedSuppliers": ["SUP-054"],
+    "supplierDetails": [
+      {"supplierId": "SUP-054", "name": "Neway Valve Group", "impact": "45% tariff surcharge on all exports", "priceIncrease": 0.45}
+    ],
+    "estimatedCostImpact": 12500000,
+    "affectedEquipmentCount": 28,
+    "maxDelayDays": 30,
+    "tariffDetails": {
+      "newTariffRate": 0.45,
+      "previousTariffRate": 0.10,
+      "affectedHSCodes": ["8481", "8402", "8404", "8411", "7304", "7306"],
+      "exemptions": []
+    }
+  },
+  "recommendations": {
+    "alternativeRoutes": [],
+    "alternativeSuppliers": [
+      {"original": "SUP-054", "alternative": "SUP-027", "costDelta": 65000, "leadTimeDelta": 14},
+      {"original": "SUP-054", "alternative": "SUP-031", "costDelta": 42000, "leadTimeDelta": 21}
+    ],
+    "emergencyActions": [
+      "Expedite all pending POs with Neway Valve before tariff enforcement date",
+      "Issue RFQs to Emerson (Fisher valves, US) and IMI CCI (Italy) for valve replacements",
+      "Evaluate Indian valve manufacturers (L&T Valves, Audco) for non-critical service valves",
+      "Review existing inventory for Chinese-origin equipment that can be repurposed",
+      "Engage trade counsel to explore tariff exemption applications for project-critical items"
+    ]
+  }
+}
