@@ -3,13 +3,8 @@
 import { Equipment } from '@/lib/types';
 import { CRITICALITY_COLORS } from '@/lib/constants';
 
-interface EquipmentLayerProps {
-  equipment: Equipment[];
-  onEquipmentClick?: (eq: Equipment) => void;
-}
-
-export default function EquipmentLayer({ equipment, onEquipmentClick }: EquipmentLayerProps) {
-  // Rendering handled by MapInner via Leaflet API directly
+// Rendering handled by MapInner via Leaflet API
+export default function EquipmentLayer() {
   return null;
 }
 

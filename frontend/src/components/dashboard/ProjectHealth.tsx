@@ -4,7 +4,7 @@ import { useProjectStore } from '@/stores/projectStore';
 import { useMapStore } from '@/stores/mapStore';
 import { formatCurrency } from '@/lib/utils';
 import { STATUS_COLORS } from '@/lib/constants';
-import { Building2, Package, AlertTriangle } from 'lucide-react';
+import { Package, AlertTriangle } from 'lucide-react';
 
 export default function ProjectHealth() {
   const { projects, equipment } = useProjectStore();

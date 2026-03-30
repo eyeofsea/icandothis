@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { AlertTriangle, Info, AlertCircle, Bell, Zap } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 

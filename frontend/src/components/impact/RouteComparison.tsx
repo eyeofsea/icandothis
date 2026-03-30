@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import { useProjectStore } from '@/stores/projectStore';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from 'recharts';
-import { ROUTE_COLORS } from '@/lib/constants';
+// Route colors used for styling
 
 export default function RouteComparison() {
   const { routes } = useProjectStore();

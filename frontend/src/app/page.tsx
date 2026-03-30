@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Radar, Bell, Settings, Layers } from 'lucide-react';
+import { Radar, Bell } from 'lucide-react';
 import * as Tabs from '@radix-ui/react-tabs';
 
 import WorldMap from '@/components/map/WorldMap';

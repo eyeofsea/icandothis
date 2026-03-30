@@ -2,9 +2,9 @@
 
 import { useMemo } from 'react';
 import { useDisruptionStore } from '@/stores/disruptionStore';
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis } from 'recharts';
 import { formatCurrency } from '@/lib/utils';
-import { TrendingDown, TrendingUp, DollarSign } from 'lucide-react';
+import { TrendingDown, TrendingUp } from 'lucide-react';
 
 export default function CostAnalysis() {
   const { activeDisruptions } = useDisruptionStore();

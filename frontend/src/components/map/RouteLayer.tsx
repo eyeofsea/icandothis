@@ -3,14 +3,9 @@
 import { ShippingRoute } from '@/lib/types';
 import { ROUTE_COLORS } from '@/lib/constants';
 
-interface RouteLayerProps {
-  routes: ShippingRoute[];
-  onRouteClick?: (route: ShippingRoute) => void;
-}
-
-export default function RouteLayer({ routes, onRouteClick }: RouteLayerProps) {
-  // This component is used as a reference — actual rendering is done in MapInner via Leaflet API
-  // Keeping as a logical component for potential future React-Leaflet migration
+// Rendering is handled by MapInner via Leaflet API
+// This module exports styling utilities for routes
+export default function RouteLayer() {
   return null;
 }
 

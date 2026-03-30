@@ -2,13 +2,8 @@
 
 import { DisruptionEvent } from '@/lib/types';
 
-interface DisruptionLayerProps {
-  disruptions: DisruptionEvent[];
-  onDisruptionClick?: (disruption: DisruptionEvent) => void;
-}
-
-export default function DisruptionLayer({ disruptions, onDisruptionClick }: DisruptionLayerProps) {
-  // Rendering handled by MapInner via Leaflet API directly
+// Rendering handled by MapInner via Leaflet API
+export default function DisruptionLayer() {
   return null;
 }
 

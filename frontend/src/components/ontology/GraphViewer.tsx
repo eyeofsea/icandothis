@@ -32,32 +32,32 @@ export default function GraphViewer() {
 
     if (filters.has('project')) {
       projects.forEach((p) =>
-        nodes.push({ id: p.id, label: p.name, type: 'project', data: p })
+        nodes.push({ id: p.id, label: p.name, type: 'project', data: { ...p } as unknown as Record<string, unknown> })
       );
     }
     if (filters.has('equipment')) {
       equipment.forEach((e) =>
-        nodes.push({ id: e.id, label: e.name, type: 'equipment', data: e })
+        nodes.push({ id: e.id, label: e.name, type: 'equipment', data: { ...e } as unknown as Record<string, unknown> })
       );
     }
     if (filters.has('supplier')) {
       suppliers.forEach((s) =>
-        nodes.push({ id: s.id, label: s.name, type: 'supplier', data: s })
+        nodes.push({ id: s.id, label: s.name, type: 'supplier', data: { ...s } as unknown as Record<string, unknown> })
       );
     }
     if (filters.has('route')) {
       routes.forEach((r) =>
-        nodes.push({ id: r.id, label: r.name, type: 'route', data: r })
+        nodes.push({ id: r.id, label: r.name, type: 'route', data: { ...r } as unknown as Record<string, unknown> })
       );
     }
     if (filters.has('zone')) {
       zones.forEach((z) =>
-        nodes.push({ id: z.id, label: z.name, type: 'zone', data: z })
+        nodes.push({ id: z.id, label: z.name, type: 'zone', data: { ...z } as unknown as Record<string, unknown> })
       );
     }
 
     activeDisruptions.forEach((d) =>
-      nodes.push({ id: d.id, label: d.name, type: 'disruption', data: d })
+      nodes.push({ id: d.id, label: d.name, type: 'disruption', data: { ...d } as unknown as Record<string, unknown> })
     );
 
     const nodeIds = new Set(nodes.map((n) => n.id));
@@ -186,16 +186,17 @@ export default function GraphViewer() {
     });
 
     // Tick
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     simulation.on('tick', () => {
       link
-        .attr('x1', (d: any) => d.source.x)
-        .attr('y1', (d: any) => d.source.y)
-        .attr('x2', (d: any) => d.target.x)
-        .attr('y2', (d: any) => d.target.y);
+        .attr('x1', (d: unknown) => (d as { source: { x: number } }).source.x)
+        .attr('y1', (d: unknown) => (d as { source: { y: number } }).source.y)
+        .attr('x2', (d: unknown) => (d as { target: { x: number } }).target.x)
+        .attr('y2', (d: unknown) => (d as { target: { y: number } }).target.y);
 
       linkLabel
-        .attr('x', (d: any) => (d.source.x + d.target.x) / 2)
-        .attr('y', (d: any) => (d.source.y + d.target.y) / 2);
+        .attr('x', (d: unknown) => ((d as { source: { x: number }; target: { x: number } }).source.x + (d as { source: { x: number }; target: { x: number } }).target.x) / 2)
+        .attr('y', (d: unknown) => ((d as { source: { y: number }; target: { y: number } }).source.y + (d as { source: { y: number }; target: { y: number } }).target.y) / 2);
 
       node.attr('transform', (d) => `translate(${d.x},${d.y})`);
     });

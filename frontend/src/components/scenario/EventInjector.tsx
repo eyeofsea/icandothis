@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useDisruptionStore } from '@/stores/disruptionStore';
 import { DisruptionEvent } from '@/lib/types';
-import { Zap, Plus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 
 const EVENT_TYPES: DisruptionEvent['type'][] = ['geopolitical', 'natural', 'economic', 'infrastructure', 'cyber'];
 

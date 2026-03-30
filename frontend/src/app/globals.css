@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+@import 'leaflet/dist/leaflet.css';
 
 :root {
   --bg-primary: #0a0e1a;

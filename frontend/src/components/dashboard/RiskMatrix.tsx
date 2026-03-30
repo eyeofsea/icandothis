@@ -1,10 +1,10 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { ArrowUpDown, ChevronDown } from 'lucide-react';
+import { ArrowUpDown } from 'lucide-react';
 import { useProjectStore } from '@/stores/projectStore';
 import { useMapStore } from '@/stores/mapStore';
-import { formatCurrency, riskColor, riskBgColor } from '@/lib/utils';
+import { formatCurrency, riskColor } from '@/lib/utils';
 import { CRITICALITY_COLORS } from '@/lib/constants';
 
 type SortKey = 'riskScore' | 'value' | 'criticality' | 'status';
@@ -29,7 +29,7 @@ export default function RiskMatrix() {
       };
     });
 
-    let filtered = filterCriticality === 'all' ? mapped : mapped.filter((r) => r.criticality === filterCriticality);
+    const filtered = filterCriticality === 'all' ? mapped : mapped.filter((r) => r.criticality === filterCriticality);
 
     const critOrder: Record<string, number> = { Critical: 4, High: 3, Medium: 2, Low: 1 };
     filtered.sort((a, b) => {

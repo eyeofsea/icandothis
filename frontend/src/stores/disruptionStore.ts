@@ -26,12 +26,12 @@ export const useDisruptionStore = create<DisruptionState>((set) => ({
   addDisruption: (d) =>
     set((state) => ({
       activeDisruptions: [...state.activeDisruptions, d],
-      affectedEquipmentIds: [
-        ...new Set([...state.affectedEquipmentIds, ...d.affectedEquipmentIds]),
-      ],
-      affectedRouteIds: [
-        ...new Set([...state.affectedRouteIds, ...d.affectedRouteIds]),
-      ],
+      affectedEquipmentIds: Array.from(
+        new Set([...state.affectedEquipmentIds, ...d.affectedEquipmentIds])
+      ),
+      affectedRouteIds: Array.from(
+        new Set([...state.affectedRouteIds, ...d.affectedRouteIds])
+      ),
     })),
   removeDisruption: (id) =>
     set((state) => ({

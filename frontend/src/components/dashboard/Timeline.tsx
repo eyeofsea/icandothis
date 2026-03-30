@@ -7,7 +7,7 @@ import { ZoomIn, ZoomOut } from 'lucide-react';
 import { differenceInDays, format, addMonths, startOfMonth } from 'date-fns';
 
 export default function Timeline() {
-  const { equipment, projects } = useProjectStore();
+  const { equipment } = useProjectStore();
   const [zoom, setZoom] = useState(1);
 
   const today = new Date();
@@ -23,6 +23,7 @@ export default function Timeline() {
       d = addMonths(d, 1);
     }
     return m;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const criticalEquipment = useMemo(() => {
@@ -52,7 +53,6 @@ export default function Timeline() {
           {/* Month headers */}
           <div className="flex border-b border-[#1e3a5f] mb-1 sticky top-0 bg-[#0a0e1a] z-10">
             {months.map((m, i) => {
-              const offset = (differenceInDays(m, startDate) / totalDays) * 100;
               const width = (differenceInDays(addMonths(m, 1), m) / totalDays) * 100;
               return (
                 <div
@@ -79,7 +79,6 @@ export default function Timeline() {
             </div>
 
             {criticalEquipment.map((eq) => {
-              const proj = projects.find((p) => p.id === eq.projectId);
               const deliveryDate = new Date(eq.deliveryDate);
               const mfgStart = new Date(deliveryDate.getTime() - eq.leadTimeDays * 86400000);
               const barStart = Math.max(0, (differenceInDays(mfgStart, startDate) / totalDays) * 100);

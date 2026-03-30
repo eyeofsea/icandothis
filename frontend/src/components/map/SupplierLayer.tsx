@@ -3,13 +3,8 @@
 import { Supplier } from '@/lib/types';
 import { CATEGORY_COLORS } from '@/lib/constants';
 
-interface SupplierLayerProps {
-  suppliers: Supplier[];
-  onSupplierClick?: (supplier: Supplier) => void;
-}
-
-export default function SupplierLayer({ suppliers, onSupplierClick }: SupplierLayerProps) {
-  // Rendering handled by MapInner via Leaflet API directly
+// Rendering handled by MapInner via Leaflet API
+export default function SupplierLayer() {
   return null;
 }
 
