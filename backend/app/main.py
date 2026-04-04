@@ -1,3 +1,4 @@
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -6,6 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database.neo4j_client import Neo4jClient
 from app.database.redis_client import RedisClient
+
+logger = logging.getLogger(__name__)
 from app.routers import (
     analytics,
     chat,
@@ -25,6 +28,13 @@ async def lifespan(application: FastAPI):
 
     redis = await RedisClient.get_instance()
     await redis.connect(settings.REDIS_URL)
+
+    try:
+        from app.database.sync_pg import sync_all
+        sync_result = await sync_all()
+        logger.info(f"PostgreSQL sync complete: {sync_result}")
+    except Exception as e:
+        logger.warning(f"PostgreSQL sync skipped: {e}")
 
     yield
 
