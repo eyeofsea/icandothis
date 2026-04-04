@@ -76,15 +76,17 @@ function mapCriticality(crit: string | undefined): Equipment['criticality'] {
 function mapSupplier(raw: Record<string, unknown>): Supplier {
   const capabilities = (raw.capabilities as string[]) ?? [];
   const firstCap = capabilities[0]?.toLowerCase() ?? '';
+  const onTimeRate = (raw.onTimeDeliveryRate as number) ?? 0;
+  const rejectRate = (raw.qualityRejectRate as number) ?? 0;
   return {
     id: (raw.supplierId as string) ?? '',
     name: (raw.name as string) ?? '',
     country: (raw.country as string) ?? '',
     location: { lat: 0, lng: 0 },
     category: mapEquipmentCategory(firstCap),
-    capacity: Math.round(((raw.capacityUtilization as number) ?? 0) * 100) || 0,
-    qualityScore: Math.round(((raw.qualityRate as number) ?? 0) * 100) || 0,
-    onTimeDelivery: Math.round(((raw.deliveryRate as number) ?? 0) * 100) || 0,
+    capacity: Math.round((raw.capacityUtilization as number) ?? 0),
+    qualityScore: Math.round(100 - rejectRate),
+    onTimeDelivery: Math.round(onTimeRate),
     certifications: (raw.certifications as string[]) ?? [],
     riskScore: ((raw.riskFlags as string[]) ?? []).length * 15,
     activeOrders: 0,
@@ -239,10 +241,10 @@ interface ProjectState {
 let fetchInitiated = false;
 
 export const useProjectStore = create<ProjectState>((set, get) => ({
-  projects: [],
-  equipment: [],
-  suppliers: [],
-  routes: [],
+  projects: MOCK_PROJECTS,
+  equipment: MOCK_EQUIPMENT,
+  suppliers: MOCK_SUPPLIERS,
+  routes: MOCK_ROUTES,
   zones: MOCK_ZONES,
   ports: MOCK_PORTS,
   loading: false,
