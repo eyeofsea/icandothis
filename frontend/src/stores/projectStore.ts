@@ -2,8 +2,134 @@ import { create } from 'zustand';
 import {
   Project, Equipment, Supplier, ShippingRoute, GeopoliticalZone, Port,
 } from '@/lib/types';
+import {
+  fetchProjects, fetchEquipment, fetchSuppliers, fetchRoutes,
+} from '@/lib/api';
 
-// ===== Mock Data =====
+// ===== API-to-Frontend Mappers =====
+
+function mapProject(raw: Record<string, unknown>): Project {
+  const coords = raw.coordinates as { lat: number; lng: number } | null;
+  return {
+    id: (raw.projectId as string) ?? '',
+    name: (raw.name as string) ?? '',
+    client: (raw.client as string) ?? '',
+    value: (raw.totalValue as number) ?? 0,
+    completionPercent: (raw.completionPct as number) ?? 0,
+    status: mapProjectStatus(raw.status as string),
+    location: coords ?? { lat: 0, lng: 0 },
+    country: (raw.country as string) ?? '',
+    equipmentIds: (raw.equipmentIds as string[]) ?? [],
+    startDate: (raw.criticalPathDeadline as string) ?? '',
+    endDate: (raw.criticalPathDeadline as string) ?? '',
+  };
+}
+
+function mapProjectStatus(status: string | undefined): Project['status'] {
+  const normalized = (status ?? '').toLowerCase().replace(/[_\s]/g, '-');
+  if (['on-track', 'at-risk', 'delayed', 'critical'].includes(normalized)) {
+    return normalized as Project['status'];
+  }
+  return 'on-track';
+}
+
+function mapEquipment(raw: Record<string, unknown>): Equipment {
+  const supplier = raw.supplier as { supplierId?: string } | null;
+  const route = raw.route as { routeId?: string } | null;
+  const project = raw.project as { projectId?: string } | null;
+  return {
+    id: (raw.equipmentId as string) ?? '',
+    name: (raw.name as string) ?? '',
+    type: (raw.category as string) ?? '',
+    category: mapEquipmentCategory(raw.category as string),
+    criticality: mapCriticality(raw.criticality as string),
+    projectId: project?.projectId ?? '',
+    supplierId: supplier?.supplierId ?? '',
+    routeId: route?.routeId ?? '',
+    value: 0,
+    weight: (raw.weight as number) ?? 0,
+    status: 'ordered',
+    riskScore: 0,
+    deliveryDate: (raw.requiredOnSiteDate as string) ?? '',
+    leadTimeDays: 0,
+  };
+}
+
+function mapEquipmentCategory(cat: string | undefined): Equipment['category'] {
+  const valid: Equipment['category'][] = ['rotating', 'static', 'electrical', 'instrumentation', 'piping', 'valves'];
+  const normalized = (cat ?? '').toLowerCase();
+  if (valid.includes(normalized as Equipment['category'])) {
+    return normalized as Equipment['category'];
+  }
+  return 'static';
+}
+
+function mapCriticality(crit: string | undefined): Equipment['criticality'] {
+  const normalized = (crit ?? '').toLowerCase();
+  if (normalized === 'critical') return 'Critical';
+  if (normalized === 'high') return 'High';
+  if (normalized === 'medium') return 'Medium';
+  if (normalized === 'low') return 'Low';
+  return 'Medium';
+}
+
+function mapSupplier(raw: Record<string, unknown>): Supplier {
+  const capabilities = (raw.capabilities as string[]) ?? [];
+  const firstCap = capabilities[0]?.toLowerCase() ?? '';
+  return {
+    id: (raw.supplierId as string) ?? '',
+    name: (raw.name as string) ?? '',
+    country: (raw.country as string) ?? '',
+    location: { lat: 0, lng: 0 },
+    category: mapEquipmentCategory(firstCap),
+    capacity: Math.round(((raw.capacityUtilization as number) ?? 0) * 100) || 0,
+    qualityScore: Math.round(((raw.qualityRate as number) ?? 0) * 100) || 0,
+    onTimeDelivery: Math.round(((raw.deliveryRate as number) ?? 0) * 100) || 0,
+    certifications: (raw.certifications as string[]) ?? [],
+    riskScore: ((raw.riskFlags as string[]) ?? []).length * 15,
+    activeOrders: 0,
+    leadTimeDays: (raw.leadTimeDays as number) ?? 0,
+  };
+}
+
+function mapRoute(raw: Record<string, unknown>): ShippingRoute {
+  const waypoints = (raw.waypoints as Array<{ lat?: number; lng?: number; name?: string }>) ?? [];
+  const originWp = waypoints[0];
+  const destWp = waypoints[waypoints.length - 1];
+  return {
+    id: (raw.routeId as string) ?? '',
+    name: (raw.name as string) ?? '',
+    origin: {
+      lat: originWp?.lat ?? 0,
+      lng: originWp?.lng ?? 0,
+      port: originWp?.name ?? '',
+    },
+    destination: {
+      lat: destWp?.lat ?? 0,
+      lng: destWp?.lng ?? 0,
+      port: destWp?.name ?? '',
+    },
+    waypoints: waypoints.map((wp) => ({ lat: wp.lat ?? 0, lng: wp.lng ?? 0 })),
+    distanceNm: (raw.totalDistanceNm as number) ?? 0,
+    transitDays: (raw.estimatedTransitDays as number) ?? 0,
+    status: mapRouteStatus(raw.currentStatus as string),
+    riskScore: 0,
+    equipmentIds: [],
+    costPerTon: (raw.shippingCost as number) ?? 0,
+  };
+}
+
+function mapRouteStatus(status: string | undefined): ShippingRoute['status'] {
+  const normalized = (status ?? '').toLowerCase();
+  if (['active', 'disrupted', 'blocked', 'alternative'].includes(normalized)) {
+    return normalized as ShippingRoute['status'];
+  }
+  if (normalized === 'delayed') return 'disrupted';
+  return 'active';
+}
+
+// ===== Fallback Mock Data =====
+
 const MOCK_PROJECTS: Project[] = [
   {
     id: 'proj-1', name: 'Jafurah Gas Processing', client: 'Saudi Aramco',
@@ -96,6 +222,8 @@ const MOCK_PORTS: Port[] = [
   { id: 'port-6', name: 'Shanghai', country: 'China', location: { lat: 31.23, lng: 121.47 }, capacity: 97, congestionLevel: 55, status: 'congested' },
 ];
 
+// ===== Store =====
+
 interface ProjectState {
   projects: Project[];
   equipment: Equipment[];
@@ -108,17 +236,87 @@ interface ProjectState {
   fetchAll: () => void;
 }
 
-export const useProjectStore = create<ProjectState>((set) => ({
-  projects: MOCK_PROJECTS,
-  equipment: MOCK_EQUIPMENT,
-  suppliers: MOCK_SUPPLIERS,
-  routes: MOCK_ROUTES,
+let fetchInitiated = false;
+
+export const useProjectStore = create<ProjectState>((set, get) => ({
+  projects: [],
+  equipment: [],
+  suppliers: [],
+  routes: [],
   zones: MOCK_ZONES,
   ports: MOCK_PORTS,
   loading: false,
   error: null,
-  fetchAll: () => {
-    // Data is pre-loaded with mocks; in production would call API
-    set({ loading: false });
+  fetchAll: async () => {
+    if (get().loading) return;
+    set({ loading: true, error: null });
+
+    try {
+      const [projectsRaw, equipmentRaw, suppliersRaw, routesRaw] = await Promise.all([
+        fetchProjects().catch(() => null),
+        fetchEquipment().catch(() => null),
+        fetchSuppliers().catch(() => null),
+        fetchRoutes().catch(() => null),
+      ]);
+
+      const projects = projectsRaw
+        ? (projectsRaw as unknown as Record<string, unknown>[]).map(mapProject)
+        : MOCK_PROJECTS;
+      const equipment = equipmentRaw
+        ? (equipmentRaw as unknown as Record<string, unknown>[]).map(mapEquipment)
+        : MOCK_EQUIPMENT;
+      const suppliers = suppliersRaw
+        ? (suppliersRaw as unknown as Record<string, unknown>[]).map(mapSupplier)
+        : MOCK_SUPPLIERS;
+      const routes = routesRaw
+        ? (routesRaw as unknown as Record<string, unknown>[]).map(mapRoute)
+        : MOCK_ROUTES;
+
+      set({
+        projects,
+        equipment,
+        suppliers,
+        routes,
+        zones: MOCK_ZONES,
+        ports: MOCK_PORTS,
+        loading: false,
+        error: null,
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to fetch data';
+      console.error('projectStore fetchAll error, falling back to mock data:', message);
+      set({
+        projects: MOCK_PROJECTS,
+        equipment: MOCK_EQUIPMENT,
+        suppliers: MOCK_SUPPLIERS,
+        routes: MOCK_ROUTES,
+        zones: MOCK_ZONES,
+        ports: MOCK_PORTS,
+        loading: false,
+        error: message,
+      });
+    }
   },
 }));
+
+// Lazy initialization: trigger fetchAll on first subscription
+const originalSubscribe = useProjectStore.subscribe;
+useProjectStore.subscribe = (...args) => {
+  if (!fetchInitiated) {
+    fetchInitiated = true;
+    useProjectStore.getState().fetchAll();
+  }
+  return originalSubscribe(...args);
+};
+
+// Also trigger on first getState call from components
+const originalGetState = useProjectStore.getState;
+useProjectStore.getState = () => {
+  if (!fetchInitiated) {
+    fetchInitiated = true;
+    const state = originalGetState();
+    state.fetchAll();
+    return originalGetState();
+  }
+  return originalGetState();
+};

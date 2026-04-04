@@ -446,7 +446,7 @@ class Orchestrator:
                         MATCH (s:Supplier)
                         RETURN s {
                             .supplierId, .name, .country, .tier,
-                            .deliveryRate, .qualityRate, .riskFlags
+                            .onTimeDeliveryRate, .qualityRejectRate, .riskFlags
                         } AS supplier
                         ORDER BY s.name LIMIT 20
                         """

@@ -42,12 +42,14 @@ async def list_disruptions(
     query = f"""
     MATCH (d:DisruptionEvent)
     {where}
-    OPTIONAL MATCH (d)-[:AFFECTS]->(z:GeopoliticalZone)
+    OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
     WITH d, collect(z.zoneId) AS zones
     RETURN d {{
-        .eventId, .type, .severity, .startDate, .endDate,
+        .eventId, .name, .type, .severity, .startDate, .endDate,
         .source, .verificationStatus, .description, .createdAt,
-        affectedZones: zones
+        .status,
+        affectedZones: zones,
+        affectedZoneIds: zones
     }} AS disruption
     ORDER BY d.severity DESC, d.startDate DESC
     SKIP $offset LIMIT $limit
@@ -64,40 +66,46 @@ async def create_disruption(event: DisruptionEventCreate):
     query = """
     CREATE (d:DisruptionEvent {
         eventId: $eventId,
+        name: $name,
         type: $type,
         severity: $severity,
         startDate: date($startDate),
         endDate: CASE WHEN $endDate IS NOT NULL THEN date($endDate) ELSE null END,
         source: $source,
         verificationStatus: $verificationStatus,
+        status: $status,
         description: $description,
         createdAt: datetime()
     })
     WITH d
-    UNWIND $affectedZones AS zoneId
+    UNWIND CASE WHEN size($affectedZones) > 0 THEN $affectedZones ELSE [null] END AS zoneId
     OPTIONAL MATCH (z:GeopoliticalZone {zoneId: zoneId})
     FOREACH (_ IN CASE WHEN z IS NOT NULL THEN [1] ELSE [] END |
-        CREATE (d)-[:AFFECTS]->(z)
+        CREATE (d)-[:AFFECTS_ZONE]->(z)
     )
     WITH d
-    OPTIONAL MATCH (d)-[:AFFECTS]->(z:GeopoliticalZone)
+    OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
+    WITH d, collect(z.zoneId) AS zones
     RETURN d {
-        .eventId, .type, .severity,
+        .eventId, .name, .type, .severity,
         startDate: toString(d.startDate),
         endDate: toString(d.endDate),
-        .source, .verificationStatus, .description,
+        .source, .verificationStatus, .status, .description,
         createdAt: toString(d.createdAt),
-        affectedZones: collect(z.zoneId)
+        affectedZones: zones,
+        affectedZoneIds: zones
     } AS disruption
     """
     params = {
         "eventId": event_id,
+        "name": event.name or f"Disruption {event_id}",
         "type": event.type.value,
         "severity": event.severity,
         "startDate": event.startDate.isoformat(),
         "endDate": event.endDate.isoformat() if event.endDate else None,
         "source": event.source,
         "verificationStatus": event.verificationStatus.value,
+        "status": event.status.value,
         "description": event.description,
         "affectedZones": event.affectedZones,
     }
@@ -112,10 +120,10 @@ async def get_disruption_impact(event_id: str):
     db = await get_neo4j()
     query = """
     MATCH (d:DisruptionEvent {eventId: $eventId})
-    OPTIONAL MATCH (d)-[:AFFECTS]->(z:GeopoliticalZone)
+    OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
     OPTIONAL MATCH (r:ShippingRoute)-[:PASSES_THROUGH]->(z)
     OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     OPTIONAL MATCH (s:Supplier)-[:LOCATED_IN]->(z)
     WITH d,
          collect(DISTINCT {
@@ -168,7 +176,7 @@ async def simulate_disruption(request: DisruptionSimulationRequest):
     UNWIND CASE WHEN size(zones) > 0 THEN zones ELSE [null] END AS z
     OPTIONAL MATCH (r:ShippingRoute)-[:PASSES_THROUGH]->(z)
     OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     OPTIONAL MATCH (s:Supplier)-[:LOCATED_IN]->(z)
     WITH
         collect(DISTINCT {

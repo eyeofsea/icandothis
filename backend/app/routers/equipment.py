@@ -53,8 +53,8 @@ async def get_at_risk_equipment():
     MATCH (e:Equipment)-[:SHIPPED_VIA]->(r:ShippingRoute)
     WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
-    OPTIONAL MATCH (e)<-[:SUPPLIES]-(s:Supplier)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     RETURN e {
         .equipmentId, .name, .criticality, .category,
         .requiredOnSiteDate,
@@ -104,7 +104,7 @@ async def get_equipment_impact(equipment_id: str):
     query = """
     MATCH (e:Equipment {equipmentId: $equipmentId})
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
-    OPTIONAL MATCH (z)<-[:AFFECTS]-(d:DisruptionEvent)
+    OPTIONAL MATCH (z)<-[:AFFECTS_ZONE]-(d:DisruptionEvent)
     WHERE d.verificationStatus <> 'resolved'
     WITH e, collect(DISTINCT {
         eventId: d.eventId,
@@ -113,9 +113,8 @@ async def get_equipment_impact(equipment_id: str):
         description: d.description,
         zone: z.name
     }) AS disruptions
-    OPTIONAL MATCH (e)<-[:SUPPLIES]-(currentSupplier:Supplier)
-    OPTIONAL MATCH (altSupplier:Supplier)-[:CAN_SUPPLY]->(e)
-    WHERE altSupplier <> currentSupplier
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(currentSupplier:Supplier)
+    OPTIONAL MATCH (currentSupplier)-[:HAS_ALTERNATIVE]->(altSupplier:Supplier)
     WITH e, disruptions, collect(DISTINCT {
         supplierId: altSupplier.supplierId,
         name: altSupplier.name,
@@ -123,13 +122,8 @@ async def get_equipment_impact(equipment_id: str):
         leadTimeDays: altSupplier.leadTimeDays
     }) AS altSuppliers
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(currentRoute:ShippingRoute)
-    OPTIONAL MATCH (altRoute:ShippingRoute)
-    WHERE altRoute <> currentRoute
-      AND altRoute.currentStatus = 'active'
-      AND EXISTS {
-          MATCH (altRoute)-[:CONNECTS]->(dest)
-          MATCH (currentRoute)-[:CONNECTS]->(dest)
-      }
+    OPTIONAL MATCH (currentRoute)-[:HAS_ALTERNATIVE]->(altRoute:ShippingRoute)
+    WHERE altRoute.currentStatus = 'active'
     WITH e, disruptions,
          [s IN altSuppliers WHERE s.supplierId IS NOT NULL] AS altSuppliers,
          collect(DISTINCT {

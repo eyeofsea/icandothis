@@ -26,7 +26,7 @@ async def find_affected_equipment(zone_id: str) -> List[Dict[str, Any]]:
     MATCH (d:DisruptionEvent)-[:AFFECTS_ZONE]->(z:GeopoliticalZone {zoneId: $zoneId})
     OPTIONAL MATCH (r:ShippingRoute)-[:PASSES_THROUGH]->(z)
     OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     RETURN DISTINCT
         e {
             .equipmentId, .name, .category, .criticality,
@@ -61,7 +61,7 @@ async def find_alternative_suppliers(
     required_certifications = required_certifications or []
 
     cypher = """
-    MATCH (s:Supplier)-[:SUPPLIES]->(e:Equipment)
+    MATCH (e:Equipment)-[:SUPPLIED_BY]->(s:Supplier)
     WHERE e.category = $category
     // Exclude suppliers in disrupted zones
     AND NOT EXISTS {
@@ -74,11 +74,11 @@ async def find_alternative_suppliers(
     RETURN s {
         .supplierId, .name, .country, .region, .tier,
         .capabilities, .certifications, .financialRating,
-        .deliveryRate, .qualityRate, .leadTimeDays,
+        .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
         .capacityUtilization, .riskFlags,
         suppliedEquipment: suppliedEquipment
     } AS supplier
-    ORDER BY s.deliveryRate DESC, s.qualityRate DESC
+    ORDER BY s.onTimeDeliveryRate DESC, s.qualityRejectRate ASC
     """
     records = await client.execute_read(cypher, {
         "category": equipment_category,
@@ -162,8 +162,8 @@ async def get_equipment_details(equipment_id: str) -> Dict[str, Any]:
     client = await _get_client()
     cypher = """
     MATCH (e:Equipment {equipmentId: $equipmentId})
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
-    OPTIONAL MATCH (s:Supplier)-[:SUPPLIES]->(e)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
     OPTIONAL MATCH (d:DisruptionEvent)-[:AFFECTS_ZONE]->(z)
@@ -173,7 +173,7 @@ async def get_equipment_details(equipment_id: str) -> Dict[str, Any]:
         .weight, .dimensions, .hsCode, .requiredOnSiteDate,
         .installationSequencePriority, .specifications,
         project: p {.projectId, .name, .status, .totalValue, .criticalPathDeadline},
-        supplier: s {.supplierId, .name, .country, .deliveryRate, .qualityRate, .leadTimeDays},
+        supplier: s {.supplierId, .name, .country, .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays},
         route: r {.routeId, .name, .currentStatus, .estimatedTransitDays, .shippingCost},
         zones: collect(DISTINCT z {.zoneId, .name, .riskLevel, .currentStatus}),
         activeDisruptions: collect(DISTINCT d {.eventId, .type, .severity, .description})
@@ -190,15 +190,15 @@ async def get_supplier_performance(supplier_id: str) -> Dict[str, Any]:
     client = await _get_client()
     cypher = """
     MATCH (s:Supplier {supplierId: $supplierId})
-    OPTIONAL MATCH (s)-[:SUPPLIES]->(e:Equipment)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (e:Equipment)-[:SUPPLIED_BY]->(s)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     WITH s,
          collect(DISTINCT e {.equipmentId, .name, .category, .criticality}) AS equipment,
          collect(DISTINCT p {.projectId, .name}) AS projects
     RETURN s {
         .supplierId, .name, .country, .region, .tier,
         .capabilities, .certifications, .financialRating,
-        .deliveryRate, .qualityRate, .leadTimeDays,
+        .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
         .capacityUtilization, .riskFlags,
         suppliedEquipment: equipment,
         associatedProjects: projects,
@@ -216,9 +216,9 @@ async def get_project_risk_summary(project_id: str) -> Dict[str, Any]:
     client = await _get_client()
     cypher = """
     MATCH (p:Project {projectId: $projectId})
-    OPTIONAL MATCH (p)-[:REQUIRES]->(e:Equipment)
+    OPTIONAL MATCH (p)-[:HAS_EQUIPMENT]->(e:Equipment)
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
-    OPTIONAL MATCH (s:Supplier)-[:SUPPLIES]->(e)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
     OPTIONAL MATCH (d:DisruptionEvent)-[:AFFECTS_ZONE]->(z)
     WHERE d.verificationStatus <> 'resolved'

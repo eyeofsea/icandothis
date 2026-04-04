@@ -26,7 +26,7 @@ const INITIAL_NOTIFICATIONS: Notification[] = [
 
 const severityConfig = {
   info: { icon: Info, color: 'text-blue-400', badge: 'info' as const },
-  warning: { icon: AlertTriangle, color: 'text-yellow-400', badge: 'warning' as const },
+  warning: { icon: AlertTriangle, color: 'text-yellow-400', badge: 'medium' as const },
   critical: { icon: AlertCircle, color: 'text-red-400', badge: 'critical' as const },
   success: { icon: Zap, color: 'text-green-400', badge: 'success' as const },
 };
@@ -78,7 +78,7 @@ export default function NotificationPanel({ open, onClose }: NotificationPanelPr
           <div className="flex items-center gap-2">
             <Bell className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-semibold text-white">Notifications</span>
-            {unreadCount > 0 && <Badge variant="info">{unreadCount} new</Badge>}
+            {unreadCount > 0 && <Badge intent="info">{unreadCount} new</Badge>}
           </div>
           <div className="flex items-center gap-1">
             <button onClick={markAllRead} className="p-1.5 rounded-md hover:bg-white/5 text-slate-400 hover:text-white transition-colors" title="Mark all read">
@@ -127,7 +127,7 @@ export default function NotificationPanel({ open, onClose }: NotificationPanelPr
                       <span className="text-[9px] text-slate-500">
                         {formatDistanceToNow(new Date(n.timestamp), { addSuffix: true })}
                       </span>
-                      <Badge variant={config.badge}>{n.severity}</Badge>
+                      <Badge intent={config.badge}>{n.severity}</Badge>
                     </div>
                   </div>
                   <div className="flex items-center gap-0.5">

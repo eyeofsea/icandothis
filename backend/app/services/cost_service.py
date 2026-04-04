@@ -91,7 +91,7 @@ class CostService:
         try:
             records = await query_neo4j(
                 """
-                MATCH (p:Project {projectId: $projectId})-[:REQUIRES]->(e:Equipment)
+                MATCH (p:Project {projectId: $projectId})-[:HAS_EQUIPMENT]->(e:Equipment)
                 OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
                 WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
                 RETURN e {
@@ -161,7 +161,7 @@ class CostService:
                 MATCH (d:DisruptionEvent {eventId: $eventId})-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
                 OPTIONAL MATCH (r:ShippingRoute)-[:PASSES_THROUGH]->(z)
                 OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
-                OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+                OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
                 WITH collect(DISTINCT p {
                     .projectId, .name, .totalValue, .status,
                     .criticalPathDeadline

@@ -27,7 +27,7 @@ const ALERTS: Alert[] = [
 
 const severityConfig = {
   info: { icon: Info, color: 'text-blue-400', bg: 'bg-blue-500/10', border: 'border-blue-500/20', badge: 'info' as const },
-  warning: { icon: AlertTriangle, color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20', badge: 'warning' as const },
+  warning: { icon: AlertTriangle, color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20', badge: 'medium' as const },
   critical: { icon: AlertCircle, color: 'text-red-400', bg: 'bg-red-500/10', border: 'border-red-500/20', badge: 'critical' as const },
   success: { icon: Zap, color: 'text-green-400', bg: 'bg-green-500/10', border: 'border-green-500/20', badge: 'success' as const },
 };
@@ -104,8 +104,8 @@ export default function AlertsView() {
                   <span className="text-[10px] text-slate-500">
                     {formatDistanceToNow(new Date(alert.timestamp), { addSuffix: true })}
                   </span>
-                  <Badge variant={config.badge}>{alert.severity}</Badge>
-                  <Badge variant="default">{alert.category}</Badge>
+                  <Badge intent={config.badge}>{alert.severity}</Badge>
+                  <Badge intent="default">{alert.category}</Badge>
                 </div>
               </div>
             </div>

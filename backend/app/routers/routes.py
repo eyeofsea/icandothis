@@ -27,25 +27,9 @@ async def list_routes(
     query = f"""
     MATCH (r:ShippingRoute)
     {where}
-    OPTIONAL MATCH (r)-[:HAS_WAYPOINT]->(w:Waypoint)
-    WITH r, collect({{
-        name: w.name, lat: w.lat, lng: w.lng,
-        type: coalesce(w.type, 'port'),
-        estimatedArrival: toString(w.estimatedArrival)
-    }}) AS waypoints
-    OPTIONAL MATCH (r)-[:CARRIER_OPTION]->(c:Carrier)
-    WITH r, waypoints, collect({{
-        carrierName: c.name,
-        vesselType: c.vesselType,
-        transitDays: c.transitDays,
-        cost: c.cost,
-        reliability: c.reliability
-    }}) AS carriers
     RETURN r {{
         .routeId, .name, .totalDistanceNm, .estimatedTransitDays,
-        .shippingCost, .insuranceCost, .currentStatus,
-        waypoints: [wp IN waypoints WHERE wp.name IS NOT NULL],
-        carrierOptions: [c IN carriers WHERE c.carrierName IS NOT NULL]
+        .shippingCost, .insuranceCost, .currentStatus
     }} AS route
     ORDER BY r.name
     SKIP $offset LIMIT $limit
@@ -61,10 +45,10 @@ async def get_disrupted_routes():
     MATCH (r:ShippingRoute)
     WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
-    OPTIONAL MATCH (z)<-[:AFFECTS]-(d:DisruptionEvent)
+    OPTIONAL MATCH (z)<-[:AFFECTS_ZONE]-(d:DisruptionEvent)
     WHERE d.verificationStatus <> 'resolved'
     OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
-    OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+    OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
     RETURN r {
         .routeId, .name, .currentStatus, .totalDistanceNm,
         .estimatedTransitDays, .shippingCost,
@@ -109,25 +93,9 @@ async def get_route(route_id: str):
     db = await get_neo4j()
     query = """
     MATCH (r:ShippingRoute {routeId: $routeId})
-    OPTIONAL MATCH (r)-[:HAS_WAYPOINT]->(w:Waypoint)
-    WITH r, collect({
-        name: w.name, lat: w.lat, lng: w.lng,
-        type: coalesce(w.type, 'port'),
-        estimatedArrival: toString(w.estimatedArrival)
-    }) AS waypoints
-    OPTIONAL MATCH (r)-[:CARRIER_OPTION]->(c:Carrier)
-    WITH r, waypoints, collect({
-        carrierName: c.name,
-        vesselType: c.vesselType,
-        transitDays: c.transitDays,
-        cost: c.cost,
-        reliability: c.reliability
-    }) AS carriers
     RETURN r {
         .routeId, .name, .totalDistanceNm, .estimatedTransitDays,
-        .shippingCost, .insuranceCost, .currentStatus,
-        waypoints: [wp IN waypoints WHERE wp.name IS NOT NULL],
-        carrierOptions: [c IN carriers WHERE c.carrierName IS NOT NULL]
+        .shippingCost, .insuranceCost, .currentStatus
     } AS route
     """
     records = await db.execute_read(query, {"routeId": route_id})
@@ -141,15 +109,10 @@ async def get_route_alternatives(route_id: str):
     db = await get_neo4j()
     query = """
     MATCH (original:ShippingRoute {routeId: $routeId})
-    OPTIONAL MATCH (original)-[:CONNECTS]->(dest)
-    WITH original, collect(dest) AS destinations
-    MATCH (alt:ShippingRoute)
-    WHERE alt <> original
-      AND alt.currentStatus = 'active'
-    OPTIONAL MATCH (alt)-[:CONNECTS]->(altDest)
-    WHERE altDest IN destinations
-    WITH original, alt, count(altDest) AS sharedDests
-    WHERE sharedDests > 0
+    OPTIONAL MATCH (original)-[:HAS_ALTERNATIVE]->(alt:ShippingRoute)
+    WHERE alt.currentStatus = 'active'
+    WITH original, alt
+    WHERE alt IS NOT NULL
     RETURN {
         routeId: alt.routeId,
         routeName: alt.name,

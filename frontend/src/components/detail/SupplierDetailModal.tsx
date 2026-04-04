@@ -24,8 +24,8 @@ export default function SupplierDetailModal({ supplierId, onClose }: SupplierDet
     <Modal open={!!supplierId} onClose={onClose} title={supplier.name} width="max-w-xl">
       <div className="space-y-5">
         <div className="flex items-center gap-2 flex-wrap">
-          <Badge variant="info">{supplier.category}</Badge>
-          <Badge variant="default">{supplier.country}</Badge>
+          <Badge intent="info">{supplier.category}</Badge>
+          <Badge intent="default">{supplier.country}</Badge>
         </div>
 
         {/* Risk */}

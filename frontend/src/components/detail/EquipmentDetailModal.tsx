@@ -47,9 +47,9 @@ export default function EquipmentDetailModal({ equipmentId, onClose }: Equipment
       <div className="space-y-5">
         {/* Header badges */}
         <div className="flex items-center gap-2 flex-wrap">
-          <Badge variant={criticalityVariant(eq.criticality)}>{eq.criticality}</Badge>
-          <Badge variant={statusVariant(eq.status)}>{eq.status}</Badge>
-          <Badge variant="info">{eq.category}</Badge>
+          <Badge intent={criticalityVariant(eq.criticality)}>{eq.criticality}</Badge>
+          <Badge intent={statusVariant(eq.status)}>{eq.status}</Badge>
+          <Badge intent="info">{eq.category}</Badge>
         </div>
 
         {/* Risk */}

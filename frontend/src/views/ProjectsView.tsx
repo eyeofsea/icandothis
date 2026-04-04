@@ -33,7 +33,7 @@ export default function ProjectsView() {
   const statusVariant = (s: string) => {
     switch (s) {
       case 'on-track': return 'success' as const;
-      case 'at-risk': return 'warning' as const;
+      case 'at-risk': return 'medium' as const;
       case 'delayed': return 'high' as const;
       case 'critical': return 'critical' as const;
       default: return 'default' as const;
@@ -109,7 +109,7 @@ export default function ProjectsView() {
                   <div className="text-[11px] text-slate-500 mt-0.5 ml-[18px]">{proj.client}</div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge variant={statusVariant(proj.status)}>{proj.status}</Badge>
+                  <Badge intent={statusVariant(proj.status)}>{proj.status}</Badge>
                   <button onClick={() => setSelectedId(proj.id)} className="p-1.5 rounded-md hover:bg-white/10 text-slate-500 hover:text-cyan-400 transition-colors opacity-0 group-hover:opacity-100">
                     <Eye className="w-3.5 h-3.5" />
                   </button>

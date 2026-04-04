@@ -68,8 +68,8 @@ async def get_project(project_id: str):
 async def get_project_equipment(project_id: str):
     db = await get_neo4j()
     query = """
-    MATCH (p:Project {projectId: $projectId})-[:REQUIRES]->(e:Equipment)
-    OPTIONAL MATCH (e)<-[:SUPPLIES]-(s:Supplier)
+    MATCH (p:Project {projectId: $projectId})-[:HAS_EQUIPMENT]->(e:Equipment)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
     RETURN e {
         .equipmentId, .name, .description, .category, .criticality,
@@ -96,19 +96,19 @@ async def get_project_risk_summary(project_id: str):
     db = await get_neo4j()
     query = """
     MATCH (p:Project {projectId: $projectId})
-    OPTIONAL MATCH (p)-[:REQUIRES]->(e:Equipment)
+    OPTIONAL MATCH (p)-[:HAS_EQUIPMENT]->(e:Equipment)
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
     WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
     WITH p, e, r,
          CASE WHEN r IS NOT NULL THEN 1 ELSE 0 END AS routeDisrupted
-    OPTIONAL MATCH (e)<-[:SUPPLIES]-(s:Supplier)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     WHERE size(s.riskFlags) > 0
     WITH p,
          count(DISTINCT e) AS totalEquipment,
          count(DISTINCT CASE WHEN routeDisrupted = 1 THEN e END) AS eqAtRisk,
          count(DISTINCT r) AS disruptedRoutes,
          count(DISTINCT s) AS suppliersWithIssues
-    OPTIONAL MATCH (p)-[:REQUIRES]->(e2:Equipment)-[:SHIPPED_VIA]->(r2:ShippingRoute)
+    OPTIONAL MATCH (p)-[:HAS_EQUIPMENT]->(e2:Equipment)-[:SHIPPED_VIA]->(r2:ShippingRoute)
     WHERE r2.currentStatus IN ['disrupted', 'blocked', 'delayed']
     OPTIONAL MATCH (r2)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
     WITH p, totalEquipment, eqAtRisk, disruptedRoutes, suppliersWithIssues,

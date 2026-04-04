@@ -171,7 +171,7 @@ class ImpactAgent:
             WHERE z.zoneId IN $zoneIds
             RETURN s {
                 .supplierId, .name, .country, .tier,
-                .capabilities, .deliveryRate, .qualityRate,
+                .capabilities, .onTimeDeliveryRate, .qualityRejectRate,
                 zone: z.name
             } AS supplier
             """

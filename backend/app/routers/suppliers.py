@@ -38,7 +38,7 @@ async def list_suppliers(
     RETURN s {{
         .supplierId, .name, .country, .region, .tier,
         .capabilities, .certifications, .financialRating,
-        .deliveryRate, .qualityRate, .leadTimeDays,
+        .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
         .capacityUtilization, .riskFlags, .contactEmail, .contactPhone
     }} AS supplier
     ORDER BY s.name
@@ -56,7 +56,7 @@ async def get_supplier(supplier_id: str):
     RETURN s {
         .supplierId, .name, .country, .region, .tier,
         .capabilities, .certifications, .financialRating,
-        .deliveryRate, .qualityRate, .leadTimeDays,
+        .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
         .capacityUtilization, .riskFlags, .contactEmail, .contactPhone
     } AS supplier
     """
@@ -101,18 +101,18 @@ async def get_supplier_performance(supplier_id: str):
     db = await get_neo4j()
     query = """
     MATCH (s:Supplier {supplierId: $supplierId})
-    OPTIONAL MATCH (s)-[supplied:SUPPLIES]->(e:Equipment)
-    OPTIONAL MATCH (s)-[active:SUPPLIES]->(ae:Equipment)
-    WHERE active.status = 'in_progress'
-    OPTIONAL MATCH (s)-[completed:SUPPLIES]->(ce:Equipment)
-    WHERE completed.status = 'delivered'
+    OPTIONAL MATCH (e:Equipment)-[supplied:SUPPLIED_BY]->(s)
+    OPTIONAL MATCH (ae:Equipment)-[active:SUPPLIED_BY]->(s)
+    WHERE ae.status = 'in_progress'
+    OPTIONAL MATCH (ce:Equipment)-[completed:SUPPLIED_BY]->(s)
+    WHERE ce.status = 'delivered'
     OPTIONAL MATCH (s)-[issue:HAS_ISSUE]->(i)
     WHERE i.createdAt > datetime() - duration('P90D')
     RETURN {
         supplierId: s.supplierId,
         supplierName: s.name,
-        onTimeDeliveryRate: coalesce(s.deliveryRate, 0.0),
-        qualityPassRate: coalesce(s.qualityRate, 0.0),
+        onTimeDeliveryRate: coalesce(s.onTimeDeliveryRate, 0.0),
+        qualityPassRate: 100.0 - coalesce(s.qualityRejectRate, 0.0),
         averageLeadTimeDays: toFloat(coalesce(s.leadTimeDays, 0)),
         totalOrdersCompleted: count(DISTINCT ce),
         activeOrders: count(DISTINCT ae),

@@ -103,8 +103,8 @@ class SupplierService:
             records = await query_neo4j(
                 """
                 MATCH (s:Supplier {supplierId: $supplierId})
-                OPTIONAL MATCH (s)-[:SUPPLIES]->(e:Equipment)
-                OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+                OPTIONAL MATCH (e:Equipment)-[:SUPPLIED_BY]->(s)
+                OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
                 OPTIONAL MATCH (s)-[:LOCATED_IN]->(z:GeopoliticalZone)
                 OPTIONAL MATCH (d:DisruptionEvent)-[:AFFECTS_ZONE]->(z)
                 WHERE d.verificationStatus <> 'resolved'
@@ -116,7 +116,7 @@ class SupplierService:
                 RETURN s {
                     .supplierId, .name, .country, .region, .tier,
                     .capabilities, .certifications, .financialRating,
-                    .deliveryRate, .qualityRate, .leadTimeDays,
+                    .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
                     .capacityUtilization, .riskFlags,
                     suppliedEquipment: equipment,
                     associatedProjects: projects,

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useDisruptionStore } from '@/stores/disruptionStore';
 import { DisruptionEvent } from '@/lib/types';
+import { createDisruption } from '@/lib/api';
 import { Plus } from 'lucide-react';
 
 const EVENT_TYPES: DisruptionEvent['type'][] = ['geopolitical', 'natural', 'economic', 'infrastructure', 'cyber'];
@@ -23,10 +24,12 @@ export default function EventInjector() {
   const [description, setDescription] = useState('');
   const [name, setName] = useState('');
 
-  const handleSubmit = () => {
-    if (!name.trim()) return;
+  const [submitting, setSubmitting] = useState(false);
 
-    const event: DisruptionEvent = {
+  const handleSubmit = async () => {
+    if (!name.trim() || submitting) return;
+
+    const localEvent: DisruptionEvent = {
       id: `dis-custom-${Date.now()}`,
       type: eventType,
       name: name.trim(),
@@ -42,7 +45,35 @@ export default function EventInjector() {
       status: 'active',
     };
 
-    addDisruption(event);
+    // Add locally immediately for responsiveness
+    addDisruption(localEvent);
+
+    // Also persist to backend
+    setSubmitting(true);
+    try {
+      const backendTypeMap: Record<string, string> = {
+        geopolitical: 'geopolitical',
+        natural: 'weather',
+        economic: 'sanctions',
+        infrastructure: 'infrastructure_failure',
+        cyber: 'regulatory',
+      };
+      await createDisruption({
+        type: backendTypeMap[eventType] ?? eventType,
+        severity: severity,
+        startDate: new Date().toISOString().split('T')[0],
+        description: localEvent.description,
+        affectedZones: selectedZones,
+        source: 'manual_injection',
+        verificationStatus: 'confirmed',
+      } as unknown as Partial<DisruptionEvent>);
+    } catch (err) {
+      console.error('Failed to persist disruption to backend:', err);
+      // Event is already added locally, so the UI still works
+    } finally {
+      setSubmitting(false);
+    }
+
     setName('');
     setDescription('');
     setSeverity(3);
@@ -131,11 +162,11 @@ export default function EventInjector() {
 
       <button
         onClick={handleSubmit}
-        disabled={!name.trim()}
+        disabled={!name.trim() || submitting}
         className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-orange-600 hover:bg-orange-500 disabled:bg-slate-700 disabled:text-slate-500 text-xs font-medium text-white transition-colors"
       >
         <Plus className="w-3.5 h-3.5" />
-        Simulate Event
+        {submitting ? 'Saving...' : 'Simulate Event'}
       </button>
     </div>
   );

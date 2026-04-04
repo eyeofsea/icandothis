@@ -98,16 +98,16 @@ def calculate_supplier_risk_score(supplier_data: Dict[str, Any]) -> float:
     score = 0.0
 
     # Delivery rate risk (0-3 points) - lower delivery = higher risk
-    delivery_rate = supplier_data.get("deliveryRate")
+    delivery_rate = supplier_data.get("onTimeDeliveryRate")
     if delivery_rate is not None:
         score += (1.0 - delivery_rate / 100.0) * 3.0
     else:
         score += 1.5  # Unknown = moderate risk
 
-    # Quality rate risk (0-2.5 points)
-    quality_rate = supplier_data.get("qualityRate")
-    if quality_rate is not None:
-        score += (1.0 - quality_rate / 100.0) * 2.5
+    # Quality reject rate risk (0-2.5 points) - higher reject = higher risk
+    quality_reject_rate = supplier_data.get("qualityRejectRate")
+    if quality_reject_rate is not None:
+        score += (quality_reject_rate / 100.0) * 2.5
     else:
         score += 1.25
 

@@ -14,7 +14,7 @@ export default function ScenarioView() {
         <div className="flex items-center gap-3">
           <h2 className="text-lg font-bold text-white">Scenario Simulation</h2>
           {activeDisruptions.length > 0 && (
-            <Badge variant="critical">{activeDisruptions.length} active</Badge>
+            <Badge intent="critical">{activeDisruptions.length} active</Badge>
           )}
         </div>
         <p className="text-xs text-slate-500 mt-0.5">Simulate disruption events and analyze their impact</p>
@@ -42,8 +42,8 @@ export default function ScenarioView() {
                   <div className="text-[10px] text-slate-400 mt-0.5">{d.description}</div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge variant="critical">Severity {d.severity}/5</Badge>
-                  <Badge variant="info">{d.type}</Badge>
+                  <Badge intent="critical">Severity {d.severity}/5</Badge>
+                  <Badge intent="info">{d.type}</Badge>
                 </div>
               </div>
             ))}

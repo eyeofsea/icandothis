@@ -126,11 +126,11 @@ class SupplierAgent:
             return None
         try:
             cypher = """
-            MATCH (s:Supplier)-[:SUPPLIES]->(e:Equipment {equipmentId: $equipmentId})
+            MATCH (e:Equipment {equipmentId: $equipmentId})-[:SUPPLIED_BY]->(s:Supplier)
             RETURN s {
                 .supplierId, .name, .country, .region, .tier,
                 .capabilities, .certifications, .financialRating,
-                .deliveryRate, .qualityRate, .leadTimeDays,
+                .onTimeDeliveryRate, .qualityRejectRate, .leadTimeDays,
                 .capacityUtilization, .riskFlags
             } AS supplier
             LIMIT 1
@@ -178,8 +178,8 @@ class SupplierAgent:
                 continue
 
             cand_lead_time = candidate.get("leadTimeDays") or 90
-            cand_quality = (candidate.get("qualityRate") or 80) / 100.0
-            cand_delivery = (candidate.get("deliveryRate") or 80) / 100.0
+            cand_quality = (100.0 - (candidate.get("qualityRejectRate") or 1.0)) / 100.0
+            cand_delivery = (candidate.get("onTimeDeliveryRate") or 80) / 100.0
             cand_financial = (candidate.get("financialRating") or 5) / 10.0
 
             # Cost delta (using financial rating as proxy since actual cost varies)
@@ -212,8 +212,8 @@ class SupplierAgent:
                 "capabilities": candidate.get("capabilities"),
                 "certifications": candidate.get("certifications"),
                 "leadTimeDays": cand_lead_time,
-                "deliveryRate": candidate.get("deliveryRate"),
-                "qualityRate": candidate.get("qualityRate"),
+                "onTimeDeliveryRate": candidate.get("onTimeDeliveryRate"),
+                "qualityRejectRate": candidate.get("qualityRejectRate"),
                 "financialRating": candidate.get("financialRating"),
                 "capacityUtilization": capacity,
                 "supplierRiskScore": supplier_risk,
@@ -245,8 +245,8 @@ class SupplierAgent:
         alt_lt = best_alternative.get("leadTimeDays") or 90
         lt_delta = alt_lt - current_lt
 
-        current_quality = (current_supplier or {}).get("qualityRate") or 90
-        alt_quality = best_alternative.get("qualityRate") or 80
+        current_quality = 100.0 - ((current_supplier or {}).get("qualityRejectRate") or 1.0)
+        alt_quality = 100.0 - (best_alternative.get("qualityRejectRate") or 1.0)
         quality_delta = alt_quality - current_quality
 
         # Estimated cost impact (rough: $5,000 per day of lead time delta for critical)

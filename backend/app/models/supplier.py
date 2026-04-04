@@ -18,8 +18,8 @@ class SupplierBase(BaseModel):
     capabilities: List[str] = []
     certifications: List[str] = []
     financialRating: Optional[float] = Field(default=None, ge=0.0, le=10.0)
-    deliveryRate: Optional[float] = Field(default=None, ge=0.0, le=100.0)
-    qualityRate: Optional[float] = Field(default=None, ge=0.0, le=100.0)
+    onTimeDeliveryRate: Optional[float] = Field(default=None, ge=0.0, le=100.0)
+    qualityRejectRate: Optional[float] = Field(default=None, ge=0.0, le=100.0)
     leadTimeDays: Optional[int] = None
     capacityUtilization: Optional[float] = Field(default=None, ge=0.0, le=100.0)
     riskFlags: List[str] = []

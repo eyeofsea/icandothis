@@ -77,14 +77,23 @@ class Port(PortBase):
     model_config = {"from_attributes": True}
 
 
+class DisruptionStatus(str, Enum):
+    ACTIVE = "active"
+    RESOLVED = "resolved"
+    MONITORING = "monitoring"
+
+
 class DisruptionEventBase(BaseModel):
+    name: Optional[str] = None
     type: DisruptionType
     severity: int = Field(ge=1, le=5)
     startDate: date
     endDate: Optional[date] = None
-    affectedZones: List[str] = []
+    affectedZones: List[str] = Field(default_factory=list)
+    affectedZoneIds: List[str] = Field(default_factory=list)
     source: Optional[str] = None
     verificationStatus: VerificationStatus = VerificationStatus.UNVERIFIED
+    status: DisruptionStatus = DisruptionStatus.ACTIVE
     description: str
 
 

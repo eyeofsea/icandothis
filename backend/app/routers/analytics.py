@@ -54,10 +54,10 @@ async def get_dashboard():
 async def get_risk_matrix():
     db = await get_neo4j()
     query = """
-    MATCH (p:Project)-[:REQUIRES]->(e:Equipment)
+    MATCH (p:Project)-[:HAS_EQUIPMENT]->(e:Equipment)
     OPTIONAL MATCH (e)-[:SHIPPED_VIA]->(r:ShippingRoute)
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
-    OPTIONAL MATCH (e)<-[:SUPPLIES]-(s:Supplier)
+    OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     WITH p, e,
          CASE e.criticality
              WHEN 'critical' THEN 5
@@ -120,10 +120,10 @@ async def get_risk_matrix():
 async def get_cost_impact():
     db = await get_neo4j()
     query = """
-    MATCH (p:Project)-[:REQUIRES]->(e:Equipment)-[:SHIPPED_VIA]->(r:ShippingRoute)
+    MATCH (p:Project)-[:HAS_EQUIPMENT]->(e:Equipment)-[:SHIPPED_VIA]->(r:ShippingRoute)
     WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
-    OPTIONAL MATCH (z)<-[:AFFECTS]-(d:DisruptionEvent)
+    OPTIONAL MATCH (z)<-[:AFFECTS_ZONE]-(d:DisruptionEvent)
     WHERE d.verificationStatus <> 'resolved'
     WITH p, e, r, d,
          CASE r.currentStatus

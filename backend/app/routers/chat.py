@@ -58,7 +58,7 @@ async def _build_context(message: str) -> dict:
         query = """
         MATCH (e:Equipment)-[:SHIPPED_VIA]->(r:ShippingRoute)
         WHERE r.currentStatus IN ['disrupted', 'blocked', 'delayed']
-        OPTIONAL MATCH (p:Project)-[:REQUIRES]->(e)
+        OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
         RETURN e {
             .equipmentId, .name, .criticality,
             routeStatus: r.currentStatus,
@@ -75,10 +75,10 @@ async def _build_context(message: str) -> dict:
     if any(kw in lower for kw in ["supplier", "vendor", "source"]):
         query = """
         MATCH (s:Supplier)
-        WHERE size(s.riskFlags) > 0 OR s.deliveryRate < 80
-        RETURN s {.supplierId, .name, .country, .deliveryRate,
-                  .qualityRate, .riskFlags} AS supplier
-        ORDER BY s.deliveryRate ASC LIMIT 10
+        WHERE size(s.riskFlags) > 0 OR s.onTimeDeliveryRate < 80
+        RETURN s {.supplierId, .name, .country, .onTimeDeliveryRate,
+                  .qualityRejectRate, .riskFlags} AS supplier
+        ORDER BY s.onTimeDeliveryRate ASC LIMIT 10
         """
         records = await db.execute_read(query)
         context["flaggedSuppliers"] = [r["supplier"] for r in records]

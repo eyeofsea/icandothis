@@ -19,6 +19,7 @@ from app.routers import (
     ontology,
     projects,
     routes,
+    scenarios,
     suppliers,
 )
 
@@ -68,6 +69,7 @@ app.include_router(analytics.router)
 app.include_router(chat.router)
 app.include_router(hedging.router)
 app.include_router(feeds.router)
+app.include_router(scenarios.router)
 
 
 @app.get("/health")

@@ -16,7 +16,7 @@ interface ProjectDetailModalProps {
 const statusVariant = (s: string) => {
   switch (s) {
     case 'on-track': return 'success' as const;
-    case 'at-risk': return 'warning' as const;
+    case 'at-risk': return 'medium' as const;
     case 'delayed': return 'high' as const;
     case 'critical': return 'critical' as const;
     default: return 'default' as const;
@@ -40,7 +40,7 @@ export default function ProjectDetailModal({ projectId, onClose }: ProjectDetail
     <Modal open={!!projectId} onClose={onClose} title={project.name} width="max-w-2xl">
       <div className="space-y-5">
         <div className="flex items-center gap-2">
-          <Badge variant={statusVariant(project.status)}>{project.status}</Badge>
+          <Badge intent={statusVariant(project.status)}>{project.status}</Badge>
           <span className="text-xs text-slate-400">{project.client}</span>
         </div>
 
@@ -98,7 +98,7 @@ export default function ProjectDetailModal({ projectId, onClose }: ProjectDetail
                 </div>
                 <div className="flex items-center gap-2">
                   <RiskBar score={eq.riskScore} className="w-20" />
-                  <Badge variant={eq.status === 'delayed' ? 'critical' : eq.status === 'in-transit' ? 'info' : 'default'}>
+                  <Badge intent={eq.status === 'delayed' ? 'critical' : eq.status === 'in-transit' ? 'info' : 'default'}>
                     {eq.status}
                   </Badge>
                 </div>

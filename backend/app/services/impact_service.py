@@ -77,7 +77,7 @@ class ImpactService:
         try:
             records = await query_neo4j(
                 """
-                MATCH (p:Project {projectId: $projectId})-[:REQUIRES]->(e:Equipment)
+                MATCH (p:Project {projectId: $projectId})-[:HAS_EQUIPMENT]->(e:Equipment)
                        -[:SHIPPED_VIA]->(r:ShippingRoute)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
                        <-[:AFFECTS_ZONE]-(d:DisruptionEvent)
                 WHERE d.verificationStatus <> 'resolved'
