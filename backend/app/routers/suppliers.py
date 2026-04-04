@@ -1,14 +1,27 @@
-from typing import List, Optional
+import json
+from typing import Any, List, Optional
 
 from fastapi import APIRouter, HTTPException, Query
 
 from app.database.neo4j_client import get_neo4j
 from app.models.supplier import Supplier, SupplierAlternative, SupplierPerformance
 
+
+def _parse_json_fields(record: dict[str, Any]) -> dict[str, Any]:
+    """Parse JSON-stringified list fields from Neo4j."""
+    for key in ("capabilities", "certifications", "riskFlags", "specializations"):
+        val = record.get(key)
+        if isinstance(val, str):
+            try:
+                record[key] = json.loads(val)
+            except (json.JSONDecodeError, TypeError):
+                record[key] = []
+    return record
+
 router = APIRouter(prefix="/api/suppliers", tags=["suppliers"])
 
 
-@router.get("", response_model=List[Supplier])
+@router.get("")
 async def list_suppliers(
     country: Optional[str] = Query(None),
     tier: Optional[str] = Query(None),
@@ -45,10 +58,10 @@ async def list_suppliers(
     SKIP $offset LIMIT $limit
     """
     records = await db.execute_read(query, params)
-    return [record["supplier"] for record in records]
+    return [_parse_json_fields(record["supplier"]) for record in records]
 
 
-@router.get("/{supplier_id}", response_model=Supplier)
+@router.get("/{supplier_id}")
 async def get_supplier(supplier_id: str):
     db = await get_neo4j()
     query = """

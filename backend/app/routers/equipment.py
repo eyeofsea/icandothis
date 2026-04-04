@@ -1,14 +1,26 @@
-from typing import List, Optional
+import json
+from typing import Any, List, Optional
 
 from fastapi import APIRouter, HTTPException, Query
 
 from app.database.neo4j_client import get_neo4j
 from app.models.equipment import Equipment, EquipmentImpact
 
+
+def _parse_json_fields(record: dict[str, Any]) -> dict[str, Any]:
+    for key in ("specifications",):
+        val = record.get(key)
+        if isinstance(val, str):
+            try:
+                record[key] = json.loads(val)
+            except (json.JSONDecodeError, TypeError):
+                record[key] = {}
+    return record
+
 router = APIRouter(prefix="/api/equipment", tags=["equipment"])
 
 
-@router.get("", response_model=List[Equipment])
+@router.get("")
 async def list_equipment(
     category: Optional[str] = Query(None, description="Filter by category"),
     criticality: Optional[str] = Query(None, description="Filter by criticality"),
@@ -43,7 +55,7 @@ async def list_equipment(
     SKIP $offset LIMIT $limit
     """
     records = await db.execute_read(query, params)
-    return [record["equipment"] for record in records]
+    return [_parse_json_fields(record["equipment"]) for record in records]
 
 
 @router.get("/at-risk")
@@ -78,7 +90,7 @@ async def get_at_risk_equipment():
     return [record["equipment"] for record in records]
 
 
-@router.get("/{equipment_id}", response_model=Equipment)
+@router.get("/{equipment_id}")
 async def get_equipment(equipment_id: str):
     db = await get_neo4j()
     query = """

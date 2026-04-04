@@ -3,6 +3,7 @@ One-way sync: Neo4j (source of truth) -> PostgreSQL (analytics/reporting).
 Runs at startup and can be triggered via API.
 """
 import logging
+from datetime import date, datetime
 from typing import Any
 
 from sqlalchemy.dialects.postgresql import insert as pg_insert
@@ -14,6 +15,22 @@ from app.database.models_pg import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _parse_date(val: Any) -> date | None:
+    if val is None:
+        return None
+    if isinstance(val, date):
+        return val
+    if isinstance(val, datetime):
+        return val.date()
+    if isinstance(val, str):
+        for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%d-%m-%Y"):
+            try:
+                return datetime.strptime(val, fmt).date()
+            except ValueError:
+                continue
+    return None
 
 
 async def sync_suppliers() -> int:
@@ -139,7 +156,7 @@ async def sync_equipment() -> int:
                 project_neo4j_id=r["project_neo4j_id"],
                 supplier_neo4j_id=r["supplier_neo4j_id"],
                 route_neo4j_id=r["route_neo4j_id"],
-                required_on_site_date=r["required_on_site_date"],
+                required_on_site_date=_parse_date(r["required_on_site_date"]),
             ).on_conflict_do_update(
                 index_elements=["neo4j_id"],
                 set_={

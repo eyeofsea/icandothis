@@ -8,7 +8,7 @@ from app.models.project import Project, ProjectRiskSummary
 router = APIRouter(prefix="/api/projects", tags=["projects"])
 
 
-@router.get("", response_model=List[Project])
+@router.get("")
 async def list_projects(
     status: Optional[str] = Query(None, description="Filter by status"),
     country: Optional[str] = Query(None, description="Filter by country"),
@@ -45,7 +45,7 @@ async def list_projects(
     return [record["project"] for record in records]
 
 
-@router.get("/{project_id}", response_model=Project)
+@router.get("/{project_id}")
 async def get_project(project_id: str):
     db = await get_neo4j()
     query = """

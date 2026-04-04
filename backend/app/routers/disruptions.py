@@ -15,7 +15,7 @@ from app.models.disruption import (
 router = APIRouter(prefix="/api/disruptions", tags=["disruptions"])
 
 
-@router.get("", response_model=List[DisruptionEvent])
+@router.get("")
 async def list_disruptions(
     event_type: Optional[str] = Query(None, alias="type"),
     severity: Optional[int] = Query(None, ge=1, le=5),

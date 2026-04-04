@@ -8,7 +8,7 @@ from app.models.route import RouteAlternative, ShippingRoute
 router = APIRouter(prefix="/api/routes", tags=["routes"])
 
 
-@router.get("", response_model=List[ShippingRoute])
+@router.get("")
 async def list_routes(
     status: Optional[str] = Query(None),
     limit: int = Query(50, ge=1, le=200),
@@ -88,7 +88,7 @@ async def get_disrupted_routes():
     return results
 
 
-@router.get("/{route_id}", response_model=ShippingRoute)
+@router.get("/{route_id}")
 async def get_route(route_id: str):
     db = await get_neo4j()
     query = """
