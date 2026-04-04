@@ -12,6 +12,7 @@ import MapView from '@/views/MapView';
 import OntologyView from '@/views/OntologyView';
 import ImpactView from '@/views/ImpactView';
 import ScenarioView from '@/views/ScenarioView';
+import HedgingReportView from '@/views/HedgingReportView';
 import ChatPanel from '@/components/chat/ChatPanel';
 import ScenarioSelector from '@/components/scenario/ScenarioSelector';
 import { useDisruptionStore } from '@/stores/disruptionStore';
@@ -26,6 +27,7 @@ const VIEW_TITLES: Record<ViewId, string> = {
   ontology: 'Knowledge Graph',
   impact: 'Impact Analysis',
   scenario: 'Scenario Simulation',
+  hedging: 'Hedging & TCO Report',
 };
 
 export default function Home() {
@@ -43,6 +45,7 @@ export default function Home() {
       case 'ontology': return <OntologyView />;
       case 'impact': return <ImpactView />;
       case 'scenario': return <ScenarioView />;
+      case 'hedging': return <HedgingReportView />;
     }
   };
 

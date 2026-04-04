@@ -1,7 +1,7 @@
 import {
   Project, Equipment, Supplier, ShippingRoute, DisruptionEvent,
   GeopoliticalZone, DashboardKPIs, RiskMatrixItem, ImpactAnalysis,
-  ChatMessage,
+  ChatMessage, HedgingReport,
 } from './types';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
@@ -63,6 +63,15 @@ export async function simulateDisruption(event: Partial<DisruptionEvent>): Promi
     method: 'POST',
     body: JSON.stringify(event),
   });
+}
+
+export async function fetchHedgingReport(
+  disruptionId: string,
+  delayDays: number = 30,
+): Promise<HedgingReport> {
+  return apiFetch<HedgingReport>(
+    `/api/hedging/report/${disruptionId}?delay_days=${delayDays}`
+  );
 }
 
 export async function sendChatMessage(message: string, context?: Record<string, unknown>): Promise<ChatMessage> {

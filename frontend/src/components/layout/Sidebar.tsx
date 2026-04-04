@@ -9,12 +9,13 @@ import {
   GitFork,
   Zap,
   FlaskConical,
+  Scale,
   Radar,
 } from 'lucide-react';
 import Tooltip from '@/components/ui/Tooltip';
 import { cn } from '@/lib/utils';
 
-export type ViewId = 'dashboard' | 'riskmatrix' | 'projects' | 'alerts' | 'map' | 'ontology' | 'impact' | 'scenario';
+export type ViewId = 'dashboard' | 'riskmatrix' | 'projects' | 'alerts' | 'map' | 'ontology' | 'impact' | 'scenario' | 'hedging';
 
 interface NavItem {
   id: ViewId;
@@ -31,6 +32,7 @@ const navItems: NavItem[] = [
   { id: 'ontology', label: 'Ontology', icon: GitFork },
   { id: 'impact', label: 'Impact', icon: Zap },
   { id: 'scenario', label: 'Scenario', icon: FlaskConical },
+  { id: 'hedging', label: 'Hedging Report', icon: Scale },
 ];
 
 interface SidebarProps {

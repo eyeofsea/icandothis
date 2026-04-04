@@ -221,6 +221,45 @@ export interface RiskMatrixItem {
   value: number;
 }
 
+// ===== Hedging Report Types =====
+
+export interface TCOBreakdown {
+  shipping_cost: number;
+  insurance_cost: number;
+  delay_penalties: number;
+  site_overhead: number;
+  idle_workforce: number;
+  storage_cost: number;
+  total: number;
+  delay_days: number;
+}
+
+export interface HedgingScenario {
+  rank: number;
+  name: string;
+  scenario_type: string;
+  total: number;
+  net_savings: number;
+  savings_pct: number;
+  benefit_cost_ratio: number;
+  implementation_cost: number;
+  residual_delay_days: number;
+  alternative_id?: string;
+  alternative_details?: Record<string, unknown>;
+}
+
+export interface HedgingReport {
+  disruption_id: string;
+  disruption_name: string;
+  severity: number;
+  delay_days: number;
+  affected_equipment_count: number;
+  affected_project_count: number;
+  baseline_tco: TCOBreakdown;
+  scenarios: HedgingScenario[];
+  executive_summary: string;
+}
+
 // ===== Graph Types =====
 
 export interface GraphNode {
