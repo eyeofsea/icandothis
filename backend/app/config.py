@@ -10,6 +10,8 @@ class Settings(BaseSettings):
 
     # PostgreSQL
     POSTGRES_URL: str = "postgresql+asyncpg://scmrisk:scmrisk2024@localhost:5432/scm_risk_db"
+    SQLALCHEMY_DATABASE_URL: str = "postgresql+asyncpg://scmrisk:scmrisk2024@localhost:5432/scm_risk_db"
+    SQLALCHEMY_SYNC_URL: str = "postgresql://scmrisk:scmrisk2024@localhost:5432/scm_risk_db"
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379/0"
