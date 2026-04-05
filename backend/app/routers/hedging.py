@@ -1,6 +1,10 @@
+import logging
+
 from fastapi import APIRouter, HTTPException, Query
 
 from app.services.hedging_service import HedgingService
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/hedging", tags=["hedging"])
 hedging_service = HedgingService()
@@ -21,6 +25,7 @@ async def get_hedging_report(
         )
         return report
     except Exception as e:
+        logger.exception("Hedging report generation failed for %s", disruption_id)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -30,10 +35,14 @@ async def get_tco_comparison(
     delay_days: int = Query(default=30, ge=1, le=365),
 ):
     """Get only the TCO comparison table (lighter payload for decision dashboard)."""
-    report = await hedging_service.generate_report(
-        disruption_id=disruption_id,
-        delay_days=delay_days,
-    )
+    try:
+        report = await hedging_service.generate_report(
+            disruption_id=disruption_id,
+            delay_days=delay_days,
+        )
+    except Exception as e:
+        logger.exception("Hedging compare failed for %s", disruption_id)
+        raise HTTPException(status_code=500, detail=str(e))
     return {
         "disruption_id": disruption_id,
         "baseline_total": report["baseline_tco"]["total"],

@@ -2,10 +2,26 @@
 Orchestrates hedging alternatives and TCO comparison reports.
 Pulls data from Neo4j, calculates TCO via tco_engine, persists to PostgreSQL.
 """
+import logging
 from typing import Any
 
 from app.database.neo4j_client import Neo4jClient
 from app.services.tco_engine import calculate_baseline_tco, calculate_scenario_tco, compare_tco
+
+logger = logging.getLogger(__name__)
+
+
+def _sanitize(obj: Any) -> Any:
+    """Recursively convert non-serializable Neo4j types to strings."""
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize(v) for v in obj]
+    if hasattr(obj, 'isoformat'):
+        return obj.isoformat()
+    if hasattr(obj, 'iso_format'):
+        return obj.iso_format()
+    return obj
 
 
 class HedgingService:
@@ -125,10 +141,16 @@ class HedgingService:
         event_q = """
         MATCH (d:DisruptionEvent {eventId: $eventId})
         OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
-        RETURN d {.*} AS event, collect(z.zoneId) AS zoneIds
+        RETURN d {
+            .eventId, .name, .type, .severity, .description, .source,
+            .verificationStatus, .status,
+            startDate: toString(d.startDate),
+            endDate: toString(d.endDate),
+            createdAt: toString(d.createdAt)
+        } AS event, collect(z.zoneId) AS zoneIds
         """
         event_records = await neo4j.execute_read(event_q, {"eventId": disruption_id})
-        event = event_records[0]["event"] if event_records else {}
+        event = _sanitize(event_records[0]["event"]) if event_records else {}
         zone_ids = event_records[0]["zoneIds"] if event_records else []
 
         # Fetch affected equipment via zones -> routes -> equipment
@@ -140,7 +162,7 @@ class HedgingService:
         RETURN DISTINCT e {.*, projectId: p.projectId, supplierId: s.supplierId, routeId: r.routeId} AS equipment
         """
         equip_records = await neo4j.execute_read(equip_q, {"zoneIds": zone_ids})
-        equipment = [r["equipment"] for r in equip_records]
+        equipment = [_sanitize(r["equipment"]) for r in equip_records]
 
         # Fetch affected routes
         route_q = """
@@ -149,7 +171,7 @@ class HedgingService:
         RETURN DISTINCT r {.*} AS route
         """
         route_records = await neo4j.execute_read(route_q, {"zoneIds": zone_ids})
-        affected_routes = [r["route"] for r in route_records]
+        affected_routes = [_sanitize(r["route"]) for r in route_records]
 
         # Fetch affected projects
         project_q = """
@@ -158,7 +180,7 @@ class HedgingService:
         RETURN DISTINCT p {.*} AS project
         """
         proj_records = await neo4j.execute_read(project_q, {"zoneIds": zone_ids})
-        projects = [r["project"] for r in proj_records]
+        projects = [_sanitize(r["project"]) for r in proj_records]
 
         # Find alternative routes (avoiding disrupted zones)
         alt_route_q = """
@@ -173,25 +195,22 @@ class HedgingService:
         LIMIT 5
         """
         alt_route_records = await neo4j.execute_read(alt_route_q, {"zoneIds": zone_ids})
-        alt_routes = [r["route"] for r in alt_route_records]
+        alt_routes = [_sanitize(r["route"]) for r in alt_route_records]
 
         # Find alternative suppliers (outside disrupted zones)
         categories = list({eq.get("category") for eq in equipment if eq.get("category")})
         alt_suppliers: list[dict[str, Any]] = []
         for cat in categories[:3]:
             sup_q = """
-            MATCH (s:Supplier)-[:SUPPLIES]->(e:Equipment)
+            MATCH (e:Equipment)-[:SUPPLIED_BY]->(s:Supplier)
             WHERE e.category = $category
-              AND NOT EXISTS {
-                MATCH (s)-[:LOCATED_IN]->(z:GeopoliticalZone)
-                WHERE z.zoneId IN $zoneIds
-              }
-            RETURN DISTINCT s {.*} AS supplier
+            WITH DISTINCT s
+            RETURN s {.*} AS supplier
             ORDER BY s.onTimeDeliveryRate DESC
             LIMIT 3
             """
             sup_records = await neo4j.execute_read(sup_q, {"category": cat, "zoneIds": zone_ids})
-            alt_suppliers.extend([r["supplier"] for r in sup_records])
+            alt_suppliers.extend([_sanitize(r["supplier"]) for r in sup_records])
 
         return {
             "event": event,

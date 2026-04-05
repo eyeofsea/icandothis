@@ -1,7 +1,22 @@
+from typing import Any
+
 from fastapi import APIRouter, HTTPException
 
 from app.database.neo4j_client import get_neo4j
 from app.models.ontology import GraphPath, OntologyGraph, OntologyNode, OntologyEdge
+
+
+def _sanitize_properties(props: dict[str, Any]) -> dict[str, Any]:
+    """Convert non-serializable Neo4j types (DateTime, Date, etc.) to strings."""
+    sanitized = {}
+    for k, v in props.items():
+        if hasattr(v, 'isoformat'):
+            sanitized[k] = v.isoformat()
+        elif hasattr(v, 'iso_format'):
+            sanitized[k] = v.iso_format()
+        else:
+            sanitized[k] = v
+    return sanitized
 
 router = APIRouter(prefix="/api/ontology", tags=["ontology"])
 
@@ -25,7 +40,11 @@ async def get_full_graph(limit: int = 500):
     LIMIT $limit
     """
     node_records = await db.execute_read(node_query, {"limit": limit})
-    nodes = [record["node"] for record in node_records]
+    nodes = []
+    for record in node_records:
+        node = record["node"]
+        node["properties"] = _sanitize_properties(node.get("properties", {}))
+        nodes.append(node)
 
     edge_query = """
     MATCH (a)-[r]->(b)

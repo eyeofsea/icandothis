@@ -49,27 +49,20 @@ async def get_disrupted_routes():
     WHERE d.verificationStatus <> 'resolved'
     OPTIONAL MATCH (e:Equipment)-[:SHIPPED_VIA]->(r)
     OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
-    RETURN r {
-        .routeId, .name, .currentStatus, .totalDistanceNm,
-        .estimatedTransitDays, .shippingCost,
-        affectedZones: collect(DISTINCT {
-            zoneId: z.zoneId,
-            name: z.name,
-            riskLevel: z.riskLevel
-        }),
-        disruptions: collect(DISTINCT {
-            eventId: d.eventId,
-            type: d.type,
-            severity: d.severity,
-            description: d.description
-        }),
-        affectedEquipment: collect(DISTINCT {
-            equipmentId: e.equipmentId,
-            name: e.name,
-            criticality: e.criticality,
-            projectId: p.projectId,
-            projectName: p.name
-        })
+    WITH r,
+         collect(DISTINCT {zoneId: z.zoneId, name: z.name, riskLevel: z.riskLevel}) AS zones,
+         collect(DISTINCT {eventId: d.eventId, type: d.type, severity: d.severity, description: d.description}) AS disruptions,
+         collect(DISTINCT {equipmentId: e.equipmentId, name: e.name, criticality: e.criticality, projectId: p.projectId, projectName: p.name}) AS equipment
+    RETURN {
+        routeId: r.routeId,
+        name: r.name,
+        currentStatus: r.currentStatus,
+        totalDistanceNm: r.totalDistanceNm,
+        estimatedTransitDays: r.estimatedTransitDays,
+        shippingCost: r.shippingCost,
+        affectedZones: [z IN zones WHERE z.zoneId IS NOT NULL],
+        disruptions: [d IN disruptions WHERE d.eventId IS NOT NULL],
+        affectedEquipment: [e IN equipment WHERE e.equipmentId IS NOT NULL]
     } AS route
     ORDER BY
         CASE r.currentStatus
@@ -78,14 +71,7 @@ async def get_disrupted_routes():
             ELSE 2 END
     """
     records = await db.execute_read(query)
-    results = []
-    for record in records:
-        route = record["route"]
-        route["affectedZones"] = [z for z in route["affectedZones"] if z.get("zoneId")]
-        route["disruptions"] = [d for d in route["disruptions"] if d.get("eventId")]
-        route["affectedEquipment"] = [e for e in route["affectedEquipment"] if e.get("equipmentId")]
-        results.append(route)
-    return results
+    return [record["route"] for record in records]
 
 
 @router.get("/{route_id}")

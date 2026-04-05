@@ -4,8 +4,10 @@ import { useMemo, useState } from 'react';
 import { ArrowUpDown } from 'lucide-react';
 import { useProjectStore } from '@/stores/projectStore';
 import { useMapStore } from '@/stores/mapStore';
-import { formatCurrency, riskColor } from '@/lib/utils';
-import { CRITICALITY_COLORS } from '@/lib/constants';
+import { formatCurrency } from '@/lib/utils';
+import Badge from '@/components/ui/Badge';
+import RiskBar from '@/components/ui/RiskBar';
+import { cn } from '@/lib/utils';
 
 type SortKey = 'riskScore' | 'value' | 'criticality' | 'status';
 
@@ -41,7 +43,7 @@ export default function RiskMatrix() {
       return sortAsc ? cmp : -cmp;
     });
 
-    return filtered;
+    return filtered.slice(0, 10); // Show only top 10 in dashboard
   }, [equipment, projects, suppliers, routes, sortKey, sortAsc, filterCriticality]);
 
   const toggleSort = (key: SortKey) => {
@@ -50,39 +52,44 @@ export default function RiskMatrix() {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs text-slate-400">Filter:</span>
-        <select
-          value={filterCriticality}
-          onChange={(e) => setFilterCriticality(e.target.value)}
-          className="text-xs bg-[#1a2236] border border-[#1e3a5f] rounded px-2 py-1 text-slate-300 outline-none"
-        >
-          <option value="all">All</option>
-          <option value="Critical">Critical</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Filter Criticality</span>
+          <select
+            value={filterCriticality}
+            onChange={(e) => setFilterCriticality(e.target.value)}
+            className="text-[10px] bg-slate-900 border border-slate-800 rounded px-2 py-1 text-slate-300 outline-none focus:border-sky-500/50 transition-colors uppercase font-bold"
+          >
+            <option value="all">ALL</option>
+            <option value="Critical">CRITICAL</option>
+            <option value="High">HIGH</option>
+            <option value="Medium">MEDIUM</option>
+            <option value="Low">LOW</option>
+          </select>
+        </div>
+        <div className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+          Top {rows.length} Risks
+        </div>
       </div>
 
-      <div className="flex-1 overflow-auto">
-        <table className="w-full text-[11px]">
-          <thead className="sticky top-0 bg-[#0a0e1a]">
-            <tr className="text-slate-500 border-b border-[#1e3a5f]">
-              <th className="text-left py-1.5 px-1 font-medium">Equipment</th>
-              <th className="text-left py-1.5 px-1 font-medium hidden xl:table-cell">Project</th>
-              <th className="text-left py-1.5 px-1 font-medium">
-                <button onClick={() => toggleSort('criticality')} className="flex items-center gap-0.5 hover:text-slate-300">
-                  Crit. <ArrowUpDown className="w-2.5 h-2.5" />
+      <div className="flex-1 overflow-auto scrollbar-hide -mx-4 px-4">
+        <table className="w-full text-[11px] border-separate border-spacing-0">
+          <thead className="sticky top-0 bg-slate-900/80 backdrop-blur-md z-10">
+            <tr className="text-slate-500">
+              <th className="text-left py-2 px-2 font-black uppercase tracking-widest border-b border-white/5">Asset</th>
+              <th className="text-left py-2 px-2 font-black uppercase tracking-widest border-b border-white/5 hidden xl:table-cell">Project</th>
+              <th className="text-left py-2 px-2 font-black uppercase tracking-widest border-b border-white/5">
+                <button onClick={() => toggleSort('criticality')} className="flex items-center gap-0.5 hover:text-white transition-colors">
+                  Crit {sortKey === 'criticality' && <ArrowUpDown className="w-2.5 h-2.5 text-sky-400" />}
                 </button>
               </th>
-              <th className="text-left py-1.5 px-1 font-medium">
-                <button onClick={() => toggleSort('riskScore')} className="flex items-center gap-0.5 hover:text-slate-300">
-                  Risk <ArrowUpDown className="w-2.5 h-2.5" />
+              <th className="text-left py-2 px-2 font-black uppercase tracking-widest border-b border-white/5">
+                <button onClick={() => toggleSort('riskScore')} className="flex items-center gap-0.5 hover:text-white transition-colors">
+                  Risk {sortKey === 'riskScore' && <ArrowUpDown className="w-2.5 h-2.5 text-sky-400" />}
                 </button>
               </th>
-              <th className="text-left py-1.5 px-1 font-medium">Status</th>
+              <th className="text-right py-2 px-2 font-black uppercase tracking-widest border-b border-white/5">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -93,40 +100,30 @@ export default function RiskMatrix() {
                   setSelectedEquipment(row.id);
                   if (row.currentPosition) setMapCenter([row.currentPosition.lat, row.currentPosition.lng]);
                 }}
-                className="border-b border-[#1e3a5f]/50 hover:bg-white/[0.03] cursor-pointer transition-colors"
+                className="group border-b border-white/[0.02] hover:bg-white/[0.04] cursor-pointer transition-all duration-150"
               >
-                <td className="py-1.5 px-1">
-                  <div className="text-slate-200 font-medium truncate max-w-[120px]">{row.name}</div>
-                  <div className="text-slate-500 text-[9px]">{formatCurrency(row.value)}</div>
+                <td className="py-2.5 px-2">
+                  <div className="text-slate-200 font-bold truncate max-w-[120px] group-hover:text-sky-400 transition-colors">{row.name}</div>
+                  <div className="text-slate-600 text-[9px] font-bold tracking-tighter uppercase">{formatCurrency(row.value)}</div>
                 </td>
-                <td className="py-1.5 px-1 text-slate-400 hidden xl:table-cell truncate max-w-[80px]">{row.projectName}</td>
-                <td className="py-1.5 px-1">
-                  <span
-                    className="inline-block px-1.5 py-0.5 rounded text-[9px] font-semibold"
-                    style={{
-                      color: CRITICALITY_COLORS[row.criticality],
-                      background: `${CRITICALITY_COLORS[row.criticality]}20`,
-                    }}
+                <td className="py-2.5 px-2 text-slate-500 font-medium hidden xl:table-cell truncate max-w-[100px]">{row.projectName}</td>
+                <td className="py-2.5 px-2">
+                  <Badge 
+                    intent={row.criticality === 'Critical' ? 'critical' : row.criticality === 'High' ? 'high' : row.criticality === 'Medium' ? 'medium' : 'low'}
+                    variant="glass"
+                    className="px-1.5 py-0 rounded-md"
                   >
-                    {row.criticality}
-                  </span>
+                    {row.criticality.substring(0, 3)}
+                  </Badge>
                 </td>
-                <td className="py-1.5 px-1">
-                  <div className="flex items-center gap-1">
-                    <div className="w-8 h-1.5 rounded-full bg-slate-700 overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all"
-                        style={{
-                          width: `${row.riskScore}%`,
-                          background: row.riskScore >= 70 ? '#ef4444' : row.riskScore >= 50 ? '#f97316' : row.riskScore >= 30 ? '#eab308' : '#22c55e',
-                        }}
-                      />
-                    </div>
-                    <span className={riskColor(row.riskScore)}>{row.riskScore}</span>
-                  </div>
+                <td className="py-2.5 px-2 min-w-[100px]">
+                  <RiskBar score={row.riskScore} size="sm" showLabel />
                 </td>
-                <td className="py-1.5 px-1">
-                  <span className={`text-[9px] ${row.status === 'delayed' ? 'text-red-400' : row.status === 'in-transit' ? 'text-cyan-400' : 'text-slate-400'}`}>
+                <td className="py-2.5 px-2 text-right">
+                  <span className={cn(
+                    "text-[9px] font-black uppercase tracking-tighter",
+                    row.status === 'delayed' ? 'text-rose-400' : row.status === 'in-transit' ? 'text-sky-400' : 'text-slate-500'
+                  )}>
                     {row.status}
                   </span>
                 </td>

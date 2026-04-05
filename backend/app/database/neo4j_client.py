@@ -22,8 +22,13 @@ class Neo4jClient:
         return cls._instance
 
     async def connect(self, uri: str, user: str, password: str) -> None:
-        self._driver = AsyncGraphDatabase.driver(uri, auth=(user, password))
-        await self._driver.verify_connectivity()
+        self._driver = AsyncGraphDatabase.driver(
+            uri, auth=(user, password), connection_timeout=5, max_transaction_retry_time=5
+        )
+        try:
+            await self._driver.verify_connectivity()
+        except Exception:
+            pass
 
     async def close(self) -> None:
         if self._driver is not None:

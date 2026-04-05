@@ -94,52 +94,28 @@ async def activate_scenario(scenario_id: str) -> Dict[str, Any]:
     event_id = scenario["eventId"]
     affected_zones = scenario.get("affectedZones", [])
 
-    # Build the query - create DisruptionEvent and AFFECTS_ZONE relationships
-    query = """
+    # Step 1: Create/update DisruptionEvent node and zone relationships
+    write_query = """
     MERGE (d:DisruptionEvent {eventId: $eventId})
-    ON CREATE SET
-        d.name = $name,
+    SET d.name = $name,
         d.type = $type,
         d.severity = $severity,
         d.description = $description,
-        d.startDate = date($startDate),
-        d.endDate = CASE WHEN $endDate IS NOT NULL THEN date($endDate) ELSE null END,
+        d.startDate = $startDate,
+        d.endDate = $endDate,
         d.source = $source,
         d.verificationStatus = $verificationStatus,
         d.status = 'active',
         d.scenarioId = $scenarioId,
         d.createdAt = datetime()
-    ON MATCH SET
-        d.name = $name,
-        d.type = $type,
-        d.severity = $severity,
-        d.description = $description,
-        d.startDate = date($startDate),
-        d.endDate = CASE WHEN $endDate IS NOT NULL THEN date($endDate) ELSE null END,
-        d.source = $source,
-        d.verificationStatus = $verificationStatus,
-        d.status = 'active',
-        d.scenarioId = $scenarioId,
-        d.updatedAt = datetime()
     WITH d
     OPTIONAL MATCH (d)-[r:AFFECTS_ZONE]->()
     DELETE r
     WITH d
-    UNWIND CASE WHEN size($affectedZones) > 0 THEN $affectedZones ELSE [null] END AS zoneId
-    OPTIONAL MATCH (z:GeopoliticalZone {zoneId: zoneId})
-    FOREACH (_ IN CASE WHEN z IS NOT NULL THEN [1] ELSE [] END |
-        CREATE (d)-[:AFFECTS_ZONE]->(z)
-    )
-    WITH d
-    OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
-    RETURN d {
-        .eventId, .name, .type, .severity, .description,
-        startDate: toString(d.startDate),
-        endDate: toString(d.endDate),
-        .source, .verificationStatus, .status, .scenarioId,
-        createdAt: toString(d.createdAt),
-        affectedZoneIds: collect(z.zoneId)
-    } AS disruption
+    UNWIND $affectedZones AS zoneId
+    MATCH (z:GeopoliticalZone {zoneId: zoneId})
+    CREATE (d)-[:AFFECTS_ZONE]->(z)
+    RETURN d.eventId AS eventId
     """
 
     params = {
@@ -153,10 +129,41 @@ async def activate_scenario(scenario_id: str) -> Dict[str, Any]:
         "source": scenario.get("source", ""),
         "verificationStatus": scenario.get("verificationStatus", "Confirmed"),
         "scenarioId": scenario_id,
-        "affectedZones": affected_zones,
+        "affectedZones": affected_zones if affected_zones else ["__none__"],
     }
 
-    records = await db.execute_write(query, params)
+    await db.execute_write(write_query, params)
+
+    # Step 2: Update affected shipping routes' status based on severity
+    if affected_zones and affected_zones != ["__none__"]:
+        route_status = "blocked" if scenario.get("severity", 1) >= 4 else "disrupted"
+        update_routes_query = """
+        MATCH (r:ShippingRoute)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
+        WHERE z.zoneId IN $affectedZones
+        SET r.currentStatus = $routeStatus
+        RETURN count(r) AS updatedCount
+        """
+        await db.execute_write(update_routes_query, {
+            "affectedZones": affected_zones,
+            "routeStatus": route_status,
+        })
+
+    # Step 3: Read back with zone IDs
+    read_query = """
+    MATCH (d:DisruptionEvent {eventId: $eventId})
+    OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
+    WITH d, collect(z.zoneId) AS zoneIds
+    RETURN {
+        eventId: d.eventId, name: d.name, type: d.type,
+        severity: d.severity, description: d.description,
+        startDate: toString(d.startDate), endDate: toString(d.endDate),
+        source: d.source, verificationStatus: d.verificationStatus,
+        status: d.status, scenarioId: d.scenarioId,
+        createdAt: toString(d.createdAt),
+        affectedZoneIds: zoneIds
+    } AS disruption
+    """
+    records = await db.execute_read(read_query, {"eventId": event_id})
     if not records:
         raise RuntimeError(f"Failed to activate scenario {scenario_id}")
 

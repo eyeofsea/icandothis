@@ -27,10 +27,16 @@ from app.routers import (
 @asynccontextmanager
 async def lifespan(application: FastAPI):
     neo4j = await Neo4jClient.get_instance()
-    await neo4j.connect(settings.NEO4J_URI, settings.NEO4J_USER, settings.NEO4J_PASSWORD)
+    try:
+        await neo4j.connect(settings.NEO4J_URI, settings.NEO4J_USER, settings.NEO4J_PASSWORD)
+    except Exception as e:
+        logger.warning(f"Neo4j connection deferred: {e}")
 
     redis = await RedisClient.get_instance()
-    await redis.connect(settings.REDIS_URL)
+    try:
+        await redis.connect(settings.REDIS_URL)
+    except Exception as e:
+        logger.warning(f"Redis connection deferred: {e}")
 
     try:
         from app.database.sync_pg import sync_all
@@ -41,8 +47,14 @@ async def lifespan(application: FastAPI):
 
     yield
 
-    await neo4j.close()
-    await redis.close()
+    try:
+        await neo4j.close()
+    except Exception:
+        pass
+    try:
+        await redis.close()
+    except Exception:
+        pass
 
 
 app = FastAPI(

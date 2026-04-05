@@ -24,6 +24,9 @@ class Settings(BaseSettings):
         "http://localhost:3000",
         "http://localhost:5173",
         "http://localhost:8080",
+        "https://scm-risk-web-1057913091051.asia-northeast3.run.app",
+        "https://vints.ai",
+        "https://www.vints.ai",
     ]
 
     # App

@@ -161,7 +161,7 @@ def compare_tco(
         scenario_total = s["total"]
         impl_cost = s.get("implementation_cost", 0)
         net_savings = baseline_total - scenario_total
-        bcr = (net_savings / impl_cost) if impl_cost > 0 else float("inf")
+        bcr = (net_savings / impl_cost) if impl_cost > 0 else 999.0
         ranked.append({
             **s,
             "baseline_total": baseline_total,

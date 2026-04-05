@@ -44,10 +44,14 @@ async def list_disruptions(
     {where}
     OPTIONAL MATCH (d)-[:AFFECTS_ZONE]->(z:GeopoliticalZone)
     WITH d, collect(z.zoneId) AS zones
-    RETURN d {{
-        .eventId, .name, .type, .severity, .startDate, .endDate,
-        .source, .verificationStatus, .description, .createdAt,
-        .status,
+    RETURN {{
+        eventId: d.eventId, name: d.name, type: d.type,
+        severity: d.severity, startDate: toString(d.startDate),
+        endDate: toString(d.endDate), source: d.source,
+        verificationStatus: d.verificationStatus,
+        description: d.description,
+        createdAt: toString(d.createdAt),
+        status: d.status,
         affectedZones: zones,
         affectedZoneIds: zones
     }} AS disruption

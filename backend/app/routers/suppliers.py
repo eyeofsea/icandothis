@@ -1,9 +1,12 @@
 import json
+import logging
 from typing import Any, List, Optional
 
 from fastapi import APIRouter, HTTPException, Query
 
 from app.database.neo4j_client import get_neo4j
+
+logger = logging.getLogger(__name__)
 from app.models.supplier import Supplier, SupplierAlternative, SupplierPerformance
 
 
@@ -109,37 +112,35 @@ async def get_supplier_alternatives(supplier_id: str):
     return [record["alternative"] for record in records]
 
 
-@router.get("/{supplier_id}/performance", response_model=SupplierPerformance)
+@router.get("/{supplier_id}/performance")
 async def get_supplier_performance(supplier_id: str):
     db = await get_neo4j()
     query = """
     MATCH (s:Supplier {supplierId: $supplierId})
-    OPTIONAL MATCH (e:Equipment)-[supplied:SUPPLIED_BY]->(s)
-    OPTIONAL MATCH (ae:Equipment)-[active:SUPPLIED_BY]->(s)
+    OPTIONAL MATCH (e:Equipment)-[:SUPPLIED_BY]->(s)
+    WITH s, count(e) AS totalEquipment
+    OPTIONAL MATCH (ae:Equipment)-[:SUPPLIED_BY]->(s)
     WHERE ae.status = 'in_progress'
-    OPTIONAL MATCH (ce:Equipment)-[completed:SUPPLIED_BY]->(s)
-    WHERE ce.status = 'delivered'
-    OPTIONAL MATCH (s)-[issue:HAS_ISSUE]->(i)
-    WHERE i.createdAt > datetime() - duration('P90D')
+    WITH s, totalEquipment, count(ae) AS activeOrders
     RETURN {
         supplierId: s.supplierId,
         supplierName: s.name,
         onTimeDeliveryRate: coalesce(s.onTimeDeliveryRate, 0.0),
         qualityPassRate: 100.0 - coalesce(s.qualityRejectRate, 0.0),
-        averageLeadTimeDays: toFloat(coalesce(s.leadTimeDays, 0)),
-        totalOrdersCompleted: count(DISTINCT ce),
-        activeOrders: count(DISTINCT ae),
-        recentIssues: collect(DISTINCT CASE WHEN i IS NOT NULL
-            THEN {type: labels(i)[0], description: i.description, date: toString(i.createdAt)}
-            ELSE null END)
+        averageLeadTimeDays: toFloat(coalesce(s.averageLeadTime, coalesce(s.leadTimeDays, 0))),
+        totalOrdersCompleted: totalEquipment,
+        activeOrders: activeOrders,
+        recentIssues: []
     } AS performance
     """
-    records = await db.execute_read(query, {"supplierId": supplier_id})
+    try:
+        records = await db.execute_read(query, {"supplierId": supplier_id})
+    except Exception as e:
+        logger.exception("Supplier performance query failed for %s", supplier_id)
+        raise HTTPException(status_code=500, detail=str(e))
     if not records:
         raise HTTPException(status_code=404, detail="Supplier not found")
-    result = records[0]["performance"]
-    result["recentIssues"] = [i for i in result.get("recentIssues", []) if i is not None]
-    return result
+    return records[0]["performance"]
 
 
 async def _supplier_exists(db, supplier_id: str) -> bool:

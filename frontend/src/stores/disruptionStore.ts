@@ -73,6 +73,86 @@ function deriveLocationFromZones(zoneIds: string[]): { lat: number; lng: number 
   return { lat: 25, lng: 45 };
 }
 
+// ===== Mock Disruptions (fallback when API unavailable) =====
+
+const MOCK_DISRUPTIONS: DisruptionEvent[] = [
+  {
+    id: 'DIS-001',
+    type: 'geopolitical',
+    name: 'Strait of Hormuz Tension',
+    description: 'Military escalation near Strait of Hormuz threatens maritime traffic. Iran-US tensions causing shipping delays and rerouting.',
+    severity: 5,
+    startDate: '2026-03-15T00:00:00Z',
+    affectedZoneIds: ['zone-1'],
+    affectedRouteIds: ['route-001', 'route-003'],
+    affectedEquipmentIds: ['eq-001', 'eq-002', 'eq-005', 'eq-008'],
+    affectedProjectIds: ['proj-001', 'proj-002'],
+    location: { lat: 26.5, lng: 56.0 },
+    radius: 250,
+    status: 'active',
+  },
+  {
+    id: 'DIS-002',
+    type: 'infrastructure',
+    name: 'Suez Canal Obstruction',
+    description: 'Container vessel grounded in Suez Canal blocking northbound traffic. Estimated 7-14 day clearance.',
+    severity: 4,
+    startDate: '2026-03-28T00:00:00Z',
+    affectedZoneIds: ['zone-2'],
+    affectedRouteIds: ['route-002', 'route-004'],
+    affectedEquipmentIds: ['eq-003', 'eq-004', 'eq-006'],
+    affectedProjectIds: ['proj-001', 'proj-003'],
+    location: { lat: 30.5, lng: 32.5 },
+    radius: 200,
+    status: 'active',
+  },
+  {
+    id: 'DIS-003',
+    type: 'natural',
+    name: 'Japan Earthquake — Port Damage',
+    description: 'Magnitude 7.2 earthquake damaged Yokohama port infrastructure. Crane and berth capacity reduced by 60%.',
+    severity: 4,
+    startDate: '2026-04-01T00:00:00Z',
+    affectedZoneIds: ['zone-4'],
+    affectedRouteIds: ['route-005'],
+    affectedEquipmentIds: ['eq-007', 'eq-009', 'eq-010'],
+    affectedProjectIds: ['proj-002'],
+    location: { lat: 35.4, lng: 139.6 },
+    radius: 150,
+    status: 'active',
+  },
+  {
+    id: 'DIS-004',
+    type: 'economic',
+    name: 'China Tariff Escalation',
+    description: 'New 25% tariff on industrial equipment exports from China. Affects rotating and static equipment categories.',
+    severity: 3,
+    startDate: '2026-03-01T00:00:00Z',
+    affectedZoneIds: ['zone-4'],
+    affectedRouteIds: ['route-006'],
+    affectedEquipmentIds: ['eq-011', 'eq-012'],
+    affectedProjectIds: ['proj-001', 'proj-003'],
+    location: { lat: 31.2, lng: 121.5 },
+    radius: 300,
+    status: 'monitoring',
+  },
+  {
+    id: 'DIS-005',
+    type: 'geopolitical',
+    name: 'Russia Sanctions — Steel Supply',
+    description: 'Expanded sanctions on Russian steel exports. Major supplier Severstal blocked from fulfilling orders.',
+    severity: 3,
+    startDate: '2026-02-15T00:00:00Z',
+    affectedZoneIds: ['zone-5'],
+    affectedRouteIds: ['route-007'],
+    affectedEquipmentIds: ['eq-013', 'eq-014'],
+    affectedProjectIds: ['proj-002'],
+    location: { lat: 59.9, lng: 30.3 },
+    radius: 200,
+    status: 'active',
+  },
+];
+
 // ===== Store =====
 
 interface DisruptionState {
@@ -96,7 +176,7 @@ interface DisruptionState {
 let fetchInitiated = false;
 
 export const useDisruptionStore = create<DisruptionState>((set, get) => ({
-  activeDisruptions: [],
+  activeDisruptions: MOCK_DISRUPTIONS,
   affectedEquipmentIds: [],
   affectedRouteIds: [],
   impactAnalysis: null,
@@ -156,6 +236,7 @@ export const useDisruptionStore = create<DisruptionState>((set, get) => ({
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to fetch disruptions';
       console.error('disruptionStore fetchDisruptions error:', message);
+      // Keep mock disruptions as fallback when API is unavailable
       set({ loading: false, error: message });
     }
   },

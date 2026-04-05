@@ -67,11 +67,13 @@ async def get_at_risk_equipment():
     OPTIONAL MATCH (r)-[:PASSES_THROUGH]->(z:GeopoliticalZone)
     OPTIONAL MATCH (e)-[:SUPPLIED_BY]->(s:Supplier)
     OPTIONAL MATCH (p:Project)-[:HAS_EQUIPMENT]->(e)
-    RETURN e {
-        .equipmentId, .name, .criticality, .category,
-        .requiredOnSiteDate,
+    WITH e, r, s, p, collect(DISTINCT z.name) AS zoneNames
+    RETURN {
+        equipmentId: e.equipmentId, name: e.name,
+        criticality: e.criticality, category: e.category,
+        requiredOnSiteDate: e.requiredOnSiteDate,
         route: {routeId: r.routeId, name: r.name, status: r.currentStatus},
-        affectedZones: collect(DISTINCT z.name),
+        affectedZones: zoneNames,
         supplier: CASE WHEN s IS NOT NULL
             THEN {supplierId: s.supplierId, name: s.name}
             ELSE null END,

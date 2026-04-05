@@ -14,6 +14,16 @@ class EquipmentCategory(str, Enum):
     STRUCTURAL = "structural"
     HVAC = "hvac"
     SAFETY = "safety"
+    VALVES = "valves"
+
+    @classmethod
+    def _missing_(cls, value: object) -> "EquipmentCategory | None":
+        if isinstance(value, str):
+            lower = value.lower()
+            for member in cls:
+                if member.value == lower:
+                    return member
+        return None
 
 
 class CriticalityLevel(str, Enum):
@@ -21,6 +31,15 @@ class CriticalityLevel(str, Enum):
     HIGH = "high"
     MEDIUM = "medium"
     LOW = "low"
+
+    @classmethod
+    def _missing_(cls, value: object) -> "CriticalityLevel | None":
+        if isinstance(value, str):
+            lower = value.lower()
+            for member in cls:
+                if member.value == lower:
+                    return member
+        return None
 
 
 class Dimensions(BaseModel):

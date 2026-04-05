@@ -1,10 +1,11 @@
 'use client';
 
 import { useMemo } from 'react';
-import { DollarSign, AlertTriangle, Activity, TrendingUp, Shield, Zap } from 'lucide-react';
+import { DollarSign, AlertTriangle, Activity, TrendingUp, Shield, Zap, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { useProjectStore } from '@/stores/projectStore';
 import { useDisruptionStore } from '@/stores/disruptionStore';
-import { formatCurrency } from '@/lib/utils';
+import { formatCurrency, cn } from '@/lib/utils';
+import Card from '@/components/ui/Card';
 
 export default function KPICards() {
   const { projects, equipment } = useProjectStore();
@@ -19,30 +20,47 @@ export default function KPICards() {
     const potentialSavings = atRiskValue * 0.35;
 
     return [
-      { label: 'Portfolio Value', value: formatCurrency(totalValue), icon: DollarSign, color: 'text-cyan-400', bgColor: 'bg-cyan-500/10', trend: '+2.1%', trendUp: true },
-      { label: 'At-Risk Value', value: formatCurrency(atRiskValue), icon: AlertTriangle, color: 'text-red-400', bgColor: 'bg-red-500/10', trend: atRiskValue > 0 ? 'Active' : 'None', trendUp: false },
-      { label: 'Active Disruptions', value: String(activeDisruptions.length), icon: Zap, color: 'text-orange-400', bgColor: 'bg-orange-500/10', trend: activeDisruptions.length > 0 ? 'Monitoring' : 'Clear', trendUp: activeDisruptions.length === 0 },
-      { label: 'Avg Risk Score', value: `${avgRisk}/100`, icon: Activity, color: 'text-yellow-400', bgColor: 'bg-yellow-500/10', trend: avgRisk < 40 ? 'Low' : avgRisk < 60 ? 'Medium' : 'High', trendUp: avgRisk < 40 },
-      { label: 'Critical Items', value: String(criticalCount), icon: Shield, color: 'text-purple-400', bgColor: 'bg-purple-500/10', trend: `of ${equipment.length}`, trendUp: true },
-      { label: 'Potential Savings', value: formatCurrency(potentialSavings), icon: TrendingUp, color: 'text-green-400', bgColor: 'bg-green-500/10', trend: potentialSavings > 0 ? 'Available' : '-', trendUp: true },
+      { label: 'Portfolio Value', value: formatCurrency(totalValue), icon: DollarSign, color: 'text-sky-400', bgColor: 'bg-sky-500/10', trend: '+2.1%', trendUp: true, detail: 'Across all active projects' },
+      { label: 'At-Risk Assets', value: formatCurrency(atRiskValue), icon: AlertTriangle, color: 'text-rose-400', bgColor: 'bg-rose-500/10', trend: atRiskValue > 0 ? 'Urgent' : 'Clear', trendUp: false, detail: `${affectedEquipmentIds.length} items impacted` },
+      { label: 'Active Incidents', value: String(activeDisruptions.length), icon: Zap, color: 'text-amber-400', bgColor: 'bg-amber-500/10', trend: activeDisruptions.length > 0 ? 'Live' : 'Zero', trendUp: activeDisruptions.length === 0, detail: 'Currently monitoring' },
+      { label: 'Network Risk', value: `${avgRisk}/100`, icon: Activity, color: 'text-orange-400', bgColor: 'bg-orange-500/10', trend: avgRisk < 50 ? 'Stable' : 'Volatile', trendUp: avgRisk < 50, detail: 'Global average score' },
+      { label: 'Criticality Delta', value: String(criticalCount), icon: Shield, color: 'text-indigo-400', bgColor: 'bg-indigo-500/10', trend: `of ${equipment.length}`, trendUp: true, detail: 'High-priority items' },
+      { label: 'Optimization Cap', value: formatCurrency(potentialSavings), icon: TrendingUp, color: 'text-emerald-400', bgColor: 'bg-emerald-500/10', trend: potentialSavings > 0 ? 'Ready' : 'Zero', trendUp: true, detail: 'Mitigation savings' },
     ];
   }, [projects, equipment, activeDisruptions, affectedEquipmentIds]);
 
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {kpis.map((kpi) => (
-        <div key={kpi.label} className="glass-card p-3 hover:bg-white/[0.03] transition-colors">
-          <div className="flex items-start justify-between mb-1.5">
-            <div className={`p-1.5 rounded-md ${kpi.bgColor}`}>
-              <kpi.icon className={`w-3.5 h-3.5 ${kpi.color}`} />
+        <Card key={kpi.label} variant="glass" padding="none" className="group hover:scale-[1.02] transition-transform duration-300">
+          <div className="p-5">
+            <div className="flex items-start justify-between mb-4">
+              <div className={cn("p-2.5 rounded-xl border border-white/5", kpi.bgColor)}>
+                <kpi.icon className={cn("w-5 h-5", kpi.color)} />
+              </div>
+              <div className={cn(
+                "flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest",
+                kpi.trendUp ? "bg-emerald-500/10 text-emerald-400" : "bg-rose-500/10 text-rose-400"
+              )}>
+                {kpi.trendUp ? <ArrowUpRight className="w-3 h-3" /> : <ArrowDownRight className="w-3 h-3" />}
+                {kpi.trend}
+              </div>
             </div>
-            <span className={`text-[10px] font-medium ${kpi.trendUp ? 'text-green-400' : 'text-red-400'}`}>
-              {kpi.trend}
-            </span>
+            
+            <div className="space-y-1">
+              <div className="text-2xl font-black text-white tracking-tight leading-none tabular-nums">
+                {kpi.value}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{kpi.label}</span>
+                <span className="text-[9px] text-slate-600 font-medium">{kpi.detail}</span>
+              </div>
+            </div>
           </div>
-          <div className="text-lg font-bold text-white leading-tight">{kpi.value}</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">{kpi.label}</div>
-        </div>
+          
+          {/* Visual decoration */}
+          <div className={cn("h-1 w-full opacity-50", kpi.trendUp ? "bg-emerald-500/30" : "bg-rose-500/30")} />
+        </Card>
       ))}
     </div>
   );
