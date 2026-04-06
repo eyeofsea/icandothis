@@ -6,7 +6,7 @@ PROJECT_ID="${GCP_PROJECT_ID:?Set GCP_PROJECT_ID}"
 echo "Creating GCP secrets..."
 
 # Create secrets (prompts for values)
-for SECRET in neo4j-password pg-password anthropic-key freightos-key; do
+for SECRET in neo4j-password pg-password anthropic-key opensanctions-key freight-key news-api-key; do
   echo "Enter value for $SECRET:"
   read -s VALUE
   echo -n "$VALUE" | gcloud secrets create "$SECRET" \
