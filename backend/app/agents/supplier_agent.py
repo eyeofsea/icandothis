@@ -10,6 +10,7 @@ from __future__ import annotations
 import logging
 from typing import Any, Dict, List, Optional
 
+from app.agents.ai_client import ai_analyze
 from app.agents.tools.neo4j_tools import (
     find_alternative_suppliers,
     get_supplier_performance,
@@ -21,6 +22,12 @@ from app.agents.tools.scoring import (
 )
 
 logger = logging.getLogger(__name__)
+
+SUPPLIER_AGENT_PROMPT = """You are a Supplier Evaluation AI for EPC mega-project procurement.
+You assess alternative suppliers based on: delivery reliability, quality, certification match,
+lead time, financial stability, capacity, and geopolitical risk exposure.
+Consider qualification timelines, switching costs, and critical path impacts.
+Provide specific supplier recommendations with risk/benefit trade-offs."""
 
 
 class SupplierAgent:
@@ -108,6 +115,38 @@ class SupplierAgent:
         equipment_with_alternatives = sum(1 for r in recommendations if r["alternativeCount"] > 0)
         equipment_without = sum(1 for r in recommendations if r["alternativeCount"] == 0)
 
+        rule_summary = self._generate_summary(recommendations, disrupted_zone_ids)
+
+        # AI-enhanced supplier evaluation
+        ai_analysis = await ai_analyze(
+            system_prompt=SUPPLIER_AGENT_PROMPT,
+            user_prompt=(
+                f"Evaluate supplier alternatives for {len(affected_equipment)} equipment items. "
+                f"{equipment_with_alternatives} have alternatives, "
+                f"{equipment_without} have no alternatives. "
+                f"Excluded zones: {disrupted_zone_ids}. "
+                "Assess the top recommendations and flag any risks with the proposed switches."
+            ),
+            data={
+                "topRecommendations": [
+                    {
+                        "equipment": r.get("equipmentName"),
+                        "criticality": r.get("criticality"),
+                        "currentSupplier": r.get("currentSupplier", {}).get("name") if r.get("currentSupplier") else None,
+                        "bestAlt": {
+                            "name": r["bestAlternative"].get("supplierName"),
+                            "country": r["bestAlternative"].get("country"),
+                            "tier": r["bestAlternative"].get("tier"),
+                            "leadTimeDays": r["bestAlternative"].get("leadTimeDays"),
+                            "qualityScore": r["bestAlternative"].get("qualityScore"),
+                        } if r.get("bestAlternative") else None,
+                        "switchImpact": r.get("switchImpact"),
+                    }
+                    for r in recommendations[:10]
+                ],
+            },
+        )
+
         return {
             "recommendations": recommendations,
             "totalEquipmentProcessed": len(affected_equipment),
@@ -115,7 +154,8 @@ class SupplierAgent:
             "equipmentWithoutAlternatives": equipment_without,
             "totalAlternativesFound": all_alternatives_count,
             "excludedZones": disrupted_zone_ids,
-            "summary": self._generate_summary(recommendations, disrupted_zone_ids),
+            "summary": rule_summary,
+            "aiAnalysis": ai_analysis,
         }
 
     async def _get_current_supplier(

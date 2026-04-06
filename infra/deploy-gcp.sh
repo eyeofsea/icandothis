@@ -78,7 +78,7 @@ gcloud run deploy "${SERVICE_NAME}-api" \
   --min-instances=0 \
   --max-instances=3 \
   --set-env-vars="NEO4J_URI=bolt://${NEO4J_VM}:7687,NEO4J_USER=neo4j" \
-  --set-secrets="NEO4J_PASSWORD=neo4j-password:latest,ANTHROPIC_API_KEY=anthropic-key:latest,POSTGRES_PASSWORD=pg-password:latest" \
+  --set-secrets="NEO4J_PASSWORD=neo4j-password:latest,ANTHROPIC_API_KEY=anthropic-key:latest,POSTGRES_PASSWORD=pg-password:latest,OPENSANCTIONS_API_KEY=opensanctions-key:latest,FREIGHT_API_KEY=freight-key:latest,NEWS_API_KEY=news-api-key:latest" \
   --add-cloudsql-instances="$PROJECT_ID:$REGION:$DB_INSTANCE"
 
 BACKEND_URL=$(gcloud run services describe "${SERVICE_NAME}-api" --region="$REGION" --format="value(status.url)")

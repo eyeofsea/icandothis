@@ -12,10 +12,17 @@ import uuid
 from datetime import date, timedelta
 from typing import Any, Dict, List, Optional
 
+from app.agents.ai_client import ai_analyze
 from app.agents.tools.neo4j_tools import query_neo4j
 from app.agents.impact_agent import ImpactAgent
 
 logger = logging.getLogger(__name__)
+
+DISRUPTION_AGENT_PROMPT = """You are a Disruption Detection AI for supply chain risk management.
+You classify and verify supply chain disruption events from news and intelligence feeds.
+Analyze events for: severity (1-5), affected trade zones, estimated duration, and urgency.
+Identify potential cascade effects and recommend immediate actions.
+Be precise about which shipping routes, suppliers, and equipment categories are at risk."""
 
 # Severity classification thresholds
 SEVERITY_CRITERIA = {
@@ -114,6 +121,25 @@ class DisruptionAgent:
                 result["impactAnalysis"] = {"error": str(exc)}
 
         result["summary"] = self._generate_summary(result)
+
+        # AI-enhanced analysis
+        result["aiAnalysis"] = await ai_analyze(
+            system_prompt=DISRUPTION_AGENT_PROMPT,
+            user_prompt=(
+                f"Analyze this disruption event: '{event_candidate.get('headline', '')}'. "
+                f"Severity classified as {severity}/5. "
+                f"{len(validated_zones)} zones affected, "
+                f"{verification.get('routesAffected', 0)} routes and "
+                f"{verification.get('suppliersInZone', 0)} suppliers potentially impacted. "
+                "Provide risk assessment and recommended immediate actions."
+            ),
+            data={
+                "event": event_candidate,
+                "verification": verification,
+                "zones": validated_zones,
+            },
+        )
+
         return result
 
     async def _verify_against_kb(

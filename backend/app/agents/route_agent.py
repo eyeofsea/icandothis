@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 from typing import Any, Dict, List, Optional
 
+from app.agents.ai_client import ai_analyze
 from app.agents.tools.neo4j_tools import (
     find_alternative_routes,
     query_neo4j,
@@ -20,6 +21,12 @@ from app.agents.tools.optimization import (
 from app.agents.tools.scoring import calculate_route_risk_score
 
 logger = logging.getLogger(__name__)
+
+ROUTE_AGENT_PROMPT = """You are a Route Optimization AI for maritime and multimodal logistics.
+You specialize in finding alternative shipping routes when primary routes are disrupted.
+Consider: transit time, cost, geopolitical risk, port congestion, and cargo weight limits.
+Evaluate sea rerouting, air freight, rail, and multimodal options.
+Provide specific route recommendations with quantified cost/time trade-offs."""
 
 
 # Air freight threshold: 5 metric tons
@@ -130,13 +137,44 @@ class RouteAgent:
         total_blocked = len(blocked_routes)
         routes_with_alts = sum(1 for r in route_recommendations if r["alternativeCount"] > 0)
 
+        rule_summary = self._generate_summary(route_recommendations)
+
+        # AI-enhanced route reasoning
+        ai_analysis = await ai_analyze(
+            system_prompt=ROUTE_AGENT_PROMPT,
+            user_prompt=(
+                f"Analyze routing options for {total_blocked} blocked route(s). "
+                f"{routes_with_alts} have alternative sea routes, "
+                f"{total_blocked - routes_with_alts} have no alternatives. "
+                f"Zones to avoid: {disrupted_zone_ids}. "
+                "Recommend the optimal logistics strategy considering cost, time, and risk."
+            ),
+            data={
+                "routes": [
+                    {
+                        "blocked": r["blockedRoute"],
+                        "bestAlt": {
+                            "name": r["bestAlternative"].get("name"),
+                            "additionalDays": r["bestAlternative"].get("additionalDays"),
+                            "costDelta": r["bestAlternative"].get("costDelta"),
+                            "riskScore": r["bestAlternative"].get("riskScore"),
+                        } if r.get("bestAlternative") else None,
+                        "airFreightEligible": sum(1 for a in r.get("airFreightOptions", []) if a.get("feasible")),
+                        "multimodalOptions": len(r.get("multimodalOptions", [])),
+                    }
+                    for r in route_recommendations
+                ],
+            },
+        )
+
         return {
             "routeRecommendations": route_recommendations,
             "totalBlockedRoutes": total_blocked,
             "routesWithAlternatives": routes_with_alts,
             "routesWithoutAlternatives": total_blocked - routes_with_alts,
             "disruptedZonesAvoided": disrupted_zone_ids,
-            "summary": self._generate_summary(route_recommendations),
+            "summary": rule_summary,
+            "aiAnalysis": ai_analysis,
         }
 
     def _evaluate_air_freight(
