@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 from typing import Any, Dict, List, Optional
 
+from app.agents.ai_client import ai_analyze
 from app.agents.tools.optimization import (
     calculate_delay_penalty,
     calculate_roi,
@@ -17,6 +18,12 @@ from app.agents.tools.optimization import (
 )
 
 logger = logging.getLogger(__name__)
+
+COST_AGENT_PROMPT = """You are a Cost Analysis AI for supply chain risk management in mega-project EPC.
+You specialize in disruption cost calculation, mitigation scenario comparison, and ROI analysis.
+Provide concise, data-driven financial analysis with specific dollar amounts and recommendations.
+Focus on: LD penalties, site overhead, idle workforce, rerouting/switching costs, and payback periods.
+Always recommend the most cost-effective mitigation strategy."""
 
 # Default cost parameters
 DEFAULT_SITE_OVERHEAD_PER_DAY = 50000.0  # $50K/day
@@ -93,6 +100,24 @@ class CostAgent:
             period_years=1.0,
         )
 
+        # Step 5: Generate summary (AI-enhanced if available)
+        rule_summary = self._generate_summary(
+            no_action_cost, comparison, roi_analysis, delay_days
+        )
+        ai_summary = await ai_analyze(
+            system_prompt=COST_AGENT_PROMPT,
+            user_prompt=(
+                f"Analyze this disruption cost data for {len(affected_projects)} projects "
+                f"and {len(affected_equipment)} equipment items with a {delay_days}-day delay. "
+                "Provide executive-level cost analysis with clear recommendation on best mitigation strategy."
+            ),
+            data={
+                "noActionCost": no_action_cost,
+                "scenarios": comparison,
+                "roi": roi_analysis,
+            },
+        )
+
         return {
             "noActionCost": no_action_cost,
             "mitigationScenarios": comparison,
@@ -100,9 +125,8 @@ class CostAgent:
             "delayDays": delay_days,
             "affectedProjectCount": len(affected_projects),
             "affectedEquipmentCount": len(affected_equipment),
-            "summary": self._generate_summary(
-                no_action_cost, comparison, roi_analysis, delay_days
-            ),
+            "summary": rule_summary,
+            "aiAnalysis": ai_summary,
         }
 
     def _build_scenarios(

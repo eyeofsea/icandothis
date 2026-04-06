@@ -11,6 +11,7 @@ import json
 import logging
 from typing import Any, Callable, Dict, List, Optional
 
+from app.agents.ai_client import get_client as get_anthropic_client
 from app.config import settings
 from app.agents.impact_agent import ImpactAgent
 from app.agents.supplier_agent import SupplierAgent
@@ -66,22 +67,9 @@ class Orchestrator:
         self.cost_agent = CostAgent()
         self.news_agent = NewsAgent()
         self.disruption_agent = DisruptionAgent()
-        self._anthropic_client = None
-
     def _get_anthropic_client(self):
-        """Lazy-initialize Anthropic client if API key is available."""
-        if self._anthropic_client is not None:
-            return self._anthropic_client
-        if settings.ANTHROPIC_API_KEY:
-            try:
-                import anthropic
-                self._anthropic_client = anthropic.Anthropic(
-                    api_key=settings.ANTHROPIC_API_KEY,
-                )
-                return self._anthropic_client
-            except Exception as exc:
-                logger.warning("Failed to initialize Anthropic client: %s", exc)
-        return None
+        """Get shared Anthropic client."""
+        return get_anthropic_client()
 
     async def run(
         self,

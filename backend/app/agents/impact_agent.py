@@ -11,6 +11,7 @@ import logging
 from datetime import date
 from typing import Any, Dict, List, Optional
 
+from app.agents.ai_client import ai_analyze
 from app.agents.tools.neo4j_tools import (
     find_affected_equipment,
     query_neo4j,
@@ -21,6 +22,13 @@ from app.agents.tools.scoring import (
 )
 
 logger = logging.getLogger(__name__)
+
+IMPACT_AGENT_PROMPT = """You are an Impact Analysis AI for supply chain risk in EPC mega-projects.
+You analyze how disruptions cascade through the supply chain graph:
+zones → routes → suppliers → equipment → purchase orders → projects.
+Focus on: critical path items, multi-project impacts, delay estimates, and risk prioritization.
+Quantify impacts with specific equipment counts, dollar values, and day estimates.
+Highlight the highest-risk items that need immediate attention."""
 
 
 class ImpactAgent:
@@ -113,6 +121,39 @@ class ImpactAgent:
         # Estimate delay
         estimated_delay_days = self._estimate_delay(severity, len(affected_routes), len(critical_path_items))
 
+        rule_summary = self._generate_summary(
+            event, equipment_risks, affected_routes,
+            project_risk_matrix, estimated_delay_days, impact_score,
+        )
+
+        # AI-enhanced cascade analysis
+        ai_analysis = await ai_analyze(
+            system_prompt=IMPACT_AGENT_PROMPT,
+            user_prompt=(
+                f"Analyze the impact of this {event.get('type', 'unknown')} disruption "
+                f"(severity {severity}/5). "
+                f"{len(equipment_risks)} equipment items affected "
+                f"({len(critical_path_items)} critical path), "
+                f"{len(affected_routes)} routes disrupted, "
+                f"{len(project_risk_matrix)} projects impacted. "
+                f"Estimated delay: {estimated_delay_days} days. "
+                "Identify the highest-priority risks and recommended immediate actions."
+            ),
+            data={
+                "impactScore": impact_score,
+                "topRiskEquipment": [
+                    {"id": e.get("equipmentId"), "name": e.get("name"),
+                     "criticality": e.get("criticality"), "riskScore": e.get("riskScore")}
+                    for e in equipment_risks[:10]
+                ],
+                "cascadeEffects": cascade_effects,
+                "projectRisks": {
+                    pid: {"risk": p.get("overallProjectRisk"), "equipment": len(p.get("affectedEquipment", []))}
+                    for pid, p in project_risk_matrix.items()
+                },
+            },
+        )
+
         return {
             "eventId": event.get("eventId"),
             "eventType": event.get("type"),
@@ -130,10 +171,8 @@ class ImpactAgent:
             "affectedSupplierCount": len(affected_suppliers),
             "projectRiskMatrix": project_risk_matrix,
             "cascadeEffects": cascade_effects,
-            "summary": self._generate_summary(
-                event, equipment_risks, affected_routes,
-                project_risk_matrix, estimated_delay_days, impact_score,
-            ),
+            "summary": rule_summary,
+            "aiAnalysis": ai_analysis,
         }
 
     async def _find_affected_routes(
