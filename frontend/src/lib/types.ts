@@ -281,3 +281,39 @@ export interface GraphEdge {
   type: string;
   strength?: number;
 }
+
+// ===== Feed Types =====
+
+export interface NewsItem {
+  id: string;
+  headline: string;
+  source: string;
+  url: string;
+  publishedDate: string;
+  location: string;
+  tone: number;
+  severity: number;
+  type: string;
+  zones: string[];
+  sourceType: string;
+}
+
+export interface ZoneRisk {
+  zone_id: string;
+  zone_name: string;
+  risk_level: number;
+  trend: "stable" | "increasing" | "decreasing";
+  active_threats: number;
+  insurance_multiplier: number;
+  article_count: number;
+  source: string;
+  top_headlines: { title: string; url: string; tone: number; date: string }[];
+}
+
+export interface FeedAgentStatus {
+  name: string;
+  status: "idle" | "analyzing" | "completed" | "error";
+  lastRun?: string;
+  lastTask?: string;
+  resultSummary?: string;
+}
