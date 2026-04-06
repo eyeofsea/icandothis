@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { AlertTriangle, Info, AlertCircle, Bell, Zap, ExternalLink } from 'lucide-react';
+import { AlertTriangle, Info, AlertCircle, Bell, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { useFeedStore } from '@/stores/feedStore';
 import { useDisruptionStore } from '@/stores/disruptionStore';
