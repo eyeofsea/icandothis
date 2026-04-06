@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bell, Search, User, ChevronDown } from 'lucide-react';
+import { Bell, Search, User, ChevronDown, Bot } from 'lucide-react';
 import Sidebar, { ViewId } from '@/components/layout/Sidebar';
 import NotificationPanel from '@/components/layout/NotificationPanel';
 import DashboardView from '@/views/DashboardView';
@@ -13,9 +13,11 @@ import OntologyView from '@/views/OntologyView';
 import ImpactView from '@/views/ImpactView';
 import ScenarioView from '@/views/ScenarioView';
 import HedgingReportView from '@/views/HedgingReportView';
+import NewsView from '@/views/NewsView';
 import ChatPanel from '@/components/chat/ChatPanel';
 import ScenarioSelector from '@/components/scenario/ScenarioSelector';
 import { useDisruptionStore } from '@/stores/disruptionStore';
+import { useFeedStore } from '@/stores/feedStore';
 import Tooltip from '@/components/ui/Tooltip';
 import Button from '@/components/ui/Button';
 
@@ -24,6 +26,7 @@ const VIEW_TITLES: Record<ViewId, string> = {
   riskmatrix: 'Risk Matrix',
   projects: 'Projects',
   alerts: 'Alerts',
+  news: 'News & Intelligence',
   map: 'Global Map',
   ontology: 'Knowledge Graph',
   impact: 'Impact Analysis',
@@ -35,6 +38,9 @@ export default function Home() {
   const [activeView, setActiveView] = useState<ViewId>('dashboard');
   const [notifOpen, setNotifOpen] = useState(false);
   const { activeDisruptions } = useDisruptionStore();
+  const { agentStatuses } = useFeedStore();
+  const activeAgents = agentStatuses.filter((a) => a.status !== 'idle');
+  const workingAgent = agentStatuses.find((a) => a.status === 'analyzing');
 
   const renderView = () => {
     switch (activeView) {
@@ -42,6 +48,7 @@ export default function Home() {
       case 'riskmatrix': return <RiskMatrixView />;
       case 'projects': return <ProjectsView />;
       case 'alerts': return <AlertsView />;
+      case 'news': return <NewsView />;
       case 'map': return <MapView />;
       case 'ontology': return <OntologyView />;
       case 'impact': return <ImpactView />;
@@ -76,6 +83,19 @@ export default function Home() {
 
           <div className="flex items-center gap-4">
             <ScenarioSelector />
+
+            {/* Agent Status */}
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700/50">
+              <Bot className="w-3.5 h-3.5 text-sky-400" />
+              <span className="text-[10px] text-slate-300 font-bold">
+                {activeAgents.length}/{agentStatuses.length}
+              </span>
+              {workingAgent && (
+                <span className="text-[10px] text-amber-400 font-medium animate-pulse truncate max-w-[120px]">
+                  {workingAgent.name}...
+                </span>
+              )}
+            </div>
 
             {activeDisruptions.length > 0 && (
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 group cursor-default">
