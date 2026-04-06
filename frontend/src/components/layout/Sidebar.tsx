@@ -6,6 +6,7 @@ import {
   ShieldAlert,
   FolderKanban,
   Bell,
+  Newspaper,
   Globe,
   GitFork,
   Zap,
@@ -18,7 +19,7 @@ import {
 import Tooltip from '@/components/ui/Tooltip';
 import { cn } from '@/lib/utils';
 
-export type ViewId = 'dashboard' | 'riskmatrix' | 'projects' | 'alerts' | 'map' | 'ontology' | 'impact' | 'scenario' | 'hedging';
+export type ViewId = 'dashboard' | 'riskmatrix' | 'projects' | 'alerts' | 'news' | 'map' | 'ontology' | 'impact' | 'scenario' | 'hedging';
 
 interface NavItem {
   id: ViewId;
@@ -31,6 +32,7 @@ const navItems: NavItem[] = [
   { id: 'riskmatrix', label: 'Risk Matrix', icon: ShieldAlert },
   { id: 'projects', label: 'Projects', icon: FolderKanban },
   { id: 'alerts', label: 'Alerts', icon: Bell },
+  { id: 'news', label: 'News', icon: Newspaper },
   { id: 'map', label: 'Map', icon: Globe },
   { id: 'ontology', label: 'Ontology', icon: GitFork },
   { id: 'impact', label: 'Impact', icon: Zap },
