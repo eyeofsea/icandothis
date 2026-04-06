@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     # Anthropic
     ANTHROPIC_API_KEY: str = ""
 
+    # External Feed API Keys (optional — free APIs used as default)
+    OPENSANCTIONS_API_KEY: str = ""
+    FREIGHT_API_KEY: str = ""
+    NEWS_API_KEY: str = ""  # NewsAPI.org key for supplementary news
+
     # CORS
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
