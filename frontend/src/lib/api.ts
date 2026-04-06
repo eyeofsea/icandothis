@@ -2,6 +2,7 @@ import {
   Project, Equipment, Supplier, ShippingRoute, DisruptionEvent,
   GeopoliticalZone, DashboardKPIs, RiskMatrixItem, ImpactAnalysis,
   ChatMessage, HedgingReport, HedgingScenario, TCOBreakdown,
+  NewsItem, ZoneRisk,
 } from './types';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
@@ -356,6 +357,56 @@ function generateMockHedgingReport(disruptionId: string, delayDays: number): Hed
     scenarios,
     executive_summary: summary,
   };
+}
+
+// ===== External Feed APIs =====
+
+export async function fetchNewsFeed(category?: string): Promise<NewsItem[]> {
+  try {
+    const params = category ? `?category=${category}` : '';
+    const data = await apiFetch<{
+      eventCandidate: {
+        id: string;
+        headline: string;
+        source: string;
+        url?: string;
+        publishedDate: string;
+        location: string;
+        rawType: string;
+        rawSeverity: number;
+        affectedZones: string[];
+        sourceType: string;
+        tone?: number;
+      };
+      classification: { severity: number; type: string };
+      matchedZones: { zoneId: string }[];
+    }>(`/api/feeds/news/scan${params}`);
+
+    const ec = data.eventCandidate;
+    return [{
+      id: ec.id,
+      headline: ec.headline,
+      source: ec.source,
+      url: ec.url || '',
+      publishedDate: ec.publishedDate,
+      location: ec.location,
+      tone: ec.tone || 0,
+      severity: data.classification.severity,
+      type: data.classification.type,
+      zones: ec.affectedZones,
+      sourceType: ec.sourceType,
+    }];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchAllZoneRisks(): Promise<ZoneRisk[]> {
+  try {
+    return await apiFetch<ZoneRisk[]>('/api/feeds/risk/zones');
+  } catch {
+    return [];
+  }
 }
 
 export async function sendChatMessage(message: string, context?: Record<string, unknown>): Promise<ChatMessage> {
