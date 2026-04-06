@@ -7,6 +7,8 @@ import RiskMatrix from '@/components/dashboard/RiskMatrix';
 import ProjectHealth from '@/components/dashboard/ProjectHealth';
 import AlertFeed from '@/components/dashboard/AlertFeed';
 import Timeline from '@/components/dashboard/Timeline';
+import IntelligenceFeed from '@/components/dashboard/IntelligenceFeed';
+import AgentActivityPanel from '@/components/dashboard/AgentActivityPanel';
 import EquipmentDetailModal from '@/components/detail/EquipmentDetailModal';
 import ProjectDetailModal from '@/components/detail/ProjectDetailModal';
 import Card from '@/components/ui/Card';
@@ -50,10 +52,31 @@ export default function DashboardView() {
       {/* KPI Cards */}
       <KPICards />
 
+      {/* Intelligence + Agent Activity Row */}
+      <div className="grid grid-cols-12 gap-6">
+        <Card
+          title="Intelligence Feed"
+          subtitle="GDELT Real-time News"
+          className="col-span-12 lg:col-span-7 h-[340px]"
+          padding="none"
+        >
+          <IntelligenceFeed />
+        </Card>
+
+        <Card
+          title="Agent Activity"
+          subtitle="AI Agent Status"
+          className="col-span-12 lg:col-span-5 h-[340px]"
+          padding="none"
+        >
+          <AgentActivityPanel />
+        </Card>
+      </div>
+
       {/* Main Analysis Row */}
       <div className="grid grid-cols-12 gap-6">
-        <Card 
-          title="Global Risk Matrix" 
+        <Card
+          title="Global Risk Matrix"
           subtitle="Impact vs. Probability"
           className="col-span-12 lg:col-span-7 h-[420px]"
           padding="none"
@@ -62,9 +85,9 @@ export default function DashboardView() {
             <RiskMatrix />
           </div>
         </Card>
-        
-        <Card 
-          title="Intelligence Feed" 
+
+        <Card
+          title="Live Alerts"
           subtitle="Live Disruptions"
           className="col-span-12 lg:col-span-5 h-[420px]"
           padding="none"
